@@ -3,6 +3,7 @@ import { FC, ReactNode } from 'react';
 import theme from 'src/utils/theme/theme';
 
 const SvgIconContainer = styled('span')<{ size?: number; color?: string }>`
+	display: contents;
 	& svg {
 		width: ${({ size }) => `${size}px` ?? `24px`};
 		height: ${({ size }) => `${size}px` ?? `24px`};

@@ -1,15 +1,40 @@
 import { createTheme, ThemeOptions } from '@mui/material/styles';
 declare module '@mui/material/styles' {
 	interface Theme {
-		Danger: string;
+		sizes: {
+			height: {
+				formControl: {
+					small: number;
+					medium: number;
+					large: number;
+				};
+			};
+		};
 	}
 	// allow configuration using `createTheme`
-	interface Components {
-		Danger?: string;
+	interface ThemeOptions {
+		sizes: {
+			height: {
+				formControl: {
+					small: number;
+					medium: number;
+					large: number;
+				};
+			};
+		};
 	}
 }
 
 let theme = createTheme({
+	sizes: {
+		height: {
+			formControl: {
+				small: 40,
+				medium: 50,
+				large: 60,
+			},
+		},
+	},
 	palette: {
 		grey: {
 			A100: 'rgba(0,0,0,0.05)',
@@ -32,9 +57,11 @@ let theme = createTheme({
 			paper: '#fff',
 		},
 		text: {
-			primary: '#000000',
-			secondary: 'rgba(0,0,0,0.8)',
-			disabled: 'rgba(0,0,0,0.3)',
+			// primary: '#000000',
+			// primary: `hsl(50, 0%, ${calcColor()})`,
+			primary: `#000000`,
+			secondary: '#393939',
+			disabled: '#AAAAAA',
 		},
 		success: {
 			main: '#90DA1A',
@@ -87,21 +114,43 @@ let theme = createTheme({
 			fontWeight: 500,
 		},
 	},
-
 	shape: {
 		borderRadius: 10,
 	},
-	components: {
-		MuiChip: {
-			styleOverrides: {
-				root: {},
-			},
-		},
-	},
+	components: {},
 });
 
 theme = createTheme(theme, {
 	components: {
+		MuiFormControl: {
+			styleOverrides: {
+				root: {
+					'&:has(input:focus)': {
+						'& .MuiFormLabel-root': {
+							color: theme.palette.primary.main,
+						},
+					},
+					'& .MuiFormLabel-root': {
+						color: theme.palette.text.disabled,
+						fontWeight: 400,
+						lineHeight: '16px',
+					},
+					'& .MuiOutlinedInput-root': {
+						'& fieldset': {
+							borderColor: theme.palette.grey['A200'],
+							transition: 'all 0.3s ease 0s',
+						},
+						'&:not(:has(input:focus)):hover fieldset': {
+							borderColor: theme.palette.grey['400'],
+						},
+						'&.Mui-focused fieldset': {},
+					},
+					'& .MuiInputBase-input': {
+						fontWeight: 400,
+					},
+				},
+			},
+		},
 		MuiChip: {
 			styleOverrides: {
 				root: {
@@ -125,6 +174,7 @@ theme = createTheme(theme, {
 		MuiButton: {
 			styleOverrides: {
 				root: {
+					color: theme.palette.text.primary,
 					boxShadow: 'none',
 					textTransform: 'initial',
 					padding: 0,
@@ -163,8 +213,13 @@ theme = createTheme(theme, {
 		MuiIconButton: {
 			styleOverrides: {
 				root: {
+					'& svg path': {
+						fill: theme.palette.text.disabled,
+					},
+				},
+				colorPrimary: {
 					background: theme.palette.primary.main,
-					'& *': {
+					'& svg path': {
 						fill: theme.palette.common.white,
 					},
 					'&:hover': {
@@ -260,9 +315,7 @@ theme = createTheme(theme, {
 						borderRadius: 26 / 2,
 						backgroundColor: theme.palette.mode === 'light' ? '#E9E9EA' : '#39393D',
 						opacity: 1,
-						transition: theme.transitions.create(['background-color'], {
-							duration: 500,
-						}),
+						transition: theme.transitions.create(['background-color'], { duration: 500 }),
 					},
 				},
 				sizeMedium: {
@@ -305,9 +358,7 @@ theme = createTheme(theme, {
 						borderRadius: 26 / 2,
 						backgroundColor: theme.palette.mode === 'light' ? '#E9E9EA' : '#39393D',
 						opacity: 1,
-						transition: theme.transitions.create(['background-color'], {
-							duration: 500,
-						}),
+						transition: theme.transitions.create(['background-color'], { duration: 500 }),
 					},
 				},
 			},
