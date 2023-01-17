@@ -117,7 +117,15 @@ let theme = createTheme({
 	shape: {
 		borderRadius: 10,
 	},
-	components: {},
+	components: {
+		MuiContainer: {
+			styleOverrides: {
+				maxWidthLg: {
+					maxWidth: '1290px !important',
+				},
+			},
+		},
+	},
 });
 
 theme = createTheme(theme, {
