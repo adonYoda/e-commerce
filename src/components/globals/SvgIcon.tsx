@@ -2,13 +2,14 @@ import { styled } from '@mui/material';
 import { FC, ReactNode } from 'react';
 import theme from 'src/utils/theme/theme';
 
-const SvgIconContainer = styled('span')<{ size?: number; color?: string }>`
+const SvgIconContainer = styled('span')<{ size?: number; color?: string; invertedColor?: boolean }>`
 	display: contents;
 	& svg {
 		width: ${({ size }) => `${size}px` ?? `24px`};
 		height: ${({ size }) => `${size}px` ?? `24px`};
 		& path {
-			fill: ${({ theme, color }) => color ?? theme.palette.text.primary};
+			fill: ${({ theme, color, invertedColor }) => color ?? theme.palette.text.primary};
+			filter: ${({ invertedColor }) => (invertedColor ? 'invert(1)' : 'none')};
 		}
 	}
 `;
@@ -16,12 +17,13 @@ const SvgIconContainer = styled('span')<{ size?: number; color?: string }>`
 interface Props {
 	size?: number;
 	color?: string;
+	invertedColor?: boolean;
 	icon: ReactNode;
 }
 
-const SvgIcon: FC<Props> = ({ size, color, icon }) => {
+const SvgIcon: FC<Props> = ({ size, color, invertedColor, icon }) => {
 	return (
-		<SvgIconContainer size={size} color={color}>
+		<SvgIconContainer size={size} color={color} invertedColor={invertedColor}>
 			{icon}
 		</SvgIconContainer>
 	);

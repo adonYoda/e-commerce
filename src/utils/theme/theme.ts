@@ -57,11 +57,9 @@ let theme = createTheme({
 			paper: '#fff',
 		},
 		text: {
-			// primary: '#000000',
-			// primary: `hsl(50, 0%, ${calcColor()})`,
 			primary: `#000000`,
-			secondary: '#393939',
-			disabled: '#AAAAAA',
+			secondary: 'rgba(0, 0, 0, 0.55)',
+			disabled: 'rgba(0, 0, 0, 0.3)',
 		},
 		success: {
 			main: '#90DA1A',
