@@ -1,40 +1,59 @@
 import { createTheme, ThemeOptions } from '@mui/material/styles';
+import React from 'react';
 declare module '@mui/material/styles' {
-	interface Theme {
-		sizes: {
-			height: {
-				formControl: {
-					small: number;
-					medium: number;
-					large: number;
-				};
-			};
-		};
+	interface TypographyVariants {
+		display: React.CSSProperties;
+		lead: React.CSSProperties;
+		body15: React.CSSProperties;
+		body17: React.CSSProperties;
+		body21: React.CSSProperties;
+		caption1: React.CSSProperties;
+		caption2: React.CSSProperties;
+		caption3: React.CSSProperties;
+		caption4: React.CSSProperties;
 	}
+
 	// allow configuration using `createTheme`
-	interface ThemeOptions {
-		sizes: {
-			height: {
-				formControl: {
-					small: number;
-					medium: number;
-					large: number;
-				};
-			};
-		};
+	interface TypographyVariantsOptions {
+		display?: React.CSSProperties;
+		lead?: React.CSSProperties;
+		body15?: React.CSSProperties;
+		body17?: React.CSSProperties;
+		body21?: React.CSSProperties;
+		caption1?: React.CSSProperties;
+		caption2?: React.CSSProperties;
+		caption3?: React.CSSProperties;
+		caption4?: React.CSSProperties;
+	}
+}
+
+// Update the Typography's variant prop options
+declare module '@mui/material/Typography' {
+	interface TypographyPropsVariantOverrides {
+		display: true;
+		lead: true;
+		body15: true;
+		body17: true;
+		body21: true;
+		caption1: true;
+		caption2: true;
+		caption3: true;
+		caption4: true;
+	}
+}
+
+declare module '@mui/material/styles/createPalette' {
+	interface Text {
+		extra: string;
+		placeholder: string;
+	}
+	interface TypeText {
+		extra?: string;
+		placeholder?: string;
 	}
 }
 
 let theme = createTheme({
-	sizes: {
-		height: {
-			formControl: {
-				small: 40,
-				medium: 50,
-				large: 60,
-			},
-		},
-	},
 	palette: {
 		grey: {
 			A100: 'rgba(0,0,0,0.05)',
@@ -58,8 +77,10 @@ let theme = createTheme({
 		},
 		text: {
 			primary: `#000000`,
-			secondary: 'rgba(0, 0, 0, 0.55)',
+			secondary: 'rgba(0, 0, 0, 0.6)',
 			disabled: 'rgba(0, 0, 0, 0.3)',
+			extra: 'rgba(0, 0, 0, 0.5)',
+			placeholder: 'rgba(0, 0, 0, 0.3)',
 		},
 		success: {
 			main: '#90DA1A',
@@ -76,46 +97,99 @@ let theme = createTheme({
 	},
 	typography: {
 		fontFamily: 'Inter',
-		h1: {
-			fontWeight: 500,
-			fontSize: 72,
-		},
-		h2: {
-			fontSize: 64,
-			fontWeight: 500,
-		},
 		fontSize: 16,
 		htmlFontSize: 16,
-		h3: {
-			fontSize: 48,
+		display: {
 			fontWeight: 500,
+			fontSize: '120px',
+			lineHeight: '120px',
+			letterSpacing: '-6px',
+		},
+		lead: {
+			fontSize: '24px',
+			lineHeight: '30px',
+			letterSpacing: '-1px',
+		},
+		body15: {
+			fontSize: '15px',
+			lineHeight: '23px',
+			letterSpacing: '-0.6px',
+		},
+		body17: {
+			fontSize: '17px',
+			lineHeight: '25px',
+			letterSpacing: '-0.7px',
+		},
+		body21: {
+			fontSize: '21px',
+			lineHeight: '30px',
+			letterSpacing: '-0.8px',
+		},
+		caption1: {
+			fontSize: '20px',
+			lineHeight: '24px',
+			letterSpacing: '-0.6px',
+		},
+		caption2: {
+			fontSize: '18px',
+			lineHeight: '20px',
+			letterSpacing: '-0.3px',
+		},
+		caption3: {
+			fontSize: '16px',
+			lineHeight: '18px',
+			letterSpacing: '-0.5px',
+		},
+		caption4: {
+			fontSize: '13px',
+			lineHeight: '15px',
+			letterSpacing: '-0.2px',
+		},
+		h1: {
+			fontWeight: 500,
+			fontSize: '72px',
+			lineHeight: '80px',
+			letterSpacing: '-4.5px',
+		},
+		h2: {
+			fontSize: '64px',
+			fontWeight: 500,
+			lineHeight: '70px',
+			letterSpacing: '-3px',
+		},
+		h3: {
+			fontSize: '48px',
+			fontWeight: 500,
+			lineHeight: '54px',
+			letterSpacing: '-1.6px',
 		},
 		h4: {
-			fontSize: 36,
+			fontSize: '36px',
 			fontWeight: 500,
+			lineHeight: '44px',
+			letterSpacing: '-1.2px',
 		},
 		h5: {
-			fontSize: 28,
+			fontSize: '28px',
 			fontWeight: 500,
-		},
-		body1: {
-			fontSize: 15,
-		},
-		body2: {
-			fontSize: 17,
+			lineHeight: '34px',
+			letterSpacing: '-0.8px',
 		},
 		button: {
 			fontSize: 16,
-		},
-		caption: {
-			fontSize: 20,
-			fontWeight: 500,
 		},
 	},
 	shape: {
 		borderRadius: 10,
 	},
 	components: {
+		MuiDivider: {
+			styleOverrides: {
+				root: {
+					borderColor: 'rgba(0, 0, 0, 0.2)',
+				},
+			},
+		},
 		MuiContainer: {
 			styleOverrides: {
 				maxWidthLg: {
@@ -123,14 +197,9 @@ let theme = createTheme({
 				},
 			},
 		},
-	},
-});
-
-theme = createTheme(theme, {
-	components: {
 		MuiFormControl: {
 			styleOverrides: {
-				root: {
+				root: ({ theme }) => ({
 					'&:has(input:focus)': {
 						'& .MuiFormLabel-root': {
 							color: theme.palette.primary.main,
@@ -154,12 +223,12 @@ theme = createTheme(theme, {
 					'& .MuiInputBase-input': {
 						fontWeight: 400,
 					},
-				},
+				}),
 			},
 		},
 		MuiChip: {
 			styleOverrides: {
-				root: {
+				root: ({ theme }) => ({
 					height: 24,
 					background: `${theme.palette.secondary.light}33`,
 					transition: 'all 0.3s ease 0s',
@@ -174,12 +243,12 @@ theme = createTheme(theme, {
 							color: theme.palette.secondary.dark,
 						},
 					},
-				},
+				}),
 			},
 		},
 		MuiButton: {
 			styleOverrides: {
-				root: {
+				root: ({ theme }) => ({
 					color: theme.palette.text.primary,
 					boxShadow: 'none',
 					textTransform: 'initial',
@@ -190,7 +259,7 @@ theme = createTheme(theme, {
 						background: theme.palette.action.disabledBackground,
 						borderColor: theme.palette.grey['A200'],
 					},
-				},
+				}),
 				sizeSmall: {
 					height: 40,
 					padding: 14,
@@ -206,24 +275,24 @@ theme = createTheme(theme, {
 					padding: 22,
 					fontSize: 20,
 				},
-				outlined: {
+				outlined: ({ theme }) => ({
 					borderColor: theme.palette.grey['A200'],
 					color: theme.palette.text.primary,
 					'&:hover': {
 						background: theme.palette.grey['A100'],
 						borderColor: theme.palette.grey['A200'],
 					},
-				},
+				}),
 			},
 		},
 		MuiIconButton: {
 			styleOverrides: {
-				root: {
+				root: ({ theme }) => ({
 					'& svg path': {
 						fill: theme.palette.text.disabled,
 					},
-				},
-				colorPrimary: {
+				}),
+				colorPrimary: ({ theme }) => ({
 					background: theme.palette.primary.main,
 					'& svg path': {
 						fill: theme.palette.common.white,
@@ -231,47 +300,31 @@ theme = createTheme(theme, {
 					'&:hover': {
 						background: theme.palette.primary.dark,
 					},
-				},
+				}),
 			},
 		},
 		MuiPagination: {
 			styleOverrides: {
-				root: {
+				root: ({ theme }) => ({
 					border: `1px solid ${theme.palette.grey['A200']}`,
 					borderRadius: theme.shape.borderRadius,
 					'& li div': {
 						height: '100%',
 					},
-				},
+				}),
 			},
 		},
 		MuiPaginationItem: {
 			styleOverrides: {
-				root: {
-					sizeSmall: {
-						height: 40,
-						width: 40,
-					},
-					sizeMedium: {
-						height: 50,
-						width: 50,
-					},
-					sizeLarge: {
-						height: 60,
-						width: 60,
-					},
+				root: ({ theme }) => ({
 					color: theme.palette.text.disabled,
 					fontSize: 18,
 					borderRadius: 0,
 					margin: 0,
-				},
+				}),
 				sizeSmall: {
 					height: 40,
 					width: 40,
-				},
-				sizeMedium: {
-					height: 50,
-					width: 50,
 				},
 				sizeLarge: {
 					height: 60,
@@ -281,7 +334,7 @@ theme = createTheme(theme, {
 		},
 		MuiSwitch: {
 			styleOverrides: {
-				sizeSmall: {
+				sizeSmall: ({ theme }) => ({
 					width: 54,
 					height: 30,
 					padding: 0,
@@ -323,8 +376,8 @@ theme = createTheme(theme, {
 						opacity: 1,
 						transition: theme.transitions.create(['background-color'], { duration: 500 }),
 					},
-				},
-				sizeMedium: {
+				}),
+				sizeMedium: ({ theme }) => ({
 					width: 42,
 					height: 24,
 					padding: 0,
@@ -366,7 +419,7 @@ theme = createTheme(theme, {
 						opacity: 1,
 						transition: theme.transitions.create(['background-color'], { duration: 500 }),
 					},
-				},
+				}),
 			},
 		},
 	},
