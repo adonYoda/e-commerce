@@ -7,6 +7,9 @@ export const GlobalStyles = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
+    * {
+        box-sizing: border-box;
+    }
 
     a {
         text-decoration: inherit;

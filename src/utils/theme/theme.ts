@@ -25,6 +25,19 @@ declare module '@mui/material/styles' {
 		caption3?: React.CSSProperties;
 		caption4?: React.CSSProperties;
 	}
+
+	interface FormControlPropsSize {
+		size: string;
+	}
+	interface FormControlPropsSizeOptions {
+		size?: string;
+	}
+	interface TextFieldPropsSize {
+		size: string;
+	}
+	interface TextFieldPropsSizeOptions {
+		size?: string;
+	}
 }
 
 // Update the Typography's variant prop options
@@ -41,7 +54,16 @@ declare module '@mui/material/Typography' {
 		caption4: true;
 	}
 }
-
+declare module '@mui/material/FormControl' {
+	interface FormControlPropsSizeOverrides {
+		large: true;
+	}
+}
+declare module '@mui/material/TextField' {
+	interface TextFieldPropsSizeOverrides {
+		large: true;
+	}
+}
 declare module '@mui/material/styles/createPalette' {
 	interface Text {
 		extra: string;
@@ -198,6 +220,281 @@ let theme = createTheme({
 			},
 		},
 		MuiFormControl: {
+			variants: [
+				{
+					props: { size: 'large' },
+					style: ({ theme }) => ({
+						'& .MuiFormLabel-root': {
+							transform: 'translate(calc((60px - 22px)/2), calc(60px / 2 - 16px / 2)) scale(1)',
+							fontSize: '20px',
+							'&[data-shrink="true"]': {
+								transform: 'translate(12px, -9px) scale(0.75)',
+							},
+						},
+						'& .MuiOutlinedInput-root': {
+							'& fieldset': {
+								borderColor: theme.palette.grey['A200'],
+								transition: 'all 0.3s ease 0s',
+							},
+							'&:not(:has(input:focus)):hover fieldset': {
+								borderColor: theme.palette.grey['400'],
+							},
+							'&.Mui-focused fieldset': {},
+						},
+						'& .MuiInputBase-root': {
+							height: '60px',
+						},
+						'& .MuiIconButton-root': {
+							padding: 'calc((60px - 22px)/2)',
+							'& svg': {
+								width: '22px',
+								height: '22px',
+							},
+						},
+						'& .MuiInputBase-input': {
+							padding: '0px calc((60px - 22px)/2)',
+							fontWeight: 400,
+							lineHeight: '16px',
+							fontSize: '20px',
+						},
+						'& .MuiInputAdornment-root': {
+							'& svg': {
+								'& path': {
+									fill: theme.palette.text.placeholder,
+								},
+							},
+						},
+					}),
+				},
+				{
+					props: { size: 'medium' },
+					style: ({ theme }) => ({
+						'& .MuiFormLabel-root': {
+							transform: 'translate(calc((50px - 18.3px)/2), calc(50px / 2 - 16px / 2)) scale(1)',
+							fontSize: '18px',
+							'&[data-shrink="true"]': {
+								transform: 'translate(14px, -9px) scale(0.75)',
+							},
+						},
+						'& .MuiOutlinedInput-root': {
+							'& fieldset': {
+								borderColor: theme.palette.grey['A200'],
+								transition: 'all 0.3s ease 0s',
+							},
+							'&:not(:has(input:focus)):hover fieldset': {
+								borderColor: theme.palette.grey['400'],
+							},
+							'&.Mui-focused fieldset': {},
+						},
+						'& .MuiInputBase-root': {
+							height: '50px',
+						},
+						'& .MuiIconButton-root': {
+							padding: 'calc((50px - 18.3px)/2)',
+							'& svg': {
+								width: '18.3px',
+								height: '18.3px',
+							},
+						},
+						'& .MuiInputBase-input': {
+							padding: '0px calc((50px - 18.3px)/2)',
+							fontWeight: 400,
+							lineHeight: '16px',
+							fontSize: '18px',
+						},
+					}),
+				},
+				{
+					props: { size: 'small' },
+					style: ({ theme }) => ({
+						'& .MuiFormLabel-root': {
+							transform: 'translate(calc((40px - 16.5px)/2), calc(40px / 2 - 16px / 2)) scale(1)',
+							fontSize: '16px',
+							'&[data-shrink="true"]': {
+								transform: 'translate(16px, -9px) scale(0.75)',
+							},
+						},
+						'& .MuiOutlinedInput-root': {
+							'& fieldset': {
+								borderColor: theme.palette.grey['A200'],
+								transition: 'all 0.3s ease 0s',
+							},
+							'&:not(:has(input:focus)):hover fieldset': {
+								borderColor: theme.palette.grey['400'],
+							},
+							'&.Mui-focused fieldset': {},
+						},
+						'& .MuiInputBase-root': {
+							height: '40px',
+						},
+						'& .MuiIconButton-root': {
+							padding: 'calc((40px - 16.5px)/2)',
+							'& svg': {
+								width: '16.5px',
+								height: '16.5px',
+							},
+						},
+						'& .MuiInputBase-input': {
+							padding: '0px calc((40px - 16.5px)/2)',
+							fontWeight: 400,
+							lineHeight: '16px',
+							fontSize: '16px',
+						},
+					}),
+				},
+			],
+			defaultProps: {
+				size: 'medium',
+			},
+			styleOverrides: {
+				root: ({ theme }) => ({
+					borderRadius: theme.shape.borderRadius,
+					'&:has(input:focus)': {
+						'& .MuiFormLabel-root': {
+							color: theme.palette.primary.main,
+						},
+					},
+					'& .MuiFormLabel-root': {
+						color: theme.palette.text.disabled,
+						fontWeight: 400,
+						lineHeight: '16px',
+					},
+					'& .MuiOutlinedInput-root': {
+						'& fieldset': {
+							borderColor: theme.palette.grey['A200'],
+							transition: 'all 0.3s ease 0s',
+						},
+						'&:not(:has(input:focus)):hover fieldset': {
+							borderColor: theme.palette.grey['400'],
+						},
+						'&.Mui-focused fieldset': {},
+					},
+					'& .MuiInputBase-input': {
+						fontWeight: 400,
+					},
+				}),
+			},
+		},
+		MuiTextField: {
+			variants: [
+				{
+					props: { size: 'large' },
+					style: ({ theme }) => ({
+						'& .MuiFormLabel-root': {
+							transform: 'translate(calc((60px - 22px)/2), calc(60px / 2 - 16px / 2)) scale(1)',
+							fontSize: '20px',
+							'&[data-shrink="true"]': {
+								transform: 'translate(12px, -9px) scale(0.75)',
+							},
+						},
+						'& .MuiOutlinedInput-root': {
+							'& fieldset': {
+								borderColor: theme.palette.grey['A200'],
+								transition: 'all 0.3s ease 0s',
+							},
+							'&:not(:has(input:focus)):hover fieldset': {
+								borderColor: theme.palette.grey['400'],
+							},
+							'&.Mui-focused fieldset': {},
+						},
+						'& .MuiInputBase-root': {
+							height: '60px',
+						},
+						'& .MuiIconButton-root': {
+							padding: 'calc((60px - 22px)/2)',
+							'& svg': {
+								width: '22px',
+								height: '22px',
+							},
+						},
+						'& .MuiInputBase-input': {
+							padding: '0px calc((60px - 22px)/2)',
+							fontWeight: 400,
+							lineHeight: '16px',
+							fontSize: '20px',
+						},
+					}),
+				},
+				{
+					props: { size: 'medium' },
+					style: ({ theme }) => ({
+						'& .MuiFormLabel-root': {
+							transform: 'translate(calc((50px - 18.3px)/2), calc(50px / 2 - 16px / 2)) scale(1)',
+							fontSize: '18px',
+							'&[data-shrink="true"]': {
+								transform: 'translate(14px, -9px) scale(0.75)',
+							},
+						},
+						'& .MuiOutlinedInput-root': {
+							'& fieldset': {
+								borderColor: theme.palette.grey['A200'],
+								transition: 'all 0.3s ease 0s',
+							},
+							'&:not(:has(input:focus)):hover fieldset': {
+								borderColor: theme.palette.grey['400'],
+							},
+							'&.Mui-focused fieldset': {},
+						},
+						'& .MuiInputBase-root': {
+							height: '50px',
+						},
+						'& .MuiIconButton-root': {
+							padding: 'calc((50px - 18.3px)/2)',
+							'& svg': {
+								width: '18.3px',
+								height: '18.3px',
+							},
+						},
+						'& .MuiInputBase-input': {
+							padding: '0px calc((50px - 18.3px)/2)',
+							fontWeight: 400,
+							lineHeight: '16px',
+							fontSize: '18px',
+						},
+					}),
+				},
+				{
+					props: { size: 'small' },
+					style: ({ theme }) => ({
+						'& .MuiFormLabel-root': {
+							transform: 'translate(calc((40px - 16.5px)/2), calc(40px / 2 - 16px / 2)) scale(1)',
+							fontSize: '16px',
+							'&[data-shrink="true"]': {
+								transform: 'translate(16px, -9px) scale(0.75)',
+							},
+						},
+						'& .MuiOutlinedInput-root': {
+							'& fieldset': {
+								borderColor: theme.palette.grey['A200'],
+								transition: 'all 0.3s ease 0s',
+							},
+							'&:not(:has(input:focus)):hover fieldset': {
+								borderColor: theme.palette.grey['400'],
+							},
+							'&.Mui-focused fieldset': {},
+						},
+						'& .MuiInputBase-root': {
+							height: '40px',
+						},
+						'& .MuiIconButton-root': {
+							padding: 'calc((40px - 16.5px)/2)',
+							'& svg': {
+								width: '16.5px',
+								height: '16.5px',
+							},
+						},
+						'& .MuiInputBase-input': {
+							padding: '0px calc((40px - 16.5px)/2)',
+							fontWeight: 400,
+							lineHeight: '16px',
+							fontSize: '16px',
+						},
+					}),
+				},
+			],
+			defaultProps: {
+				size: 'medium',
+			},
 			styleOverrides: {
 				root: ({ theme }) => ({
 					'&:has(input:focus)': {
@@ -263,17 +560,25 @@ let theme = createTheme({
 				sizeSmall: {
 					height: 40,
 					padding: 14,
-					fontSize: 16,
+					fontWeight: 500,
+					fontSize: '16px',
+					lineHeight: '18px',
+					letterSpacing: '-0.5px',
 				},
 				sizeMedium: {
 					height: 50,
 					padding: 18,
-					fontSize: 18,
+					fontWeight: 500,
+					fontSize: '18px',
+					lineHeight: '20px',
+					letterSpacing: '-0.3px',
 				},
 				sizeLarge: {
 					height: 60,
 					padding: 22,
-					fontSize: 20,
+					fontSize: '20px',
+					lineHeight: '24px',
+					letterSpacing: '-0.6px',
 				},
 				outlined: ({ theme }) => ({
 					borderColor: theme.palette.grey['A200'],
