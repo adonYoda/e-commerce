@@ -1,5 +1,4 @@
 import { styled } from '@mui/material';
-import './App.css';
 import AppBar from './components/globals/AppBar';
 import Header from './components/Header';
 

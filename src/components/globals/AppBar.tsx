@@ -1,4 +1,4 @@
-import { alpha, Button, Grid, InputBase, Stack, styled } from "@mui/material";
+import { alpha, Button, Divider, Grid, InputBase, Stack, styled } from "@mui/material";
 import React from "react";
 import theme from "src/utils/theme/theme";
 //import styled from "styled-components";
@@ -22,6 +22,7 @@ const MenuBar = styled("div")(({theme})=>({
     flexDirection: "row",
     flexWrap: "nowrap",
     width: "80%",
+    margin: "20px"
 }))
 
 const IconBar = styled("div")(({theme})=>({
@@ -109,6 +110,7 @@ const AppBar = () => {
         <SvgIcon color="white" icon={<UserIcon />} />
         </IconBar>
       </SearchBar>
+      
     </Stack>
   );
 };
