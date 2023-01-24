@@ -3,6 +3,7 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import Nike from "../../assets/Images/Nike.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { height } from "@mui/system";
 
 const Test = styled("div")((theme) => ({
   backgroundColor: "#17181F",
@@ -11,6 +12,9 @@ const Test = styled("div")((theme) => ({
 }));
 const StyledCarousel = styled(Carousel)((theme) => ({
   paddingTop: "30px",
+  "& .carousel .slider-wrapper":{width: "100%"},
+  //height: "570px",
+  "& .carousel .slider":{height: "100%"}
   //   "& li":{listStyle: "none"},
   //   //listStyle: "none"
   //     display: "flex",
@@ -19,32 +23,37 @@ const StyledCarousel = styled(Carousel)((theme) => ({
 }));
 
 const Image = styled("img")((theme) => ({
-  height: "500px",
-  width: "200px",
+  height: "100%",
+  width: "100%",
 }));
+
+const ImageWrapper = styled("div")((theme) => ({
+    width: "100%",
+    height: "100%",
+}))
 
 const Header = () => {
   return (
     <Test>
-      <Divider sx={{ borderWidth: "0.5px", borderColor: "white" }} />
+      <Divider sx={{ filter: "invert(1)" }} />
       <Container>
         <StyledCarousel>
-          <div>
+          <ImageWrapper>
             <Image src={Nike} alt="" />
             <p>NIKE1</p>
-          </div>
-          <div>
+          </ImageWrapper>
+          <ImageWrapper>
             <Image src={Nike} alt="" />
             <p>NIKE2</p>
-          </div>
-          <div>
+          </ImageWrapper>
+          <ImageWrapper>
             <Image src={Nike} alt="" />
             <p>NIKE3</p>
-          </div>
-          <div>
+          </ImageWrapper>
+          <ImageWrapper>
             <Image src={Nike} alt="" />
             <p>NIKE4</p>
-          </div>
+          </ImageWrapper>
         </StyledCarousel>
       </Container>
     </Test>
