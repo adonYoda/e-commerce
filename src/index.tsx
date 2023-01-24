@@ -5,7 +5,9 @@ import { ThemeProvider } from '@mui/material';
 import theme from './utils/theme/theme';
 import { GlobalStyles } from './styles/GlobalStyles.styled';
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
 root.render(
 	<React.StrictMode>
 		<ThemeProvider theme={theme}>
