@@ -13,14 +13,9 @@ const Test = styled("div")((theme) => ({
 const StyledCarousel = styled(Carousel)((theme) => ({
   paddingTop: "30px",
   "& .carousel .slider-wrapper":{width: "100%"},
-  //height: "570px",
   "& .carousel .slider":{height: "100%"}
-  //   "& li":{listStyle: "none"},
-  //   //listStyle: "none"
-  //     display: "flex",
-  //     flexWrap: "nowrap"
-  //   //    justifyContent: "center",
 }));
+
 
 const Image = styled("img")((theme) => ({
   height: "100%",
@@ -37,7 +32,7 @@ const Header = () => {
     <Test>
       <Divider sx={{ filter: "invert(1)" }} />
       <Container>
-        <StyledCarousel>
+        <StyledCarousel infiniteLoop={true} >
           <ImageWrapper>
             <Image src={Nike} alt="" />
             <p>NIKE1</p>
