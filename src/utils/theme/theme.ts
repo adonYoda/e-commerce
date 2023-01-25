@@ -219,6 +219,9 @@ let theme = createTheme({
 		},
 		MuiContainer: {
 			styleOverrides: {
+				root: {
+					position: 'relative',
+				},
 				maxWidthLg: {
 					maxWidth: '1290px !important',
 				},
