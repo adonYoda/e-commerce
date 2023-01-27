@@ -1,3 +1,4 @@
+import { Container } from '@mui/material';
 import React from 'react';
 import { CategoriesColumn, CategoriesContainer, CategoriesRow } from './Categories.styled';
 import Category from './Category';
@@ -38,23 +39,25 @@ const categories = [
 const Categories = () => {
 	return (
 		<CategoriesContainer>
-			<CategoriesRow>
-				<Category {...categories[0]} />
-				<CategoriesColumn>
-					{categories.map(
-						(c, i) =>
-							!c.large && (
-								<Category
-									key={c.title}
-									imageSrc={c.imageSrc}
-									imageAlt={c.imageAlt}
-									title={c.title}
-									large={c.large}
-								/>
-							)
-					)}
-				</CategoriesColumn>
-			</CategoriesRow>
+			<Container>
+				<CategoriesRow>
+					<Category {...categories[0]} />
+					<CategoriesColumn>
+						{categories.map(
+							(c, i) =>
+								!c.large && (
+									<Category
+										key={c.title}
+										imageSrc={c.imageSrc}
+										imageAlt={c.imageAlt}
+										title={c.title}
+										large={c.large}
+									/>
+								)
+						)}
+					</CategoriesColumn>
+				</CategoriesRow>
+			</Container>
 		</CategoriesContainer>
 	);
 };

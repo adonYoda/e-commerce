@@ -34,6 +34,7 @@ export const FooterContentLink = styled(Typography)`
 	margin-bottom: 16px;
 	font-weight: 500;
 	transition: all 0.3s ease 0s;
+	cursor: pointer;
 	&:hover {
 		color: ${({ theme }) => theme.palette.text.primary};
 	}

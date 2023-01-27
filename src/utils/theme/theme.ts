@@ -526,7 +526,11 @@ let theme = createTheme({
 							'&-input': {
 								padding: '0px calc((40px - 16.5px)/2)',
 								fontSize: '16px',
+								'&::placeholder': {
+									letterSpacing: '-0.5px',
+								},
 							},
+
 							'&-adornedStart': {
 								paddingLeft: '0px calc((40px - 16.5px)/2)',
 							},
@@ -559,13 +563,14 @@ let theme = createTheme({
 			styleOverrides: {
 				root: ({ theme }) => ({
 					borderRadius: theme.shape.borderRadius,
+
 					'&:has(input:focus)': {
 						'& .MuiFormLabel-root': {
 							color: theme.palette.primary.main,
 						},
 					},
 					'& .MuiFormLabel-root': {
-						color: theme.palette.text.disabled,
+						color: theme.palette.text.placeholder,
 						fontWeight: 400,
 						lineHeight: '16px',
 					},
@@ -589,7 +594,7 @@ let theme = createTheme({
 							margin: 0,
 							'& svg': {
 								'& path': {
-									fill: theme.palette.text.placeholder,
+									fill: theme.palette.text.secondary,
 								},
 							},
 						},
@@ -666,9 +671,21 @@ let theme = createTheme({
 		},
 		MuiIconButton: {
 			styleOverrides: {
+				sizeLarge: {
+					width: '60px',
+					height: '60px',
+				},
+				sizeMedium: {
+					width: '50px',
+					height: '50px',
+				},
+				sizeSmall: {
+					width: '40px',
+					height: '40px',
+				},
 				root: ({ theme }) => ({
 					'& svg path': {
-						fill: theme.palette.text.disabled,
+						fill: theme.palette.text.primary,
 					},
 				}),
 				colorPrimary: ({ theme }) => ({
