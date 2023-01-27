@@ -1,6 +1,6 @@
 import { Button, FormControl, InputAdornment, styled, Typography } from '@mui/material';
 
-export const NewsletterSection = styled('section')`
+export const NewsletterContainer = styled('div')`
 	display: flex;
 	overflow: hidden;
 `;

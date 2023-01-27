@@ -11,8 +11,8 @@ const SvgIconContainer = styled('span')<{
 }>`
 	display: contents;
 	& svg {
-		width: ${({ size, width }) => `${width}px` ?? `${size}px` ?? `24px`};
-		height: ${({ size, height }) => `${height}px` ?? `${size}px` ?? `24px`};
+		width: ${({ size, width }) => (width ? `${width}px` : size ? `${size}px` : `24px`)};
+		height: ${({ size, height }) => (height ? `${height}px` : size ? `${size}px` : `24px`)};
 		& path {
 			fill: ${({ theme, color }) => color ?? theme.palette.text.primary};
 			filter: ${({ invertedColor }) => (invertedColor ? 'invert(1)' : 'invert(0)')};

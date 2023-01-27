@@ -1,7 +1,7 @@
 import React from 'react';
 import {
 	NewsletterCaption,
-	NewsletterSection,
+	NewsletterContainer,
 	NewsletterContent,
 	NewsletterForm,
 	NewsletterImage,
@@ -29,7 +29,7 @@ import { ReactComponent as MailIcon } from '../../assets/icons/Base/envelope.svg
 
 const Newsletter = () => {
 	return (
-		<NewsletterSection>
+		<NewsletterContainer>
 			<NewsletterContent>
 				<Container>
 					<NewsletterBody>
@@ -57,7 +57,7 @@ const Newsletter = () => {
 			<NewsletterImage>
 				<img src={newsletterImg} alt='' />
 			</NewsletterImage>
-		</NewsletterSection>
+		</NewsletterContainer>
 	);
 };
 

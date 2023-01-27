@@ -1,14 +1,5 @@
-import { styled } from '@mui/material';
-import AppBar from './components/globals/AppBar';
-import Header from './components/Header';
-
 function App() {
-  return (
-    <div>
-      <AppBar />
-	  <Header/>
-    </div>
-  );
+	return <div></div>;
 }
 
 export default App;
