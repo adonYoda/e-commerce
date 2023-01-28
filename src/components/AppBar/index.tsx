@@ -28,9 +28,9 @@ const StackStyled = styled(Stack)<{ dark?: boolean }>(({ theme, dark }) => ({
 	padding: '0 30px 0 15px',
 	width: '100%',
 	height: '80px',
-	backgroundColor: theme.palette.background.paper,
-	filter: dark ? 'invert(1)' : 'invert(0)',
-	borderBottom: dark ? theme.palette.grey['A200'] : theme.palette.grey['A100'],
+	backgroundColor: dark ? '#17181f' : theme.palette.background.paper,
+	borderBottom: `1px solid ${dark ? theme.palette.grey[800] : theme.palette.grey['A100']}`,
+	transition: 'all 0.3s ease 0s',
 	'& .MuiInputBase': {
 		'&-root': {
 			'& fieldset': {
@@ -48,24 +48,27 @@ const StackStyled = styled(Stack)<{ dark?: boolean }>(({ theme, dark }) => ({
 	},
 }));
 
-const MenuBar = styled('ul')(({ theme }) => ({
+const MenuBar = styled('ul')<{ dark?: boolean }>(({ theme, dark }) => ({
 	display: 'flex',
 	alignItems: 'center',
 	paddingLeft: '10px',
 	marginRight: 'auto',
+	filter: dark ? 'invert(1)' : 'invert(0)',
 }));
 const MenuItem = styled('li')(({ theme }) => ({
 	listStyle: 'none',
 }));
-const SearchBar = styled('div')(({ theme }) => ({
+const SearchBar = styled('div')<{ dark?: boolean }>(({ theme, dark }) => ({
 	display: 'flex',
 	alignItems: 'center',
 	gap: '5px',
+	filter: dark ? 'invert(1)' : 'invert(0)',
 }));
 
-const MyButton = styled(Button)(({ theme }) => ({
+const MyButton = styled(Button)<{ dark?: boolean }>(({ theme, dark }) => ({
 	padding: '15px',
 	color: theme.palette.text.secondary,
+	filter: dark ? 'invert(1)' : 'invert(0)',
 	'&:hover': {
 		color: theme.palette.text.primary,
 	},
@@ -87,10 +90,10 @@ interface Props {
 const AppBar: FC<Props> = ({ dark }) => {
 	return (
 		<StackStyled dark={dark}>
-			<MyButton>
+			<MyButton dark={dark}>
 				<SvgIcon width={67} icon={<LogoIcon />} />
 			</MyButton>
-			<MenuBar>
+			<MenuBar dark={dark}>
 				<MenuItem>
 					<MyButton>Men</MyButton>
 				</MenuItem>
@@ -110,7 +113,7 @@ const AppBar: FC<Props> = ({ dark }) => {
 					<MyButton>Blog</MyButton>
 				</MenuItem>
 			</MenuBar>
-			<SearchBar>
+			<SearchBar dark={dark}>
 				<Search>
 					<TextField
 						placeholder='Search'
