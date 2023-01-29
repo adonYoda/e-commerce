@@ -17,7 +17,7 @@ import theme from 'src/utils/theme/theme';
 import { ReactComponent as SearchIcon } from '../../assets/icons/Base/search.svg';
 import { ReactComponent as BagIcon } from '../../assets/icons/Base/shopping-bag.svg';
 import { ReactComponent as UserIcon } from '../../assets/icons/Base/user.svg';
-import SvgIcon from '../globals/SvgIcon';
+import SvgIcon from '../../components/globals/SvgIcon';
 import { ReactComponent as LogoIcon } from '../../assets/icons/Base/logo.svg';
 
 const StackStyled = styled(Stack)<{ dark?: boolean }>(({ theme, dark }) => ({

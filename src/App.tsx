@@ -1,10 +1,17 @@
-import { RouterProvider } from 'react-router-dom';
-import { router } from './services/router/router';
+import Header from './scenes/Header';
+import Footer from './scenes/Footer';
+import { useState } from 'react';
+import { useWindowScrollPosition } from './hooks/useWindowScrollPosition';
+import Main from './scenes/Main';
 
 function App() {
+	const position = useWindowScrollPosition();
+
 	return (
 		<>
-			<RouterProvider router={router} />
+			<Header dark={position > 570 ? false : true} />
+			<Main />
+			<Footer />
 		</>
 	);
 }
