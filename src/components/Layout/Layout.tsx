@@ -1,7 +1,7 @@
 import { styled } from '@mui/material';
 import React, { FC, ReactNode } from 'react';
-import Footer from 'src/scenes/Footer/Footer';
-import AppBar from '../AppBar';
+import Footer from 'src/components/Footer/Footer';
+import Header from '../Header';
 
 const LayoutContainer = styled('div')`
 	position: relative;
@@ -15,7 +15,7 @@ interface Props {
 const Layout: FC<Props> = ({ children, dark }) => {
 	return (
 		<LayoutContainer>
-			<AppBar dark={dark} />
+			<Header dark={dark} />
 			{children}
 			<Footer />
 		</LayoutContainer>
