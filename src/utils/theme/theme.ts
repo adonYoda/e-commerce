@@ -38,6 +38,20 @@ declare module '@mui/material/styles' {
 	interface TextFieldPropsSizeOptions {
 		large?: string;
 	}
+	interface FormControlLabelProps {
+		size: {
+			large: string;
+			medium: string;
+			small: string;
+		};
+	}
+	interface FormControlLabelPropsOptions {
+		size?: {
+			large?: string;
+			medium?: string;
+			small?: string;
+		};
+	}
 }
 
 // Update the Typography's variant prop options
@@ -62,6 +76,12 @@ declare module '@mui/material/FormControl' {
 		darkOutlined: true;
 	}
 }
+declare module '@mui/material/FormControlLabel' {
+	interface FormControlLabelProps {
+		size?: 'small' | 'medium' | 'large';
+	}
+}
+// FormControlLabelProps
 
 declare module '@mui/material/TextField' {
 	interface TextFieldPropsSizeOverrides {
@@ -210,6 +230,129 @@ let theme = createTheme({
 		borderRadius: 10,
 	},
 	components: {
+		MuiFormControlLabel: {
+			variants: [
+				{
+					props: { size: 'large' },
+					style: ({ theme }) => ({
+						height: '50px',
+						marginLeft: '16px',
+						'& .MuiCheckbox-root': {
+							'& svg': {
+								height: '24px',
+								width: '24px',
+								'& path': {},
+							},
+						},
+						'& .MuiTypography-root': {
+							marginLeft: '10px',
+							fontSize: '20px',
+							lineHeight: '24px',
+							letterSpacing: '-0.6px',
+						},
+					}),
+				},
+				{
+					props: { size: 'medium' },
+					style: ({ theme }) => ({
+						height: '40px',
+						marginLeft: '12px',
+						'& .MuiCheckbox-root': {
+							'& svg': {
+								height: '20px',
+								width: '20px',
+								'& path': {},
+							},
+						},
+						'& .MuiTypography-root': {
+							marginLeft: '8px',
+							fontSize: '18px',
+							lineHeight: '20px',
+							letterSpacing: '-0.3px',
+						},
+					}),
+				},
+				{
+					props: { size: 'small' },
+					style: ({ theme }) => ({
+						height: '30px',
+						marginLeft: '8px',
+						'& .MuiButtonBase-root, .MuiCheckbox-root': {
+							minHeight: 'inherit',
+							width: '18px',
+							'& svg': {
+								height: '18px',
+								width: '18px',
+								'& path': {},
+							},
+						},
+						'& .MuiTypography-root': {
+							marginLeft: '6px',
+							fontSize: '16px',
+							lineHeight: '18px',
+							letterSpacing: '-0.5px',
+						},
+					}),
+				},
+			],
+			defaultProps: {
+				size: 'small',
+			},
+			styleOverrides: {
+				root: ({ theme }) => ({
+					'& .MuiCheckbox-root': {
+						'& svg': {
+							'& path:nth-child(2)': {
+								fill: theme.palette.text.extra,
+							},
+						},
+					},
+				}),
+			},
+		},
+		MuiAccordion: {
+			defaultProps: {
+				disableGutters: true,
+			},
+			styleOverrides: {
+				root: {
+					borderTopLeftRadius: '0px',
+					borderTopRightRadius: '0px',
+					boxShadow: 'none',
+					'&:before, &.Mui-expanded:before, &:first-of-type:before': {
+						display: 'block !important',
+						position: 'absolute',
+						left: '0',
+						top: '-1px',
+						right: '0',
+						height: '1px',
+						content: '',
+						opacity: '1',
+						backgroundColor: 'rgba(0,0,0,0.12)',
+					},
+					' .MuiButtonBase-root': {
+						minHeight: '50px',
+						padding: '0',
+						'&.Mui-expanded': {
+							minHeight: '50px',
+						},
+						' .MuiAccordionSummary-content': {
+							margin: '10px 0',
+						},
+						' .MuiTypography-root': {
+							fontSize: '18px',
+							lineHeight: '30px',
+							letterSpacing: '-0.3px',
+							fontWeight: '500',
+						},
+					},
+					' .MuiAccordionDetails-root': {
+						padding: '0',
+						margin: '6px 0 24px',
+					},
+				},
+			},
+		},
 		MuiDivider: {
 			styleOverrides: {
 				root: {
@@ -224,6 +367,47 @@ let theme = createTheme({
 				},
 				maxWidthLg: {
 					maxWidth: '1290px !important',
+				},
+			},
+		},
+		MuiPaper: {
+			styleOverrides: {
+				root: {
+					'&.MuiPopover-paper': {
+						marginTop: '10px',
+						border: '1px solid rgba(0, 0, 0, 0.1)',
+						boxShadow: '0px 1px 1px rgba(0, 0, 0, 0.06), 0px 3px 6px rgba(0, 0, 0, 0.1) !important',
+					},
+				},
+			},
+		},
+		MuiMenu: {
+			styleOverrides: {
+				root: ({ theme }) => ({
+					'& .MuiMenu-list': {
+						padding: '4px !important',
+					},
+					'& .MuiMenuItem-root': {
+						borderRadius: '5px',
+						'&:not(:last-child)': {
+							marginBottom: '4px !important',
+						},
+						'&.Mui-selected': {
+							backgroundColor: `${theme.palette.primary.main} !important`,
+							color: theme.palette.common.white,
+							'&:hover': {},
+						},
+					},
+				}),
+			},
+		},
+		MuiMenuItem: {
+			defaultProps: {
+				dense: true,
+			},
+			styleOverrides: {
+				root: {
+					fontWeight: 400,
 				},
 			},
 		},
@@ -273,6 +457,14 @@ let theme = createTheme({
 							},
 							'&-positionStart': {},
 						},
+						'& .MuiSelect-select': {
+							fontSize: '20px',
+							letterSpacing: '-0.6px',
+							paddingRight: '46px !important',
+							'& ~ svg': {
+								right: '15px',
+							},
+						},
 					}),
 				},
 				{
@@ -318,6 +510,14 @@ let theme = createTheme({
 								},
 							},
 							'&-positionStart': {},
+						},
+						'& .MuiSelect-select': {
+							fontSize: '18px',
+							letterSpacing: '-0.3px',
+							paddingRight: '42px !important',
+							'& ~ svg': {
+								right: '11px',
+							},
 						},
 					}),
 				},
@@ -365,6 +565,13 @@ let theme = createTheme({
 							},
 							'&-positionStart': {},
 						},
+						'& .MuiSelect-select': {
+							fontSize: '16px',
+							letterSpacing: '-0.5px',
+							'& ~ svg': {
+								right: '7px',
+							},
+						},
 					}),
 				},
 			],
@@ -408,6 +615,20 @@ let theme = createTheme({
 								},
 							},
 						},
+					},
+					'& svg': {
+						transition: 'all 0.2s ease 0s',
+					},
+					'& .MuiSelect-select': {
+						fontWeight: '500',
+						'& ~ svg': {
+							position: 'absolute',
+							width: '20px !important',
+							height: '20px !important',
+						},
+					},
+					'& .MuiMenuItem-root': {
+						fontSize: '10px',
 					},
 				}),
 			},

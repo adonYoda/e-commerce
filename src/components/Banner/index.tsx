@@ -7,8 +7,10 @@ import { ReactComponent as ArrowNextIcon } from '../../assets/icons/Navigation/a
 import { ReactComponent as ArrowPrevIcon } from '../../assets/icons/Navigation/angle-left-b.svg';
 import { ReactComponent as ArrowRightIcon } from '../../assets/icons/Navigation/arrow-right.svg';
 import theme from 'src/utils/theme/theme';
+import { headerSize } from 'src/utils/constants/sizes.constants';
 
 const BannerContainer = styled('div')`
+	margin-top: -${headerSize.height};
 	background-color: #17181f;
 	height: 650px;
 `;

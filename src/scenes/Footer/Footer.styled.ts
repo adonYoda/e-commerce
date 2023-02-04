@@ -15,6 +15,7 @@ export const FooterContentTitle = styled(Typography)`
 	filter: invert(1);
 	font-weight: 500;
 	margin-bottom: 20px;
+	cursor: pointer;
 `;
 FooterContentTitle.defaultProps = {
 	variant: 'caption1',

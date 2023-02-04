@@ -1,6 +1,10 @@
 import { Container, Divider, IconButton, styled, Typography } from '@mui/material';
 import React from 'react';
+import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 import SvgIcon from 'src/components/globals/SvgIcon';
+import { categories } from 'src/utils/constants/categories.constants';
+import { homePath, productsPath } from 'src/utils/constants/routes.constants';
 import theme from 'src/utils/theme/theme';
 import { ReactComponent as LogoIcon } from '../../assets/icons/Base/logo.svg';
 import { ReactComponent as FacebookIcon } from '../../assets/icons/Social/Facebook.svg';
@@ -20,46 +24,57 @@ import {
 	SocialIcon,
 } from './Footer.styled';
 
-const footerLists = [
-	{
-		header: 'Products',
-		links: [{ title: 'Men' }, { title: 'Women' }, { title: 'Kids' }, { title: 'Sale' }, { title: 'Collections' }],
-	},
-	{
-		header: 'Get help',
-		links: [
-			{ title: 'Order status' },
-			{ title: 'Shipping and delovery' },
-			{ title: 'Returns' },
-			{ title: 'Payment options' },
-		],
-	},
-	{
-		header: 'Legals',
-		links: [{ title: 'Terms of services' }, { title: 'Privacy policy' }],
-	},
-];
+const products = {
+	header: 'Products',
+	links: categories,
+};
+const help = {
+	header: 'Get help',
+	links: [
+		{ title: 'Order status' },
+		{ title: 'Shipping and delivery' },
+		{ title: 'Returns' },
+		{ title: 'Payment options' },
+	],
+};
+const legals = {
+	header: 'Legals',
+	links: [{ title: 'Terms of services' }, { title: 'Privacy policy' }],
+};
 
 const socialIcons = [<FacebookIcon />, <InstagramIcon />, <TwitterIcon />];
 
 const Footer = () => {
+	const navigate = useNavigate();
 	return (
 		<FooterContainer>
 			<Container>
 				<FooterContent>
 					<FooterContentColumn>
-						<FooterContentTitle>
+						<FooterContentTitle onClick={() => navigate(homePath)}>
 							<SvgIcon width={60} icon={<LogoIcon />} />
 						</FooterContentTitle>
 					</FooterContentColumn>
-					{footerLists.map((item) => (
-						<FooterContentColumn>
-							<FooterContentTitle>{item.header}</FooterContentTitle>
-							{item.links.map((p) => (
-								<FooterContentLink>{p.title}</FooterContentLink>
-							))}
-						</FooterContentColumn>
-					))}
+					<FooterContentColumn>
+						<FooterContentTitle>{products.header}</FooterContentTitle>
+						{products.links.map((p) => (
+							<FooterContentLink key={p.title}>
+								<Link to={productsPath + '/' + p.title}>{p.title}</Link>
+							</FooterContentLink>
+						))}
+					</FooterContentColumn>
+					<FooterContentColumn>
+						<FooterContentTitle>{help.header}</FooterContentTitle>
+						{help.links.map((p) => (
+							<FooterContentLink key={p.title}>{p.title}</FooterContentLink>
+						))}
+					</FooterContentColumn>
+					<FooterContentColumn>
+						<FooterContentTitle>{legals.header}</FooterContentTitle>
+						{legals.links.map((p) => (
+							<FooterContentLink key={p.title}>{p.title}</FooterContentLink>
+						))}
+					</FooterContentColumn>
 					<FooterContentColumn className='footer-contacts'>
 						<FooterContentTitle>Contact</FooterContentTitle>
 						<FooterContentDescription variant='body15'>Email</FooterContentDescription>
@@ -82,8 +97,8 @@ const Footer = () => {
 				<FooterBottom>
 					<FooterBottomAuthor>Tel Ran © 2022</FooterBottomAuthor>
 					<FooterBottomSocials>
-						{socialIcons.map((icon) => (
-							<SocialIcon>{icon}</SocialIcon>
+						{socialIcons.map((icon, i) => (
+							<SocialIcon key={i}>{icon}</SocialIcon>
 						))}
 					</FooterBottomSocials>
 				</FooterBottom>
