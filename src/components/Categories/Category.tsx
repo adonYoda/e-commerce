@@ -12,10 +12,10 @@ interface Props {
 
 const Category: FC<Props> = ({ large, imageSrc, imageAlt, title }) => {
 	return (
-		<CategoryContainer large={large}>
+		<CategoryContainer large={large ? 'large' : undefined}>
 			<BgImageStyled src={imageSrc} alt={imageAlt} />
-			<CategoryContent large={large}>
-				<Title className='category' large={large} variant={large ? 'h2' : 'h5'}>
+			<CategoryContent large={large ? 'large' : undefined}>
+				<Title className='category' large={large ? 'large' : undefined} variant={large ? 'h2' : 'h5'}>
 					{title}
 				</Title>
 				<CategoryButton variant='body15'>
