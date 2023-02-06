@@ -7,17 +7,19 @@ import { LandingPageContainer } from './LandingPage.styled';
 
 const LandingPage = () => {
 	return (
-		<LandingPageContainer>
-			<Banner />
-			<Section title='New arrivals'>{/* <Products /> */}</Section>
-			<Section title='Categories'>
-				<Categories />
-			</Section>
-			<Section title='Blog'>
-				<LastPostsBlog />
-			</Section>
+		<>
+			<LandingPageContainer>
+				<Banner />
+				<Section title='New arrivals'>{/* <Products /> */}</Section>
+				<Section title='Categories'>
+					<Categories />
+				</Section>
+				<Section title='Blog'>
+					<LastPostsBlog />
+				</Section>
+			</LandingPageContainer>
 			<Newsletter />
-		</LandingPageContainer>
+		</>
 	);
 };
 

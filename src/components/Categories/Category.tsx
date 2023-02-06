@@ -2,6 +2,8 @@ import React, { FC } from 'react';
 import SvgIcon from '../globals/SvgIcon';
 import { ReactComponent as RightArrowIcon } from '../../assets/icons/Navigation/arrow-right.svg';
 import { BgImageStyled, CategoryButton, CategoryContainer, CategoryContent, Title } from './Category.styled';
+import { Link } from 'react-router-dom';
+import { productsPath } from 'src/utils/constants/routes.constants';
 
 interface Props {
 	large: boolean;
@@ -19,9 +21,9 @@ const Category: FC<Props> = ({ large, imageSrc, imageAlt, title }) => {
 					{title}
 				</Title>
 				<CategoryButton variant='body15'>
-					<span>
+					<Link to={productsPath + '/' + title}>
 						Explore <SvgIcon icon={<RightArrowIcon />} />
-					</span>
+					</Link>
 				</CategoryButton>
 			</CategoryContent>
 		</CategoryContainer>

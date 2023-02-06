@@ -4,6 +4,7 @@ import { Navigate, Route, Routes, useLocation, useParams } from 'react-router';
 import LastPostsBlog from 'src/components/Blog';
 import Breadcrumbs from 'src/components/globals/Breadcrumbs';
 import TopTitleBar from 'src/components/globals/TopTitleBar';
+import Newsletter from 'src/components/Newsletter/Newsletter';
 import useGetParams from 'src/hooks/useGetParams';
 import { categories } from 'src/utils/constants/categories.constants';
 import Products from './FakeProducts';
@@ -27,31 +28,36 @@ const ProductsPage = () => {
 		console.log(value);
 	};
 	return (
-		<ProductsPageContainer>
-			<Container>
-				<TopTitleBar
-					title={categoryParam}
-					selectorList={names}
-					handleGetValue={handleGetValue}
-					selectorWidth='135px'
-				/>
-				<ProductsPageMain>
-					<Sidebar categoryParam={categoryParam} />
-					<Routes>
-						<Route path='/' element={<Navigate to={categories[0].title} />} />
-						<Route
-							path={categoryParam}
-							element={<Products categoryParam={categoryParam} subcategoryParam={subcategoryParam} />}
-						>
+		<>
+			<ProductsPageContainer>
+				<Container>
+					<TopTitleBar
+						title={categoryParam}
+						selectorList={names}
+						handleGetValue={handleGetValue}
+						selectorWidth='135px'
+					/>
+					<ProductsPageMain>
+						<Sidebar categoryParam={categoryParam} />
+						<Routes>
+							<Route path='/' element={<Navigate to={categories[0].title} />} />
 							<Route
-								path={subcategoryParam}
+								path={categoryParam}
 								element={<Products categoryParam={categoryParam} subcategoryParam={subcategoryParam} />}
-							/>
-						</Route>
-					</Routes>
-				</ProductsPageMain>
-			</Container>
-		</ProductsPageContainer>
+							>
+								<Route
+									path={subcategoryParam}
+									element={
+										<Products categoryParam={categoryParam} subcategoryParam={subcategoryParam} />
+									}
+								/>
+							</Route>
+						</Routes>
+					</ProductsPageMain>
+				</Container>
+			</ProductsPageContainer>
+			<Newsletter />
+		</>
 	);
 };
 

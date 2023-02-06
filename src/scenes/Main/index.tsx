@@ -2,6 +2,8 @@ import { Container, styled } from '@mui/material';
 import React from 'react';
 import { Route, RouterProvider, Routes } from 'react-router';
 import Breadcrumbs from 'src/components/globals/Breadcrumbs';
+import ScrollToTop from 'src/components/globals/ScrollToTop';
+import Newsletter from 'src/components/Newsletter/Newsletter';
 import LandingPage from 'src/pages/LandingPage';
 import ProductsPage from 'src/pages/ProductsPage';
 import { homePath, productsNestPath } from 'src/utils/constants/routes.constants';
@@ -21,10 +23,12 @@ const Main = () => {
 			<ContainerStyled>
 				<Breadcrumbs />
 			</ContainerStyled>
-			<Routes>
-				<Route path={homePath} element={<LandingPage />} />
-				<Route path={productsNestPath} element={<ProductsPage />} />
-			</Routes>
+			<ScrollToTop>
+				<Routes>
+					<Route path={homePath} element={<LandingPage />} />
+					<Route path={productsNestPath} element={<ProductsPage />} />
+				</Routes>
+			</ScrollToTop>
 		</MainContainer>
 	);
 };

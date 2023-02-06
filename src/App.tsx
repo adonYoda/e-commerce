@@ -9,7 +9,7 @@ function App() {
 	const location = useGetLocation();
 	return (
 		<>
-			<Header dark={position < 570 && location[0] === '' ? 'dark' : undefined} />
+			<Header dark={location[0] === '' && position < 570 ? 'dark' : undefined} />
 			<Main />
 			<Footer />
 		</>

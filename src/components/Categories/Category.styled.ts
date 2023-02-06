@@ -15,7 +15,7 @@ export const Title = styled(Typography)<{ large?: string }>`
 `;
 export const CategoryButton = styled(Typography)`
 	margin-bottom: 20px;
-	& > span {
+	& > a {
 		display: inline-flex;
 		cursor: pointer;
 		transition: all 0.3s ease 0s;
