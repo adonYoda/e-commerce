@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import productReducer from "./product/productSlice";
+import tokenReducer from "./token/tokenSlice"
 
 
-//create Store
+
 export const store = configureStore({
     reducer: {
         product: productReducer,
+        token: tokenReducer,
     }
 });
 

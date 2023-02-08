@@ -1,6 +1,6 @@
 import React from 'react'
 
-const productApi = () => {
+export const productApi = () => {
   return (
    null
   )
