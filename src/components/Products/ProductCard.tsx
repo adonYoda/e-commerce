@@ -25,14 +25,15 @@ interface Props {
 
 const ProductCard: React.FC<Props> = ({ product }) => {
   return (
-    <Card>
+    <Card variant="outlined" >
       <CardActionArea>
-      <CardMedia
-        component="img"
-        image={product.aboutProduct.mainImgUrl}
-        alt={product.aboutProduct.description}
-        loading="lazy"
-      />
+        <CardMedia
+          component="img"
+          image={product.aboutProduct.mainImgUrl}
+          alt={product.aboutProduct.description}
+          loading="lazy"
+        />
+        <SvgIcon width={60} icon={<ShoppingBagIcon />}/>
       </CardActionArea>
       <CardContent>
         <Rating

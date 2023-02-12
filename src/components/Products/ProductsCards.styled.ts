@@ -1,9 +1,9 @@
 import { ImageList, styled } from "@mui/material";
 
-export const ProductList = styled(ImageList)`
+export const ProductList = styled("div")`
   width: 100%;
   height: auto;
   display: flex;
-  gap: 30px;
+  gap: 10px;
   flex-wrap: wrap;
 `;
