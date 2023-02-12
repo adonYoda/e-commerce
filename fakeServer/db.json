@@ -1,5 +1,5 @@
 {
-    "product": [
+    "oldProducts": [
         {
             "product_id": 7442,
             "date_created": "2023-01-02",
@@ -507,5 +507,821 @@
             ],
             "discount": 70
           }
+    ],
+    "products" : [
+      {
+        "productId": 7114,
+        "productName": "Basic",
+        "productReceiptDate": "16-01-2023",
+        "productAttributes": {
+          "category": "men",
+          "subCategory": "t-shirt",
+          "brand": "levi's",
+          "collection": "new arrivals",
+          "season": "winter",
+          "style": "a-line"
+        },
+        "currency": "USD",
+        "price": 680,
+        "discount": 15,
+        "promoCode": "promo code if exist",
+        "rating": {
+          "totalRatingScore": 5,
+          "numberOfRated": 1
+        },
+        "aboutProduct": {
+          "colorSizeQuantity": [
+            {
+              "color": "Black",
+              "size": "M",
+              "quantity": 50
+            }
+          ],
+          "mainImgUrl": "https://i.imgur.com/7L5ySIE.jpeg",
+          "photos": [
+            "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+            "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+          ],
+          "description": "Some description",
+          "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+        }
+      },
+      {
+        "productId": 7115,
+        "productName": "Basic",
+        "productReceiptDate": "16-01-2023",
+        "productAttributes": {
+          "category": "men",
+          "subCategory": "t-shirt",
+          "brand": "levi's",
+          "collection": "new arrivals",
+          "season": "winter",
+          "style": "a-line"
+        },
+        "currency": "USD",
+        "price": 750,
+        "discount": 15,
+        "promoCode": "promo code if exist",
+        "rating": {
+          "totalRatingScore": 15,
+          "numberOfRated": 4
+        },
+        "aboutProduct": {
+          "colorSizeQuantity": [
+            {
+              "color": "Black",
+              "size": "M",
+              "quantity": 40
+            }
+          ],
+          "mainImgUrl": "https://i.imgur.com/d1oO7bt.jpeg",
+          "photos": [
+            "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+            "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+          ],
+          "description": "Some description",
+          "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+        }
+      },
+        {
+          "productId": 7116,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 60,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 5,
+            "numberOfRated": 2
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/IlDd6bg.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7117,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 400,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 8,
+            "numberOfRated": 2
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/D0WQond.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7118,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 40,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 8,
+            "numberOfRated": 3
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/d56xbxO.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7119,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 240,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 9,
+            "numberOfRated": 3
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/G9Y4tOA.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7120,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 270,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 15,
+            "numberOfRated": 3
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/SM6tDt1.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7121,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 275,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 10,
+            "numberOfRated": 3
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/euNCITP.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7122,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 300,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 10,
+            "numberOfRated": 3
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/3LCnc3G.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7123,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 350,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 12,
+            "numberOfRated": 3
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/JWCDMLZ.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7124,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 350,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 10,
+            "numberOfRated": 3
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/jR6oi1X.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7125,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 390,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 10,
+            "numberOfRated": 4
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/FnIRDED.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7126,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 420,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 10,
+            "numberOfRated": 5
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/mXww2VA.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7127,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 155,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 15,
+            "numberOfRated": 5
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/ZnO1UyR.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7128,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 170,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 20,
+            "numberOfRated": 5
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/4mPGqrW.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7129,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 190,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 20,
+            "numberOfRated": 5
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/LhGeQH9.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7130,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 100,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 12,
+            "numberOfRated": 5
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/S7ZJLMc.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7131,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 110,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 12,
+            "numberOfRated": 5
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/SoQhwAa.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7132,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 1250,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 25,
+            "numberOfRated": 5
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/vO62XAT.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7133,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 250,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 25,
+            "numberOfRated": 5
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/FFbFjI6.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7134,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 299,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 25,
+            "numberOfRated": 5
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/Awk4ZgN.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        },
+        {
+          "productId": 7135,
+          "productName": "Basic",
+          "productReceiptDate": "16-01-2023",
+          "productAttributes": {
+            "category": "men",
+            "subCategory": "t-shirt",
+            "brand": "levi's",
+            "collection": "new arrivals",
+            "season": "winter",
+            "style": "a-line"
+          },
+          "currency": "USD",
+          "price": 215,
+          "discount": 15,
+          "promoCode": "promo code if exist",
+          "rating": {
+            "totalRatingScore": 25,
+            "numberOfRated": 5
+          },
+          "aboutProduct": {
+            "colorSizeQuantity": [
+              {
+                "color": "Black",
+                "size": "M",
+                "quantity": 50
+              }
+            ],
+            "mainImgUrl": "https://i.imgur.com/ANzZwXX.jpeg",
+            "photos": [
+              "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+              "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+            ],
+            "description": "Some description",
+            "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+          }
+        }
     ]
 }

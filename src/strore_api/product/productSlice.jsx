@@ -3,45 +3,51 @@ import { createSlice } from "@reduxjs/toolkit";
 const productSlice = createSlice({
   name: "product",
   initialState: JSON.parse(localStorage.getItem("product")) || {
-    product_id: null,
-    date_created: "",
-    name: "",
-    sex: "",
-    category: "",
-    brand: "",
-    collection: "",
-    color: "",
-    size: "",
-    style: "",
-    season: "",
+    productId: null,
+    productName: "",
+    productReceiptDate: "",
+    productAttributes: {
+      category: "",
+      subCategory: "",
+      brand: "",
+      collection: "",
+      season: "",
+      style: "",
+    },
+    currency: "",
     price: null,
-    rating: null,
-    description: "",
-    details: "",
-    url_default_picture: "",
-    url_pictures: [],
     discount: null,
+    promoCode: "",
+    rating: {
+      totalRatingScore: null,
+      numberOfRated: null,
+    },
+    aboutProduct: {
+      colorSizeQuantity: [
+        {
+          color: "",
+          size: "",
+          quantity: null,
+        },
+      ],
+      mainImgUrl: "",
+      photos: [],
+      description: "",
+      details: "",
+    },
   },
   reducers: {
     getProduct(state, action) {
-      state.product_id = action.payload.product_id;
-      state.date_created = action.payload.date_created;
-      state.name = action.payload.name;
-      state.sex = action.payload.sex;
-      state.category = action.payload.category;
-      state.brand = action.payload.brand;
-      state.collection = action.payload.collection;
-      state.color = action.payload.color;
-      state.size = action.payload.size;
-      state.style = action.payload.style;
-      state.season = action.payload.season;
+      state.productId = action.payload.productId;
+      state.productName = action.payload.productName;
+      state.productReceiptDate = action.payload.productReceiptDate;
+      state.productAttributes = action.payload.productAttributes;
+      state.currency = action.payload.currency;
       state.price = action.payload.price;
-      state.rating = action.payload.rating;
-      state.description = action.payload.description;
-      state.details = action.payload.details;
-      state.url_default_picture = action.payload.url_default_picture;
-      state.url_pictures = action.payload.url_pictures;
       state.discount = action.payload.discount;
+      state.promoCode = action.payload.promoCode;
+      state.rating = action.payload.rating;
+      state.aboutProduct = action.payload.aboutProduct;
     },
   },
 });
