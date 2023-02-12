@@ -10,9 +10,8 @@ export const productApi = ecommerceApi.injectEndpoints({
     // }),
     getProducts: build.query({
       query: (args) => {
-        const {page} = args;
         return {
-          url: `/products?_page=${page}&_limit=12`,
+          url: `/products?_page=${args}&_limit=12`,
           method: "GET",
         };
       },

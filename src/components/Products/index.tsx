@@ -1,4 +1,4 @@
-import { Box, CircularProgress, Container } from "@mui/material";
+import { Box, CircularProgress, Container, Pagination, Stack } from "@mui/material";
 import React, { useState } from "react";
 import { useGetProductsQuery } from "src/strore_api/product/productApi";
 import { IAboutProduct, IProduct, IRating } from "src/types";
@@ -10,7 +10,11 @@ interface Props {
 }
 
 const Product = () => {
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
+
+  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    setPage(value)
+  }
 
   const {
     data = [],
@@ -25,15 +29,18 @@ const Product = () => {
         <Box sx={{ display: "flex" }}>
           <CircularProgress />
         </Box>
-      ) : (
+      ) : (<>
         <ProductList>
           {data.map((product: IProduct) => (
             <ProductCard
-              //rating={product.rating} aboutProduct={product.aboutProduct} productId={product.productId}
               product={product}
             />
           ))}
         </ProductList>
+        <Stack sx={{ margin: "0 auto", width: "50%"}}>
+          <Pagination count={10} size="large" page={page} onChange={handleChange} color="primary" />
+        </Stack>
+        </>
       )}
     </Container>
   );

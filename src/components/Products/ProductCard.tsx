@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import { IAboutProduct, IProduct, IRating } from "src/types";
+import theme from "src/utils/theme/theme";
 import { ReactComponent as ShoppingBagIcon } from "../../assets/icons/Base/shopping-bag.svg";
 import SvgIcon from "../globals/SvgIcon";
 import { ProductList } from "./ProductsCards.styled";
@@ -25,7 +26,7 @@ interface Props {
 
 const ProductCard: React.FC<Props> = ({ product }) => {
   return (
-    <Card variant="outlined" >
+    <Card variant="outlined" sx={{border: "none"}} >
       <CardActionArea>
         <CardMedia
           component="img"
@@ -33,11 +34,10 @@ const ProductCard: React.FC<Props> = ({ product }) => {
           alt={product.aboutProduct.description}
           loading="lazy"
         />
-        <SvgIcon width={60} icon={<ShoppingBagIcon />}/>
+        <SvgIcon width={35} icon={<ShoppingBagIcon />}/>
       </CardActionArea>
       <CardContent>
         <Rating
-          name="read-only"
           value={product.rating.totalRatingScore / product.rating.numberOfRated}
           readOnly
         />
