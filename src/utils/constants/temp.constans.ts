@@ -1,0 +1,1 @@
+export const fakeBaseUrl = `http://localhost:3001/`
