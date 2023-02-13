@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import { createGlobalStyle } from "styled-components";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export const GlobalStyles = createGlobalStyle`
     body {
@@ -12,6 +12,11 @@ export const GlobalStyles = createGlobalStyle`
     }
     * {
         box-sizing: border-box;
+    }
+    #root {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
 
     a {
