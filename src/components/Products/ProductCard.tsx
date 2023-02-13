@@ -1,6 +1,6 @@
 import { Card, CardActionArea, CardContent, CardMedia, Rating, styled, Typography } from "@mui/material";
 import React from "react";
-import { IAboutProduct, IProduct, IRating } from "src/types";
+import { IProduct } from "src/types";
 import { ReactComponent as ShoppingBagIcon } from "../../assets/icons/Base/shopping-bag.svg";
 import { ReactComponent as StarIcon } from "../../assets/icons/Base/star.svg";
 import { ReactComponent as StarFilledIcon } from "../../assets/icons/Base/star-filled.svg";
@@ -26,7 +26,7 @@ const CheckboxCardIconStyled = styled(CheckboxCardIcon)`
 const CardContentStyled = styled(CardContent)`
 	display: flex;
 	flex-direction: column;
-	padding: 0;
+	padding: 0 !important;
 `;
 const RatingStyled = styled(Rating)`
 	margin: 10px 0;
