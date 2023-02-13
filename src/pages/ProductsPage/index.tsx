@@ -1,26 +1,26 @@
-import { Container, styled, Typography } from '@mui/material';
-import React, { useState } from 'react';
-import { Navigate, Route, Routes, useLocation, useParams } from 'react-router';
-import LastPostsBlog from 'src/components/Blog';
-import Breadcrumbs from 'src/components/globals/Breadcrumbs';
-import TopTitleBar from 'src/components/globals/TopTitleBar';
-import Newsletter from 'src/components/Newsletter/Newsletter';
-import useGetParams from 'src/hooks/useGetParams';
-import { categories } from 'src/utils/constants/categories.constants';
-import Products from './FakeProducts';
-import Sidebar from './Sidebar/Sidebar';
+import { Container, styled, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { Navigate, Route, Routes, useLocation, useParams } from "react-router";
+import LastPostsBlog from "src/components/Blog";
+import Breadcrumbs from "src/components/globals/Breadcrumbs";
+import TopTitleBar from "src/components/globals/TopTitleBar";
+import Newsletter from "src/components/Newsletter/Newsletter";
+import Products from "src/components/Products";
+import useGetParams from "src/hooks/useGetParams";
+import { categories } from "src/utils/constants/categories.constants";
+import Sidebar from "./Sidebar/Sidebar";
 
-const ProductsPageContainer = styled('div')`
+const ProductsPageContainer = styled("div")`
 	padding: 0px 0 48px;
 `;
-const ProductsPageHeader = styled('div')`
+const ProductsPageHeader = styled("div")`
 	/* margin-bottom: 30px; */
 `;
-const ProductsPageMain = styled('div')`
+const ProductsPageMain = styled("div")`
 	display: flex;
 `;
 
-const names = ['By Price', 'By Name', 'Most Orders', 'Most Likes', 'Newest'];
+const names = ["By Price", "By Name", "Most Orders", "Most Likes", "Newest"];
 
 const ProductsPage = () => {
 	const [categoryParam, subcategoryParam] = useGetParams();
@@ -39,7 +39,7 @@ const ProductsPage = () => {
 					/>
 					<ProductsPageMain>
 						<Sidebar categoryParam={categoryParam} />
-						<Routes>
+						{/* <Routes>
 							<Route path='/' element={<Navigate to={categories[0].title} />} />
 							<Route
 								path={categoryParam}
@@ -52,7 +52,8 @@ const ProductsPage = () => {
 									}
 								/>
 							</Route>
-						</Routes>
+						</Routes> */}
+						<Products />
 					</ProductsPageMain>
 				</Container>
 			</ProductsPageContainer>

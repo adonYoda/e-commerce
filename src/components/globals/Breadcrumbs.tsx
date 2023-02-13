@@ -1,14 +1,16 @@
-import { Breadcrumbs as Breadcrumb, styled, Typography } from '@mui/material';
-import React from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import useGetLocation from 'src/hooks/useGetLocation';
-import useGetParams from 'src/hooks/useGetParams';
-import { productsPath } from 'src/utils/constants/routes.constants';
+import { Breadcrumbs as Breadcrumb, styled, Typography } from "@mui/material";
+import React from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import useGetLocation from "src/hooks/useGetLocation";
+import useGetParams from "src/hooks/useGetParams";
+import { productsPath } from "src/utils/constants/routes.constants";
 
-const TypographyStyled = styled(Typography)``;
-TypographyStyled.defaultProps = { variant: 'caption2' };
+const BreadcrumbsContainer = styled(Typography)`
+	padding: 30px 0;
+`;
 const Crumbs = styled(Typography)`
 	color: ${({ theme }) => theme.palette.text.placeholder};
+	font-weight: 500;
 	cursor: pointer;
 `;
 const LastCrumb = styled(Typography)`
@@ -22,23 +24,23 @@ const Breadcrumbs = () => {
 
 	const handleClickNav = (target: string) => {
 		const index = paramsList.findIndex((p) => p === target);
-		const path = paramsList.slice(0, index + 1).join('/');
+		const path = paramsList.slice(0, index + 1).join("/");
 		navigate(path);
 	};
 	return (
-		<div role='presentation'>
+		<BreadcrumbsContainer role='presentation'>
 			<Breadcrumb aria-label='breadcrumb'>
 				{paths.map(
 					(p, i) =>
 						i < paths.length - 1 && (
-							<Crumbs key={p} onClick={() => handleClickNav(p)}>
+							<Crumbs variant='caption2' key={p} onClick={() => handleClickNav(p)}>
 								{p}
 							</Crumbs>
 						)
 				)}
 				<LastCrumb>{paths.at(-1)}</LastCrumb>
 			</Breadcrumb>
-		</div>
+		</BreadcrumbsContainer>
 	);
 };
 
