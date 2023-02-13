@@ -1,10 +1,10 @@
-import { Divider, styled, Typography } from '@mui/material';
+import { Divider, styled, Typography } from "@mui/material";
 
-export const FooterContainer = styled('footer')`
+export const FooterContainer = styled("footer")`
 	min-width: 100%;
 	background-color: ${({ theme }) => theme.palette.background.default};
 `;
-export const FooterContent = styled('div')`
+export const FooterContent = styled("div")`
 	display: flex;
 	padding: 60px 0 calc(69px - 16px);
 `;
@@ -18,7 +18,7 @@ export const FooterContentTitle = styled(Typography)`
 	cursor: pointer;
 `;
 FooterContentTitle.defaultProps = {
-	variant: 'caption1',
+	variant: "caption1",
 };
 export const FooterContentDescription: any = styled(Typography)`
 	color: ${({ theme }) => theme.palette.text.extra};
@@ -26,7 +26,7 @@ export const FooterContentDescription: any = styled(Typography)`
 	margin-bottom: 5px;
 `;
 FooterContentDescription.defaultProps = {
-	variant: 'body15',
+	variant: "body15",
 };
 export const FooterContentLink = styled(Typography)`
 	display: block;
@@ -41,13 +41,13 @@ export const FooterContentLink = styled(Typography)`
 	}
 `;
 FooterContentLink.defaultProps = {
-	variant: 'caption2',
+	variant: "caption2",
 };
-export const FooterContentColumn = styled('div')`
-	padding-left: 30px;
+export const FooterContentColumn = styled("div")`
+	margin-left: 30px;
 	flex: 0 1 190px;
 	&:first-child {
-		padding-left: 0;
+		margin-left: 0;
 	}
 	&:last-child {
 		flex: 1 1 190px;
@@ -61,7 +61,7 @@ export const FooterContentColumn = styled('div')`
 export const DividerStyled = styled(Divider)`
 	filter: invert(1);
 `;
-export const FooterBottom = styled('div')`
+export const FooterBottom = styled("div")`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -72,13 +72,13 @@ export const FooterBottomAuthor = styled(Typography)`
 	filter: invert(1);
 `;
 FooterBottomAuthor.defaultProps = {
-	variant: 'caption2',
+	variant: "caption2",
 };
-export const FooterBottomSocials = styled('div')`
+export const FooterBottomSocials = styled("div")`
 	display: flex;
 	gap: 10px;
 `;
-export const SocialIcon = styled('button')`
+export const SocialIcon = styled("button")`
 	all: unset;
 	cursor: pointer;
 	display: inline-flex;

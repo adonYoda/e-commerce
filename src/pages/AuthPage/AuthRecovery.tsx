@@ -1,15 +1,27 @@
-import { Container, styled, Typography } from "@mui/material";
-import React, { FC, useEffect } from "react";
+import { Button, TextField } from "@mui/material";
+import React, { FC } from "react";
+import { authSignInPath } from "src/utils/constants/routes.constants";
 import AuthContent from "../../components/Auth/AuthContent";
-
-const AuthContainer = styled("div")``;
+import { AuthContainer, ContainerStyled } from "./Auth.styled";
 
 interface Props {}
 
 const AuthRecovery: FC<Props> = () => {
+	const authContent = {
+		title: "Restore password",
+		topDescription: {
+			link: "Sign in",
+			linkUrl: authSignInPath,
+		},
+	};
 	return (
 		<AuthContainer>
-			<Container>{/* <AuthContent title='Sign In'>children</AuthContent> */}</Container>
+			<ContainerStyled>
+				<AuthContent {...authContent}>
+					<TextField fullWidth label='Email' />
+					<Button variant='contained'>Send</Button>
+				</AuthContent>
+			</ContainerStyled>
 		</AuthContainer>
 	);
 };

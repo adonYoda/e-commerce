@@ -25,17 +25,13 @@ const MainContainer = styled("main")`
 	display: flex;
 	flex-direction: column;
 `;
-const ContainerStyled = styled(Container)`
-	padding-top: 30px;
-	padding-bottom: 30px;
-`;
 
 const Main = () => {
 	return (
 		<MainContainer>
-			<ContainerStyled>
+			<Container>
 				<Breadcrumbs />
-			</ContainerStyled>
+			</Container>
 			<ScrollToTop>
 				<Routes>
 					<Route path={homePath} element={<LandingPage />} />
