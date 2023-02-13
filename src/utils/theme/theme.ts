@@ -230,6 +230,13 @@ let theme = createTheme({
 		borderRadius: 10,
 	},
 	components: {
+		MuiRating: {
+			styleOverrides: {
+				root: {
+					gap: "8px",
+				},
+			},
+		},
 		MuiFormControlLabel: {
 			variants: [
 				{
@@ -366,7 +373,8 @@ let theme = createTheme({
 					position: "relative",
 				},
 				maxWidthLg: {
-					maxWidth: "1290px !important",
+					padding: "0 24px !important",
+					maxWidth: 1290 + 24 * 2 + "px !important",
 				},
 			},
 		},

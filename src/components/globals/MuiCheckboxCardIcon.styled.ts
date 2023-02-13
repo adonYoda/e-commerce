@@ -1,10 +1,11 @@
-import { Checkbox, styled } from '@mui/material';
+import { Checkbox, styled } from "@mui/material";
 
-export const CheckboxCardIcon = styled(Checkbox)<{ color: 'primary' | 'secondary' }>`
+export const CheckboxCardIcon = styled(Checkbox)<{ color: "primary" | "secondary" }>`
 	border-radius: ${({ theme }) => theme.shape.borderRadius}px;
 	transition: all 0.3s ease 0s;
 	width: 40px;
 	height: 40px;
+	background-color: ${({ theme }) => theme.palette.background.paper};
 	&:hover,
 	&:has(input:checked) {
 		& * {
