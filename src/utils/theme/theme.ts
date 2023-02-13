@@ -896,6 +896,9 @@ let theme = createTheme({
 						borderColor: theme.palette.grey["A200"],
 					},
 				}),
+				contained: ({ theme }) => ({
+					color: theme.palette.common.white,
+				}),
 			},
 		},
 		MuiIconButton: {

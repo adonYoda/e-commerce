@@ -9,11 +9,28 @@ const AuthContentContainer = styled("div")`
 	border-radius: ${({ theme }) => theme.shape.borderRadius}px;
 	box-shadow: 0px 30px 100px rgba(0, 0, 0, 0.08);
 	margin: auto;
+	translate: 0 -30px;
 `;
 const TopRow = styled("div")`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	margin-bottom: 23px;
+	font-weight: 500;
+`;
+const LinkStyled = styled(Link)`
+	color: ${({ theme }) => theme.palette.primary.main};
+	margin-left: 4px;
+`;
+const TypographyDescription = styled(Typography)`
+	color: ${({ theme }) => theme.palette.text.placeholder};
+`;
+const Childrens = styled("div")`
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	width: 100%;
+	height: 100%;
 `;
 
 interface Props {
@@ -31,12 +48,14 @@ const AuthContent: FC<Props> = ({ children, title, topDescription }) => {
 		<AuthContentContainer>
 			<TopRow>
 				<Typography variant='h5'>{title}</Typography>
-				<Typography variant='caption4'>
+				<TypographyDescription variant='caption4'>
 					{topDescription?.text}
-					{!!topDescription?.linkUrl && <Link to={topDescription?.linkUrl}>{topDescription?.link}</Link>}
-				</Typography>
+					{!!topDescription?.linkUrl && (
+						<LinkStyled to={topDescription?.linkUrl}>{topDescription?.link}</LinkStyled>
+					)}
+				</TypographyDescription>
 			</TopRow>
-			{children}
+			<Childrens>{children}</Childrens>
 		</AuthContentContainer>
 	);
 };
