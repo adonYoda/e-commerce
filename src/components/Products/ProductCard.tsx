@@ -53,7 +53,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
 	const currencyFormated = new Intl.NumberFormat(currencyFormat, {
 		style: "currency",
 		currency: product.currency,
-		maximumSignificantDigits: 3,
+		// maximumSignificantDigits: 6,
 	});
 
 	return (
