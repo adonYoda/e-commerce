@@ -28,6 +28,7 @@ const productSlice = createSlice({
           color: "",
           size: "",
           quantity: null,
+          colorPic: ""
         },
       ],
       mainImgUrl: "",

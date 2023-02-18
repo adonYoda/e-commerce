@@ -1,7 +1,7 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import { productApi } from "./product/productApi";
 import productReducer from "./product/productSlice";
-import tokenReducer from "./token/tokenSlice"
+import tokenReducer from "./token/authSlice"
 
 
 

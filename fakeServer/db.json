@@ -1,512 +1,4 @@
 {
-  "oldProducts": [
-    {
-      "product_id": 7442,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 15.5,
-      "rating": 2.3,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/7L5ySIE",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 15
-    },
-    {
-      "product_id": 7443,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 16.5,
-      "rating": 2.3,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/d1oO7bt",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 15
-    },
-    {
-      "product_id": 7444,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 17.5,
-      "rating": 4.3,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/IlDd6bg",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 20
-    },
-    {
-      "product_id": 7445,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 20.5,
-      "rating": 3.3,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/D0WQond",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 40
-    },
-    {
-      "product_id": 7446,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 19,
-      "rating": 5,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/d56xbxO",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 35
-    },
-    {
-      "product_id": 7447,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 16,
-      "rating": 2,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/G9Y4tOA",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 50
-    },
-    {
-      "product_id": 7448,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 19,
-      "rating": 2.3,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/SM6tDt1",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 15
-    },
-    {
-      "product_id": 7449,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 16.5,
-      "rating": 2.3,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/euNCITP",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 15
-    },
-    {
-      "product_id": 7450,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 16.5,
-      "rating": 2.3,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/3LCnc3G",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 15
-    },
-    {
-      "product_id": 7451,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 30.5,
-      "rating": 5,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/JWCDMLZ",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 5
-    },
-    {
-      "product_id": 7452,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 17,
-      "rating": 2.5,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/jR6oi1X",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 5
-    },
-    {
-      "product_id": 7453,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 16,
-      "rating": 4,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/FnIRDED",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 15
-    },
-    {
-      "product_id": 7454,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 17,
-      "rating": 3,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/mXww2VA",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 5
-    },
-    {
-      "product_id": 7455,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 19,
-      "rating": 3,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/ZnO1UyR",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 0
-    },
-    {
-      "product_id": 7456,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 16,
-      "rating": 0.3,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/4mPGqrW",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 70
-    },
-    {
-      "product_id": 7457,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 16,
-      "rating": 3,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/LhGeQH9",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 70
-    },
-    {
-      "product_id": 7458,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 16,
-      "rating": 3,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/S7ZJLMc",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 70
-    },
-    {
-      "product_id": 7459,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 16,
-      "rating": 0.3,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/SoQhwAa",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 70
-    },
-    {
-      "product_id": 7460,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 19,
-      "rating": 4.3,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/vO62XAT",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 70
-    },
-    {
-      "product_id": 7461,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 16,
-      "rating": 4.3,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/FFbFjI6",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 70
-    },
-    {
-      "product_id": 7462,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 20,
-      "rating": 4.9,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/Awk4ZgN",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 70
-    },
-    {
-      "product_id": 7463,
-      "date_created": "2023-01-02",
-      "name": "styled t-shirt",
-      "sex": "men",
-      "category": "t-shirt",
-      "brand": "renuar",
-      "collection": "collection",
-      "color": "red",
-      "size": "some size",
-      "style": "some style",
-      "season": "season",
-      "price": 16,
-      "rating": 4.3,
-      "description": "some description",
-      "details": "some details",
-      "url_default_picture": "https://imgur.com/ANzZwXX",
-      "url_pictures": [
-        "http://fhjgkdfhg.com/jrht1294ui",
-        "http://fhjgkdfhg.com/jrhiywuie6438tj"
-      ],
-      "discount": 70
-    }
-  ],
   "products": [
     {
       "productId": 7114,
@@ -521,7 +13,7 @@
         "style": "a-line"
       },
       "currency": "USD",
-      "price": 1680.55,
+      "price": 1680.00,
       "discount": 15,
       "promoCode": "promo code if exist",
       "rating": {
@@ -533,7 +25,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/7L5ySIE.jpeg",
@@ -570,7 +75,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 40
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/d1oO7bt.jpeg",
@@ -607,7 +125,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/IlDd6bg.jpeg",
@@ -644,7 +175,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/D0WQond.jpeg",
@@ -681,7 +225,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/d56xbxO.jpeg",
@@ -718,7 +275,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/G9Y4tOA.jpeg",
@@ -755,7 +325,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/SM6tDt1.jpeg",
@@ -792,7 +375,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/euNCITP.jpeg",
@@ -829,7 +425,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/3LCnc3G.jpeg",
@@ -866,7 +475,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/JWCDMLZ.jpeg",
@@ -903,7 +525,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/jR6oi1X.jpeg",
@@ -940,7 +575,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/FnIRDED.jpeg",
@@ -977,7 +625,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/mXww2VA.jpeg",
@@ -1014,7 +675,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/ZnO1UyR.jpeg",
@@ -1051,7 +725,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/4mPGqrW.jpeg",
@@ -1088,7 +775,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/LhGeQH9.jpeg",
@@ -1125,7 +825,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/S7ZJLMc.jpeg",
@@ -1162,7 +875,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/SoQhwAa.jpeg",
@@ -1199,7 +925,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/vO62XAT.jpeg",
@@ -1236,7 +975,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/FFbFjI6.jpeg",
@@ -1273,7 +1025,20 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/Awk4ZgN.jpeg",
@@ -1310,10 +1075,773 @@
           {
             "color": "Black",
             "size": "M",
-            "quantity": 50
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
           }
         ],
         "mainImgUrl": "https://i.imgur.com/ANzZwXX.jpeg",
+        "photos": [
+          "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+          "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+        ],
+        "description": "Some description",
+        "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+      }
+    },
+    {
+      "productId": 7136,
+      "productName": "Basic",
+      "productReceiptDate": "16-01-2023",
+      "productAttributes": {
+        "category": "men",
+        "subCategory": "t-shirt",
+        "brand": "levi's",
+        "collection": "new arrivals",
+        "season": "winter",
+        "style": "a-line"
+      },
+      "currency": "USD",
+      "price": 1250,
+      "discount": 15,
+      "promoCode": "promo code if exist",
+      "rating": {
+        "totalRatingScore": 25,
+        "numberOfRated": 5
+      },
+      "aboutProduct": {
+        "colorSizeQuantity": [
+          {
+            "color": "Black",
+            "size": "M",
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          }
+        ],
+        "mainImgUrl": "https://i.imgur.com/vO62XAT.jpeg",
+        "photos": [
+          "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+          "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+        ],
+        "description": "Some description",
+        "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+      }
+    },
+    {
+      "productId": 7137,
+      "productName": "Basic",
+      "productReceiptDate": "16-01-2023",
+      "productAttributes": {
+        "category": "men",
+        "subCategory": "t-shirt",
+        "brand": "levi's",
+        "collection": "new arrivals",
+        "season": "winter",
+        "style": "a-line"
+      },
+      "currency": "USD",
+      "price": 1250,
+      "discount": 15,
+      "promoCode": "promo code if exist",
+      "rating": {
+        "totalRatingScore": 25,
+        "numberOfRated": 5
+      },
+      "aboutProduct": {
+        "colorSizeQuantity": [
+          {
+            "color": "Black",
+            "size": "M",
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          }
+        ],
+        "mainImgUrl": "https://i.imgur.com/vO62XAT.jpeg",
+        "photos": [
+          "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+          "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+        ],
+        "description": "Some description",
+        "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+      }
+    },
+    {
+      "productId": 7138,
+      "productName": "Basic",
+      "productReceiptDate": "16-01-2023",
+      "productAttributes": {
+        "category": "men",
+        "subCategory": "t-shirt",
+        "brand": "levi's",
+        "collection": "new arrivals",
+        "season": "winter",
+        "style": "a-line"
+      },
+      "currency": "USD",
+      "price": 1250,
+      "discount": 15,
+      "promoCode": "promo code if exist",
+      "rating": {
+        "totalRatingScore": 25,
+        "numberOfRated": 5
+      },
+      "aboutProduct": {
+        "colorSizeQuantity": [
+          {
+            "color": "Black",
+            "size": "M",
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          }
+        ],
+        "mainImgUrl": "https://i.imgur.com/vO62XAT.jpeg",
+        "photos": [
+          "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+          "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+        ],
+        "description": "Some description",
+        "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+      }
+    },
+    {
+      "productId": 7139,
+      "productName": "Basic",
+      "productReceiptDate": "16-01-2023",
+      "productAttributes": {
+        "category": "men",
+        "subCategory": "t-shirt",
+        "brand": "levi's",
+        "collection": "new arrivals",
+        "season": "winter",
+        "style": "a-line"
+      },
+      "currency": "USD",
+      "price": 1250,
+      "discount": 15,
+      "promoCode": "promo code if exist",
+      "rating": {
+        "totalRatingScore": 25,
+        "numberOfRated": 5
+      },
+      "aboutProduct": {
+        "colorSizeQuantity": [
+          {
+            "color": "Black",
+            "size": "M",
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          }
+        ],
+        "mainImgUrl": "https://i.imgur.com/vO62XAT.jpeg",
+        "photos": [
+          "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+          "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+        ],
+        "description": "Some description",
+        "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+      }
+    },
+    {
+      "productId": 7140,
+      "productName": "Basic",
+      "productReceiptDate": "16-01-2023",
+      "productAttributes": {
+        "category": "men",
+        "subCategory": "t-shirt",
+        "brand": "levi's",
+        "collection": "new arrivals",
+        "season": "winter",
+        "style": "a-line"
+      },
+      "currency": "USD",
+      "price": 1250,
+      "discount": 15,
+      "promoCode": "promo code if exist",
+      "rating": {
+        "totalRatingScore": 25,
+        "numberOfRated": 5
+      },
+      "aboutProduct": {
+        "colorSizeQuantity": [
+          {
+            "color": "Black",
+            "size": "M",
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          }
+        ],
+        "mainImgUrl": "https://i.imgur.com/vO62XAT.jpeg",
+        "photos": [
+          "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+          "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+        ],
+        "description": "Some description",
+        "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+      }
+    },
+    {
+      "productId": 7141,
+      "productName": "Basic",
+      "productReceiptDate": "16-01-2023",
+      "productAttributes": {
+        "category": "men",
+        "subCategory": "t-shirt",
+        "brand": "levi's",
+        "collection": "new arrivals",
+        "season": "winter",
+        "style": "a-line"
+      },
+      "currency": "USD",
+      "price": 1250,
+      "discount": 15,
+      "promoCode": "promo code if exist",
+      "rating": {
+        "totalRatingScore": 25,
+        "numberOfRated": 5
+      },
+      "aboutProduct": {
+        "colorSizeQuantity": [
+          {
+            "color": "Black",
+            "size": "M",
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          }
+        ],
+        "mainImgUrl": "https://i.imgur.com/vO62XAT.jpeg",
+        "photos": [
+          "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+          "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+        ],
+        "description": "Some description",
+        "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+      }
+    },
+    {
+      "productId": 7142,
+      "productName": "Basic",
+      "productReceiptDate": "16-01-2023",
+      "productAttributes": {
+        "category": "men",
+        "subCategory": "t-shirt",
+        "brand": "levi's",
+        "collection": "new arrivals",
+        "season": "winter",
+        "style": "a-line"
+      },
+      "currency": "USD",
+      "price": 1250,
+      "discount": 15,
+      "promoCode": "promo code if exist",
+      "rating": {
+        "totalRatingScore": 25,
+        "numberOfRated": 5
+      },
+      "aboutProduct": {
+        "colorSizeQuantity": [
+          {
+            "color": "Black",
+            "size": "M",
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          }
+        ],
+        "mainImgUrl": "https://i.imgur.com/vO62XAT.jpeg",
+        "photos": [
+          "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+          "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+        ],
+        "description": "Some description",
+        "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+      }
+    },
+    {
+      "productId": 7143,
+      "productName": "Basic",
+      "productReceiptDate": "16-01-2023",
+      "productAttributes": {
+        "category": "men",
+        "subCategory": "t-shirt",
+        "brand": "levi's",
+        "collection": "new arrivals",
+        "season": "winter",
+        "style": "a-line"
+      },
+      "currency": "USD",
+      "price": 1250,
+      "discount": 15,
+      "promoCode": "promo code if exist",
+      "rating": {
+        "totalRatingScore": 25,
+        "numberOfRated": 5
+      },
+      "aboutProduct": {
+        "colorSizeQuantity": [
+          {
+            "color": "Black",
+            "size": "M",
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          }
+        ],
+        "mainImgUrl": "https://i.imgur.com/vO62XAT.jpeg",
+        "photos": [
+          "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+          "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+        ],
+        "description": "Some description",
+        "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+      }
+    },
+    {
+      "productId": 7144,
+      "productName": "Basic",
+      "productReceiptDate": "16-01-2023",
+      "productAttributes": {
+        "category": "men",
+        "subCategory": "t-shirt",
+        "brand": "levi's",
+        "collection": "new arrivals",
+        "season": "winter",
+        "style": "a-line"
+      },
+      "currency": "USD",
+      "price": 1250,
+      "discount": 15,
+      "promoCode": "promo code if exist",
+      "rating": {
+        "totalRatingScore": 25,
+        "numberOfRated": 5
+      },
+      "aboutProduct": {
+        "colorSizeQuantity": [
+          {
+            "color": "Black",
+            "size": "M",
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          }
+        ],
+        "mainImgUrl": "https://i.imgur.com/vO62XAT.jpeg",
+        "photos": [
+          "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+          "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+        ],
+        "description": "Some description",
+        "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+      }
+    },
+    {
+      "productId": 7145,
+      "productName": "Basic",
+      "productReceiptDate": "16-01-2023",
+      "productAttributes": {
+        "category": "men",
+        "subCategory": "t-shirt",
+        "brand": "levi's",
+        "collection": "new arrivals",
+        "season": "winter",
+        "style": "a-line"
+      },
+      "currency": "USD",
+      "price": 1250,
+      "discount": 15,
+      "promoCode": "promo code if exist",
+      "rating": {
+        "totalRatingScore": 25,
+        "numberOfRated": 5
+      },
+      "aboutProduct": {
+        "colorSizeQuantity": [
+          {
+            "color": "Black",
+            "size": "M",
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          }
+        ],
+        "mainImgUrl": "https://i.imgur.com/vO62XAT.jpeg",
+        "photos": [
+          "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+          "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+        ],
+        "description": "Some description",
+        "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+      }
+    },
+    {
+      "productId": 7146,
+      "productName": "Basic",
+      "productReceiptDate": "16-01-2023",
+      "productAttributes": {
+        "category": "men",
+        "subCategory": "t-shirt",
+        "brand": "levi's",
+        "collection": "new arrivals",
+        "season": "winter",
+        "style": "a-line"
+      },
+      "currency": "USD",
+      "price": 1250,
+      "discount": 15,
+      "promoCode": "promo code if exist",
+      "rating": {
+        "totalRatingScore": 25,
+        "numberOfRated": 5
+      },
+      "aboutProduct": {
+        "colorSizeQuantity": [
+          {
+            "color": "Black",
+            "size": "M",
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          }
+        ],
+        "mainImgUrl": "https://i.imgur.com/vO62XAT.jpeg",
+        "photos": [
+          "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+          "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+        ],
+        "description": "Some description",
+        "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+      }
+    },
+    {
+      "productId": 7147,
+      "productName": "Basic",
+      "productReceiptDate": "16-01-2023",
+      "productAttributes": {
+        "category": "men",
+        "subCategory": "t-shirt",
+        "brand": "levi's",
+        "collection": "new arrivals",
+        "season": "winter",
+        "style": "a-line"
+      },
+      "currency": "USD",
+      "price": 1250,
+      "discount": 15,
+      "promoCode": "promo code if exist",
+      "rating": {
+        "totalRatingScore": 25,
+        "numberOfRated": 5
+      },
+      "aboutProduct": {
+        "colorSizeQuantity": [
+          {
+            "color": "Black",
+            "size": "M",
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          }
+        ],
+        "mainImgUrl": "https://i.imgur.com/vO62XAT.jpeg",
+        "photos": [
+          "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+          "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+        ],
+        "description": "Some description",
+        "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+      }
+    },
+    {
+      "productId": 7148,
+      "productName": "Basic",
+      "productReceiptDate": "16-01-2023",
+      "productAttributes": {
+        "category": "men",
+        "subCategory": "t-shirt",
+        "brand": "levi's",
+        "collection": "new arrivals",
+        "season": "winter",
+        "style": "a-line"
+      },
+      "currency": "USD",
+      "price": 1250,
+      "discount": 15,
+      "promoCode": "promo code if exist",
+      "rating": {
+        "totalRatingScore": 25,
+        "numberOfRated": 5
+      },
+      "aboutProduct": {
+        "colorSizeQuantity": [
+          {
+            "color": "Black",
+            "size": "M",
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          }
+        ],
+        "mainImgUrl": "https://i.imgur.com/vO62XAT.jpeg",
+        "photos": [
+          "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+          "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+        ],
+        "description": "Some description",
+        "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+      }
+    },
+    {
+      "productId": 7149,
+      "productName": "Basic",
+      "productReceiptDate": "16-01-2023",
+      "productAttributes": {
+        "category": "men",
+        "subCategory": "t-shirt",
+        "brand": "levi's",
+        "collection": "new arrivals",
+        "season": "winter",
+        "style": "a-line"
+      },
+      "currency": "USD",
+      "price": 1250,
+      "discount": 15,
+      "promoCode": "promo code if exist",
+      "rating": {
+        "totalRatingScore": 25,
+        "numberOfRated": 5
+      },
+      "aboutProduct": {
+        "colorSizeQuantity": [
+          {
+            "color": "Black",
+            "size": "M",
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          }
+        ],
+        "mainImgUrl": "https://i.imgur.com/vO62XAT.jpeg",
+        "photos": [
+          "https://www.famousfootwear.com/nike/2022/holiday.jpg",
+          "https://www.famousfootwear.com/nike/2022/holiday2.jpg"
+        ],
+        "description": "Some description",
+        "details": "Standart fit for a relaxed,easy feel... blah blah blah"
+      }
+    },
+    {
+      "productId": 7150,
+      "productName": "Basic",
+      "productReceiptDate": "16-01-2023",
+      "productAttributes": {
+        "category": "men",
+        "subCategory": "t-shirt",
+        "brand": "levi's",
+        "collection": "new arrivals",
+        "season": "winter",
+        "style": "a-line"
+      },
+      "currency": "USD",
+      "price": 1250,
+      "discount": 15,
+      "promoCode": "promo code if exist",
+      "rating": {
+        "totalRatingScore": 25,
+        "numberOfRated": 5
+      },
+      "aboutProduct": {
+        "colorSizeQuantity": [
+          {
+            "color": "Black",
+            "size": "M",
+            "quantity": 50,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "White",
+            "size": "L",
+            "quantity": 30,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          },
+          {
+            "color": "Pink",
+            "size": "XL",
+            "quantity": 25,
+            "colorPic": "https://www.example.com/2022/pic.jpg"
+          }
+        ],
+        "mainImgUrl": "https://i.imgur.com/vO62XAT.jpeg",
         "photos": [
           "https://www.famousfootwear.com/nike/2022/holiday.jpg",
           "https://www.famousfootwear.com/nike/2022/holiday2.jpg"

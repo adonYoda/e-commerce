@@ -43,9 +43,6 @@ const ProductNamePrice = styled("div")`
 `;
 
 interface Props {
-	// rating: IRating;
-	// aboutProduct: IAboutProduct;
-	// productId: number
 	product: IProduct;
 }
 
@@ -87,16 +84,4 @@ const ProductCard: React.FC<Props> = ({ product }) => {
 
 export default ProductCard;
 
-{
-	/* <ImageListItemBar position="bottom" 
-actionIcon={<SvgIcon width={60} icon={<ShoppingBagIcon />} />}
-actionPosition="right" />
-<Box>
-<Rating name="read-only" value={(product.rating.totalRatingScore/product.rating.numberOfRated)} readOnly />
-<Box sx={{ ml: 2 }}>{product.rating.numberOfRated}</Box>
-</Box>
-<Box>
-<Typography>#{product.productId}</Typography>
-<Typography>{product.productName}{product.currency}{product.price}</Typography>
-</Box> */
-}
+

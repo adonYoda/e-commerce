@@ -10,11 +10,34 @@ export const ecommerceApi = createApi({
     prepareHeaders: (headers, {getState}) => {
       const token = (getState() as RootState).token;
       if(token){
-        headers.set("Authorization", `Basic ${token}`);
+        headers.set("Authorization", `Bearer ${token}`);
       }
       return headers;
     },
   }),
-  endpoints: () => ({})
+  endpoints: (builder) => ({
+    loginUser: builder.mutation({
+      query: (args) => {
+        return{
+          url: "signin",
+          method: "POST",
+          args
+        }
+      }
+    }),
+    registerUser: builder.mutation({
+      query: (args) => {
+        return{
+          url: "signup",
+          method: "POST",
+          args
+        }
+      }
+    })
+  })
 })
+
+// const baseQueryWithReauth = async (args, api, extraOptions) => {
+//   let result = await baseQuery(args, api, extraOptions)
+// }
 
