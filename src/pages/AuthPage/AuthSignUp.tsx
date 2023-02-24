@@ -15,7 +15,6 @@ import AuthContent from "../../components/Auth/AuthContent";
 import { AuthContainer, ContainerStyled, Link, Terms } from "./Auth.styled";
 import { ReactComponent as Visibility } from "../../assets/icons/Base/eye.svg";
 import { ReactComponent as VisibilityOff } from "../../assets/icons/Base/eye-slash.svg";
-import { useRegisterUserMutation } from "src/strore_api/ecommerceApi";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { IRegisterForm } from "src/types";
 import {
@@ -25,6 +24,7 @@ import {
 } from "src/utils/constants/temp.constans";
 import { putUser } from "src/strore_api/user/userSlice";
 import { useDispatch } from "react-redux";
+import { useRegisterUserMutation } from "src/strore_api/user/userApi";
 
 const Form = styled("form")`
   display: flex;
