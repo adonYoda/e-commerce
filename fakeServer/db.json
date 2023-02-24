@@ -1,4 +1,22 @@
 {
+  "users": [
+    {
+      "userId": "db0001",
+      "email": "debbie.baker@gmail.com",
+      "firstName": "Debbie",
+      "lastName": "Baker",
+      "registrationDate": "2023-02-22T12:00:00Z",
+      "jwtToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+      "jwtRefreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZWJieWUuYmFrZXJAZ21haWwuY29tIiwiaXNzIjoibXlBcHAiLCJpYXQiOjE1ODU3MzI3OTksImV4cCI6MTU4NTc2ODc5OX0.aI_EZsY8ZHJlZdKmJgMVjB5f5vnHp1XFjZKV7QW8_vk",
+      "roles": [
+        "USER"
+      ]
+    }
+
+
+
+  ],
+
   "products": [
     {
       "productId": 7114,

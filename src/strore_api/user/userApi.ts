@@ -6,7 +6,7 @@ const userApi = ecommerceApi.injectEndpoints({
             query: (token) => {
                 console.log(token);
                 return {
-                    url: "/signin",
+                    url: "signin",
                     method: "POST",
                     headers: {
                         Authorization: `Bearer ${token}` //<== Check it out!!!

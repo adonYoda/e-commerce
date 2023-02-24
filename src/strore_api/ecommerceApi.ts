@@ -28,7 +28,7 @@ export const ecommerceApi = createApi({
     registerUser: builder.mutation({
       query: (args) => {
         return{
-          url: "signup",
+          url: "users",
           method: "POST",
           args
         }
@@ -36,6 +36,8 @@ export const ecommerceApi = createApi({
     })
   })
 })
+
+export const {useLoginUserMutation, useRegisterUserMutation} = ecommerceApi
 
 // const baseQueryWithReauth = async (args, api, extraOptions) => {
 //   let result = await baseQuery(args, api, extraOptions)

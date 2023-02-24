@@ -36,7 +36,7 @@ const Products: FC<Props> = ({ contained }) => {
     <Container sx={{ padding: `${contained ? "auto" : 0} !important` }}>
       {isError && (
         <>
-          <Typography variant="h3" sx={{color: theme.palette.text.extra}} >
+          <Typography variant="h3" sx={{color: theme.palette.error.main}} >
             Oooooops... something went wrong...
           </Typography>
         </>

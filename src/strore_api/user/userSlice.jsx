@@ -9,6 +9,7 @@ const userSlice = createSlice({
     lastName: "",
     jwtToken: "",
     jwtRefreshToken: "",
+    registrationDate: "",
     roles: [],
   },
   reducers: {
@@ -17,6 +18,7 @@ const userSlice = createSlice({
       state.userId = action.payload.userId;
       state.firstName = action.payload.firstName;
       state.lastName = action.payload.lastName;
+      state.registrationDate = action.payload.registrationDate;
       state.roles = action.payload.roles;
     },
   },

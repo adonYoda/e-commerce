@@ -26,11 +26,11 @@ const TypographyDescription = styled(Typography)`
 	color: ${({ theme }) => theme.palette.text.placeholder};
 `;
 const Childrens = styled("div")`
-	display: flex;
+	/* display: flex;
 	flex-direction: column;
-	gap: 16px;
+	//gap: 16px;
 	width: 100%;
-	height: 100%;
+	height: 100%; */
 `;
 
 interface Props {
