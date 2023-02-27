@@ -81,13 +81,8 @@ const AuthSignUp: FC<Props> = () => {
   };
 
   const onSubmit = async (data: IRegisterForm) => {
-    //const formData = getValues(["firstName", "lastName", "password", "email"])
-    // const email = getValues('email')
-    // const firstName = getValues('firstName')
-    // const lastName = getValues('lastName')
-    // const password = getValues('password')
     if (data.password === data.confirmPassword) {
-      alert("onSubmit: " + JSON.stringify(data));
+	  console.log(data);
       const user = await registerUser({
         email: data.email,
         password: data.password,
@@ -95,11 +90,11 @@ const AuthSignUp: FC<Props> = () => {
         lastName: data.lastName,
       }).unwrap();
       dispatch(putUser(user));
-      console.log("Registration fields : " + user);
+      console.log("Registration fields : ", user);
     } else {
       setIsPasswordValid(true);
     }
-    //reset();
+    reset();
   };
 
   return (

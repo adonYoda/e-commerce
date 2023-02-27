@@ -13,11 +13,11 @@ const userApi = ecommerceApi.injectEndpoints({
           }
         }),
         registerUser: build.mutation({
-          query: ({args}) => {
+          query: (args) => {
             return{
               url: "users",
               method: "POST",
-              body: {...args}
+              body: args
             }
           }
         })
