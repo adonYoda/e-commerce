@@ -37,12 +37,18 @@ const Form = styled("form")`
 interface Props {}
 
 const AuthSignUp: FC<Props> = () => {
+  //===================Logic API of SignUp==========================
+  const [registerUser, { isError }] = useRegisterUserMutation();
+
+  //================================================================
+
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors, isValid },
     reset,
+    getValues,
   } = useForm({
     defaultValues: {
       firstName: "",
@@ -74,38 +80,27 @@ const AuthSignUp: FC<Props> = () => {
     },
   };
 
-  const onSubmit = async(data: IRegisterForm) => {
+  const onSubmit = async (data: IRegisterForm) => {
+    //const formData = getValues(["firstName", "lastName", "password", "email"])
+    // const email = getValues('email')
+    // const firstName = getValues('firstName')
+    // const lastName = getValues('lastName')
+    // const password = getValues('password')
     if (data.password === data.confirmPassword) {
-      //alert("onSubmit: " + JSON.stringify(data));
-		const user = await registerUser({
-			email: data.email,
-			password: data.password,
-			firstName: data.firstName,
-			lastName: data.lastName
-		}).unwrap()
-		dispatch(putUser(user));
-		console.log("Registration fields : " + user);
-		
-
-
+      alert("onSubmit: " + JSON.stringify(data));
+      const user = await registerUser({
+        email: data.email,
+        password: data.password,
+        firstName: data.firstName,
+        lastName: data.lastName,
+      }).unwrap();
+      dispatch(putUser(user));
+      console.log("Registration fields : " + user);
     } else {
       setIsPasswordValid(true);
     }
-
-    reset();
+    //reset();
   };
-  //===================Logic API of SignUp==========================
-  const [
-    registerUser,
-    {
-      data: registerData,
-      isSuccess: isRegisterSucces,
-      isError: isRegisterError,
-      error: registerError,
-    },
-  ] = useRegisterUserMutation();
-
-  //================================================================
 
   return (
     <AuthContainer>

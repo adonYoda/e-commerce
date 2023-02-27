@@ -1,8 +1,9 @@
+import { IRegisterForm } from "src/types";
 import { ecommerceApi } from "../ecommerceApi";
 
 const userApi = ecommerceApi.injectEndpoints({
-    endpoints: (builder) => ({
-        loginUser: builder.mutation({
+    endpoints: (build) => ({
+        loginUser: build.mutation({
           query: (args) => {
             return{
               url: "signin",
@@ -11,12 +12,12 @@ const userApi = ecommerceApi.injectEndpoints({
             }
           }
         }),
-        registerUser: builder.mutation({
-          query: (args) => {
+        registerUser: build.mutation({
+          query: ({args}) => {
             return{
               url: "users",
               method: "POST",
-              args
+              body: {...args}
             }
           }
         })
