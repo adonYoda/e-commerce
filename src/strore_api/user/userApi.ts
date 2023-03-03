@@ -6,8 +6,8 @@ const userApi = ecommerceApi.injectEndpoints({
         loginUser: build.mutation({
           query: (args) => {
             return{
-              url: "signin",
-              method: "POST",
+              url: "users",
+              //method: "POST",
               args
             }
           }

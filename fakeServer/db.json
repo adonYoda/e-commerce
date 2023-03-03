@@ -1,6 +1,12 @@
 {
   "users": [
-    
+    {
+      "email": "vitredjer@gmail.com",
+      "password": "1!Aa00000000",
+      "firstName": "Vitalii",
+      "lastName": "Redkin",
+      "id": 1
+    }
   ],
   "products": [
     {
