@@ -50,7 +50,6 @@ CategoryTitle.defaultProps = {
 };
 
 const subcategories = [
-	{ title: "All", disabled: false },
 	{ title: "Coats & Jackets", disabled: false },
 	{ title: "T-shirts", disabled: false },
 	{ title: "Tops", disabled: false },
@@ -91,9 +90,10 @@ const styles = [
 
 interface Props {
 	categoryParam: string;
+	subcategoryParam: string | undefined;
 }
 
-const Sidebar: FC<Props> = ({ categoryParam }) => {
+const Sidebar: FC<Props> = ({ categoryParam, subcategoryParam }) => {
 	const checkbox = (disabled: boolean) => (
 		<Checkbox icon={disabled ? <DisabledIcon /> : <OffIcon />} checkedIcon={<OnIcon />} />
 	);
@@ -113,6 +113,14 @@ const Sidebar: FC<Props> = ({ categoryParam }) => {
 						<Typography>Category</Typography>
 					</AccordionSummary>
 					<AccordionDetails>
+						<NavLink
+							style={({ isActive, isPending }) => ({
+								color: !subcategoryParam ? theme.palette.primary.main : theme.palette.text.primary,
+							})}
+							to={categoryParam}
+						>
+							<CategoryTitle>All</CategoryTitle>
+						</NavLink>
 						{subcategories.map((c, i) => (
 							<NavLink
 								key={c.title}
