@@ -1,14 +1,14 @@
 import {
-  alpha,
-  Button,
-  Divider,
-  Grid,
-  IconButton,
-  InputAdornment,
-  InputBase,
-  Stack,
-  styled,
-  TextField,
+	alpha,
+	Button,
+	Divider,
+	Grid,
+	IconButton,
+	InputAdornment,
+	InputBase,
+	Stack,
+	styled,
+	TextField,
 } from "@mui/material";
 import React, { FC } from "react";
 import theme from "src/utils/theme/theme";
@@ -22,81 +22,66 @@ import { ReactComponent as LogoIcon } from "../../assets/icons/Base/logo.svg";
 import { headerSize } from "src/utils/constants/sizes.constants";
 import { categories } from "src/utils/constants/categories.constants";
 import { useLocation, useMatch, useNavigate, useParams } from "react-router";
-import {
-  authSignInPath,
-  homePath,
-  productsNestPath,
-  productsPath,
-} from "src/utils/constants/routes.constants";
+import { homePath, productsNestPath, productsPath } from "src/utils/constants/routes.constants";
 import useGetParams from "src/hooks/useGetParams";
 import useGetLocation from "src/hooks/useGetLocation";
-import { useAppSelector } from "src/strore_api/configureStore";
 
 const StackStyled = styled(Stack)<{ dark?: string }>(({ theme, dark }) => ({
-  position: "fixed",
-  zIndex: "10",
-  flexDirection: "row",
-  alignItems: "center",
-  padding: "0 30px 0 15px",
-  width: "100%",
-  height: headerSize.height,
-  backgroundColor: dark ? "#17181f" : theme.palette.background.paper,
-  borderBottom: `1px solid ${
-    dark ? theme.palette.grey[800] : theme.palette.grey["A100"]
-  }`,
-  transition: "all 0.3s ease 0s",
-  "& .MuiInputBase": {
-    "&-root": {
-      "& fieldset": {
-        borderColor: dark
-          ? theme.palette.grey[400]
-          : theme.palette.grey["A200"],
-        transition: "all 0.3s ease 0s",
-      },
-      "&:not(:has(input:focus)):hover fieldset": {
-        borderColor: dark ? theme.palette.grey[600] : theme.palette.grey[400],
-      },
-      "&.Mui-focused fieldset": {
-        filter: dark ? "invert(1)" : "invert(0)",
-        borderColor: theme.palette.primary.main,
-      },
-    },
-  },
+	position: "fixed",
+	zIndex: "10",
+	flexDirection: "row",
+	alignItems: "center",
+	padding: "0 30px 0 15px",
+	width: "100%",
+	height: headerSize.height,
+	backgroundColor: dark ? "#17181f" : theme.palette.background.paper,
+	borderBottom: `1px solid ${dark ? theme.palette.grey[800] : theme.palette.grey["A100"]}`,
+	transition: "all 0.3s ease 0s",
+	"& .MuiInputBase": {
+		"&-root": {
+			"& fieldset": {
+				borderColor: dark ? theme.palette.grey[400] : theme.palette.grey["A200"],
+				transition: "all 0.3s ease 0s",
+			},
+			"&:not(:has(input:focus)):hover fieldset": {
+				borderColor: dark ? theme.palette.grey[600] : theme.palette.grey[400],
+			},
+			"&.Mui-focused fieldset": {
+				filter: dark ? "invert(1)" : "invert(0)",
+				borderColor: theme.palette.primary.main,
+			},
+		},
+	},
 }));
 
 const MenuBar = styled("ul")<{ dark?: string }>(({ theme, dark }) => ({
-  display: "flex",
-  alignItems: "center",
-  paddingLeft: "10px",
-  marginRight: "auto",
-  filter: dark ? "invert(1)" : "invert(0)",
+	display: "flex",
+	alignItems: "center",
+	paddingLeft: "10px",
+	marginRight: "auto",
+	filter: dark ? "invert(1)" : "invert(0)",
 }));
 const MenuItem = styled("li")(({ theme }) => ({
-  listStyle: "none",
+	listStyle: "none",
 }));
 const SearchBar = styled("div")<{ dark?: string }>(({ theme, dark }) => ({
-  display: "flex",
-  alignItems: "center",
-  gap: "5px",
-  filter: dark ? "invert(1)" : "invert(0)",
+	display: "flex",
+	alignItems: "center",
+	gap: "5px",
+	filter: dark ? "invert(1)" : "invert(0)",
 }));
 
-const MyButton = styled(Button)<{ dark?: string; active?: string }>(
-  ({ theme, dark, active }) => ({
-    padding: "15px",
-    color:
-      active === "true"
-        ? theme.palette.text.primary
-        : theme.palette.text.secondary,
-    filter: dark ? "invert(1)" : "invert(0)",
-    "&:hover": {
-      color: theme.palette.text.primary,
-    },
-  })
-);
+const MyButton = styled(Button)<{ dark?: string; active?: string }>(({ theme, dark, active }) => ({
+	padding: "15px",
+	color: active === "true" ? theme.palette.text.primary : theme.palette.text.secondary,
+	filter: dark ? "invert(1)" : "invert(0)",
+	"&:hover": {
+		color: theme.palette.text.primary,
+	},
+}));
 
 const Search = styled("div")(({ theme }) => ({
-  marginRight: "10px",
+	marginRight: "10px",
 }));
 
 const SvgIconSearch = styled(SvgIcon)(({ theme }) => ({}));

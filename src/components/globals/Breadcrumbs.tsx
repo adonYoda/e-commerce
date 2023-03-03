@@ -5,7 +5,7 @@ import useGetLocation from "src/hooks/useGetLocation";
 import useGetParams from "src/hooks/useGetParams";
 import { productsPath } from "src/utils/constants/routes.constants";
 
-const BreadcrumbsContainer = styled(Typography)`
+const BreadcrumbsContainer = styled("div")`
 	padding: 30px 0;
 `;
 const Crumbs = styled(Typography)`
@@ -20,10 +20,15 @@ const LastCrumb = styled(Typography)`
 const Breadcrumbs = () => {
 	const navigate = useNavigate();
 	const paramsList = useGetLocation();
-	const paths = paramsList.slice(1);
+	const paths = paramsList
+		.slice(1)
+		.filter((el) => !el.includes("productId="))
+		.map((el) => {
+			return el[0].toUpperCase() + el.slice(1);
+		});
 
 	const handleClickNav = (target: string) => {
-		const index = paramsList.findIndex((p) => p === target);
+		const index = paramsList.findIndex((p) => p.toLowerCase() === target.toLowerCase());
 		const path = paramsList.slice(0, index + 1).join("/");
 		navigate(path);
 	};

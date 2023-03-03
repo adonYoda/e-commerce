@@ -6,13 +6,18 @@ import { ReactComponent as StarIcon } from "../../assets/icons/Base/star.svg";
 import { ReactComponent as StarFilledIcon } from "../../assets/icons/Base/star-filled.svg";
 import { CheckboxCardIcon } from "../globals/MuiCheckboxCardIcon.styled";
 import { currencyFormat } from "src/utils/constants/currency.constants";
+import { Link } from "react-router-dom";
+import { productCardSize } from "src/utils/constants/sizes.constants";
+import useGetParams from "src/hooks/useGetParams";
+import useGetLocation from "src/hooks/useGetLocation";
+import { productsPath } from "src/utils/constants/routes.constants";
 
 const CardStyled = styled(Card)`
 	border: none;
 `;
 const CardActionAreaStyled = styled(CardActionArea)`
-	width: 300px;
-	height: 365px;
+	width: ${productCardSize.width};
+	height: ${productCardSize.height};
 	border-radius: ${({ theme }) => theme.shape.borderRadius}px;
 	overflow: hidden;
 	position: relative;
@@ -53,18 +58,36 @@ const ProductCard: React.FC<Props> = ({ product }) => {
 		// maximumSignificantDigits: 6,
 	});
 
+	const [productsParam, categoryParam, subcategoryParam] = useGetLocation();
+
+	const linkToProductItem = () => {
+		const path = [];
+		productsParam !== productsPath && path.push(productsPath);
+		!categoryParam && path.push(product.productAttributes.category);
+		!subcategoryParam && path.push(product.productAttributes.subCategory.name);
+		path.push(`productId=${product.productId}`);
+		path.push(product.productName);
+		return path.join("/");
+	};
+
 	return (
 		<CardStyled variant='outlined'>
-			<CardActionAreaStyled>
-				<CardMedia
-					sx={{ objectFit: "cover", width: "100%", height: "100%" }}
-					component='img'
-					image={product.aboutProduct.mainImgUrl}
-					alt={product.aboutProduct.description}
-					loading='lazy'
-				/>
-				<CheckboxCardIconStyled color='primary' icon={<ShoppingBagIcon />} checkedIcon={<ShoppingBagIcon />} />
-			</CardActionAreaStyled>
+			<Link to={linkToProductItem()}>
+				<CardActionAreaStyled>
+					<CardMedia
+						sx={{ objectFit: "cover", width: "100%", height: "100%" }}
+						component='img'
+						image={product.aboutProduct.mainImgUrl}
+						alt={product.aboutProduct.description}
+						loading='lazy'
+					/>
+					<CheckboxCardIconStyled
+						color='primary'
+						icon={<ShoppingBagIcon />}
+						checkedIcon={<ShoppingBagIcon />}
+					/>
+				</CardActionAreaStyled>
+			</Link>
 			<CardContentStyled>
 				<RatingStyled
 					icon={<StarFilledIcon />}

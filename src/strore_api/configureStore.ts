@@ -20,10 +20,9 @@ export const store = configureStore({
     
 });
 
-store.subscribe(()=>{
-    localStorage.setItem("product", JSON.stringify(store.getState().product));
+store.subscribe(() => {
+	localStorage.setItem("product", JSON.stringify(store.getState().product));
 });
-
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

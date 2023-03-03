@@ -1,14 +1,15 @@
 import { Container, styled } from "@mui/material";
 import React from "react";
-import { Route, RouterProvider, Routes } from "react-router";
+import { Route, Routes } from "react-router";
 import Breadcrumbs from "src/components/globals/Breadcrumbs";
 import ScrollToTop from "src/components/globals/ScrollToTop";
-import Newsletter from "src/components/Newsletter/Newsletter";
+import useGetLocation from "src/hooks/useGetLocation";
+import useGetParams from "src/hooks/useGetParams";
 import AuthRecovery from "src/pages/AuthPage/AuthRecovery";
 import AuthSignIn from "src/pages/AuthPage/AuthSignIn";
-import AuthPage from "src/pages/AuthPage/AuthSignIn";
 import AuthSignUp from "src/pages/AuthPage/AuthSignUp";
 import LandingPage from "src/pages/LandingPage";
+import ProductItemPage from "src/pages/ProductItemPage";
 import ProductsPage from "src/pages/ProductsPage";
 import {
 	authRecoveryPath,
@@ -16,6 +17,7 @@ import {
 	authSignUpPath,
 	homePath,
 	productsNestPath,
+	productsPath,
 } from "src/utils/constants/routes.constants";
 import { headerSize } from "src/utils/constants/sizes.constants";
 
@@ -27,6 +29,8 @@ const MainContainer = styled("main")`
 `;
 
 const Main = () => {
+	const [productsParam, cactegoryParam, subcategoryParam, productIdParam, productNameParam] = useGetLocation();
+	console.log(`products/${cactegoryParam}/${subcategoryParam}/${productIdParam}`);
 	return (
 		<MainContainer>
 			<Container>
@@ -41,6 +45,10 @@ const Main = () => {
 						<Route path={authSignUpPath} element={<AuthSignUp />} />
 						<Route path={authRecoveryPath} element={<AuthRecovery />} />
 					</>
+					<Route
+						path={`${productsPath}/${cactegoryParam}/${subcategoryParam}/${productIdParam}/${productNameParam}`}
+						element={<ProductItemPage />}
+					/>
 				</Routes>
 			</ScrollToTop>
 		</MainContainer>
