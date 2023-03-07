@@ -12,7 +12,7 @@ const LandingPage = () => {
 			<LandingPageContainer>
 				<Banner />
 				<Section title='New arrivals'>
-					<Product contained='true' />
+					<Product contained />
 				</Section>
 				<Section title='Categories'>
 					<Categories />

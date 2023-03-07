@@ -42,6 +42,7 @@ export interface IColorSize {
 	color: string;
 	size: string;
 	quantity: number;
+	iconUrl: string;
 }
 
 export interface ISubCategory {
