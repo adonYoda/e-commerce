@@ -1,5 +1,5 @@
 import { Container, styled } from "@mui/material";
-import React from "react";
+import React, { memo } from "react";
 import { Route, Routes } from "react-router";
 import Breadcrumbs from "src/components/globals/Breadcrumbs";
 import ScrollToTop from "src/components/globals/ScrollToTop";
@@ -30,7 +30,6 @@ const MainContainer = styled("main")`
 
 const Main = () => {
 	const [productsParam, cactegoryParam, subcategoryParam, productIdParam, productNameParam] = useGetLocation();
-	console.log(`products/${cactegoryParam}/${subcategoryParam}/${productIdParam}`);
 	return (
 		<MainContainer>
 			<Container>
@@ -55,4 +54,4 @@ const Main = () => {
 	);
 };
 
-export default Main;
+export default memo(Main);

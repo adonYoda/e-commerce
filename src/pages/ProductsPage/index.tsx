@@ -4,6 +4,7 @@ import { Navigate, Route, Routes, useLocation, useParams } from "react-router";
 import TopTitleBar from "src/components/globals/TopTitleBar";
 import Newsletter from "src/components/Newsletter/Newsletter";
 import Products from "src/components/Products";
+import useGetLocation from "src/hooks/useGetLocation";
 import useGetParams from "src/hooks/useGetParams";
 import { categories } from "src/utils/constants/categories.constants";
 import ProductItemPage from "../ProductItemPage";
@@ -22,7 +23,7 @@ const ProductsPageMain = styled("div")`
 const names = ["By Price", "By Name", "Most Orders", "Most Likes", "Newest"];
 
 const ProductsPage = () => {
-	const [categoryParam, subcategoryParam, productIdParam] = useGetParams();
+	const [productsParam, categoryParam, subcategoryParam, productIdParam] = useGetLocation();
 	const handleGetValue = (value: string) => {
 		console.log(value);
 	};

@@ -1,6 +1,8 @@
 import { Box, CircularProgress, Container, Pagination, Skeleton, Stack } from "@mui/material";
 import React, { FC, useState } from "react";
 import { useDispatch } from "react-redux";
+import { useLocation } from "react-router";
+import useGetLocation from "src/hooks/useGetLocation";
 import useGetParams from "src/hooks/useGetParams";
 import { useGetProductsQuery } from "src/strore_api/product/productApi";
 import { IAboutProduct, IProduct, IRating } from "src/types";
@@ -10,13 +12,17 @@ import { ProductList } from "./ProductsCards.styled";
 
 interface Props {
 	productData?: IProduct[];
-	contained?: string | undefined;
+	contained?: boolean;
 }
 
 const Products: FC<Props> = ({ contained }) => {
-	const [category, subcategory] = useGetParams();
+	// const [category, subcategory] = useGetParams();
+	const [products, category, subcategory, productId] = useGetLocation();
+
 	const [page, setPage] = useState(1);
-	const countPerPage = contained ? 12 : 9;
+
+	const countPerPage = contained ? 12 : productId ? 4 : 9;
+
 	const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
 		setPage(value);
 	};
@@ -29,7 +35,7 @@ const Products: FC<Props> = ({ contained }) => {
 	} = useGetProductsQuery({ page, countPerPage, category, subcategory, contained });
 
 	return (
-		<Container sx={{ padding: `${contained ? "auto" : 0} !important` }}>
+		<Container sx={{ padding: `${contained || productId ? "auto" : 0} !important` }}>
 			<>
 				<ProductList>
 					{data.map((product: IProduct) =>

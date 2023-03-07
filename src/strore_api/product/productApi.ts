@@ -1,8 +1,5 @@
-import React from "react";
 import { IProduct } from "src/types";
-import { store } from "../configureStore";
 import { ecommerceApi } from "../ecommerceApi";
-import { setProducts } from "./productSlice";
 
 export const productApi = ecommerceApi.injectEndpoints({
 	endpoints: (build) => ({
@@ -18,7 +15,7 @@ export const productApi = ecommerceApi.injectEndpoints({
 				subcategory?: string;
 				page: number;
 				countPerPage: number;
-				contained?: string;
+				contained?: boolean;
 			}
 		>({
 			query: ({ category, subcategory, page, countPerPage, contained }) => {
