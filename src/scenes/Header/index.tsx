@@ -110,7 +110,7 @@ const AppBar: FC<Props> = ({ dark }) => {
 				{categories.map((c) => (
 					<MenuItem key={c.title}>
 						<MyButton
-							active={categoryParam === c.title ? "true" : "false"}
+							active={categoryParam === c.title.toLowerCase() ? "true" : "false"}
 							onClick={() => handleClickCategory(c.title)}
 						>
 							{c.title}
