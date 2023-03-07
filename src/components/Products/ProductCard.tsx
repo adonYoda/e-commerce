@@ -1,18 +1,26 @@
 import { Card, CardActionArea, CardContent, CardMedia, Rating, styled, Typography } from "@mui/material";
-import React from "react";
+import React, { MouseEvent, MouseEventHandler, useState } from "react";
 import { IProduct } from "src/types";
 import { ReactComponent as ShoppingBagIcon } from "../../assets/icons/Base/shopping-bag.svg";
 import { ReactComponent as StarIcon } from "../../assets/icons/Base/star.svg";
 import { ReactComponent as StarFilledIcon } from "../../assets/icons/Base/star-filled.svg";
 import { CheckboxCardIcon } from "../globals/MuiCheckboxCardIcon.styled";
 import { currencyFormat } from "src/utils/constants/currency.constants";
+import { Link } from "react-router-dom";
+import { productCardSize } from "src/utils/constants/sizes.constants";
+import useGetParams from "src/hooks/useGetParams";
+import useGetLocation from "src/hooks/useGetLocation";
+import { productsPath } from "src/utils/constants/routes.constants";
+import { useDispatch } from "react-redux";
+import { getProduct } from "src/strore_api/product/productSlice";
+import { currencyFormated } from "src/services/currency.services";
 
 const CardStyled = styled(Card)`
 	border: none;
 `;
 const CardActionAreaStyled = styled(CardActionArea)`
-	width: 300px;
-	height: 365px;
+	width: ${productCardSize.width};
+	height: ${productCardSize.height};
 	border-radius: ${({ theme }) => theme.shape.borderRadius}px;
 	overflow: hidden;
 	position: relative;
@@ -21,7 +29,7 @@ const CheckboxCardIconStyled = styled(CheckboxCardIcon)`
 	position: absolute;
 	bottom: 10px;
 	right: 10px;
-	z-index: 5;
+	z-index: 7;
 `;
 const CardContentStyled = styled(CardContent)`
 	display: flex;
@@ -43,30 +51,56 @@ const ProductNamePrice = styled("div")`
 `;
 
 interface Props {
-	// rating: IRating;
-	// aboutProduct: IAboutProduct;
-	// productId: number
 	product: IProduct;
 }
 
 const ProductCard: React.FC<Props> = ({ product }) => {
-	const currencyFormated = new Intl.NumberFormat(currencyFormat, {
-		style: "currency",
-		currency: product.currency,
-		// maximumSignificantDigits: 6,
-	});
+	const dispatch = useDispatch();
+	const [isChecked, setIsChecked] = useState(false);
+	const [productsParam, categoryParam, subcategoryParam, productIdParam] = useGetLocation();
+
+	const linkToProductItem = () => {
+		const path = [];
+		if (!!productIdParam) {
+			path.push("./../..");
+			path.push(`productId=${product.productId}`);
+			path.push(product.productName);
+			return path.join("/");
+		}
+		productsParam !== productsPath && path.push(productsPath);
+		!categoryParam && path.push(product.productAttributes.category);
+		!subcategoryParam && path.push(product.productAttributes.subCategory.name);
+		path.push(`productId=${product.productId}`);
+		path.push(product.productName);
+		return path.join("/");
+	};
+
+	const handleOnClickCard = () => {
+		dispatch(getProduct(product));
+	};
+	const handleOnChangeToCart = () => {};
 
 	return (
 		<CardStyled variant='outlined'>
 			<CardActionAreaStyled>
-				<CardMedia
-					sx={{ objectFit: "cover", width: "100%", height: "100%" }}
-					component='img'
-					image={product.aboutProduct.mainImgUrl}
-					alt={product.aboutProduct.description}
-					loading='lazy'
-				/>
-				<CheckboxCardIconStyled color='primary' icon={<ShoppingBagIcon />} checkedIcon={<ShoppingBagIcon />} />
+				<Link to={linkToProductItem()} onClick={handleOnClickCard}>
+					<CardMedia
+						sx={{ objectFit: "cover", width: "100%", height: "100%" }}
+						component='img'
+						image={product.aboutProduct.mainImgUrl}
+						alt={product.aboutProduct.description}
+						loading='lazy'
+					/>
+				</Link>
+				{!productIdParam && (
+					<CheckboxCardIconStyled
+						onChange={handleOnChangeToCart}
+						color='primary'
+						icon={<ShoppingBagIcon />}
+						checkedIcon={<ShoppingBagIcon />}
+						checked={isChecked}
+					/>
+				)}
 			</CardActionAreaStyled>
 			<CardContentStyled>
 				<RatingStyled
@@ -78,7 +112,9 @@ const ProductCard: React.FC<Props> = ({ product }) => {
 				<TypographyProductId variant='caption3'>#{product.productId}</TypographyProductId>
 				<ProductNamePrice>
 					<Typography variant='caption3'>{product.productName}</Typography>
-					<Typography variant='caption1'>{currencyFormated.format(product.price)}</Typography>
+					<Typography variant='caption1'>
+						{currencyFormated(currencyFormat, product.currency, product.price)}
+					</Typography>
 				</ProductNamePrice>
 			</CardContentStyled>
 		</CardStyled>
@@ -86,17 +122,3 @@ const ProductCard: React.FC<Props> = ({ product }) => {
 };
 
 export default ProductCard;
-
-{
-	/* <ImageListItemBar position="bottom" 
-actionIcon={<SvgIcon width={60} icon={<ShoppingBagIcon />} />}
-actionPosition="right" />
-<Box>
-<Rating name="read-only" value={(product.rating.totalRatingScore/product.rating.numberOfRated)} readOnly />
-<Box sx={{ ml: 2 }}>{product.rating.numberOfRated}</Box>
-</Box>
-<Box>
-<Typography>#{product.productId}</Typography>
-<Typography>{product.productName}{product.currency}{product.price}</Typography>
-</Box> */
-}

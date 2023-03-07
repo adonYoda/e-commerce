@@ -50,7 +50,6 @@ CategoryTitle.defaultProps = {
 };
 
 const subcategories = [
-	{ title: "All", disabled: false },
 	{ title: "Coats & Jackets", disabled: false },
 	{ title: "T-shirts", disabled: false },
 	{ title: "Tops", disabled: false },
@@ -91,9 +90,10 @@ const styles = [
 
 interface Props {
 	categoryParam: string;
+	subcategoryParam: string | undefined;
 }
 
-const Sidebar: FC<Props> = ({ categoryParam }) => {
+const Sidebar: FC<Props> = ({ categoryParam, subcategoryParam }) => {
 	const checkbox = (disabled: boolean) => (
 		<Checkbox icon={disabled ? <DisabledIcon /> : <OffIcon />} checkedIcon={<OnIcon />} />
 	);
@@ -105,14 +105,18 @@ const Sidebar: FC<Props> = ({ categoryParam }) => {
 		<SidebarContainer>
 			<SidebarColumn>
 				<Accordion>
-					<AccordionSummary
-						expandIcon={<SvgIconArrow icon={<ExpandMoreIcon />} />}
-						aria-controls='panel1a-content'
-						id='panel1a-header'
-					>
+					<AccordionSummary expandIcon={<SvgIconArrow icon={<ExpandMoreIcon />} />}>
 						<Typography>Category</Typography>
 					</AccordionSummary>
 					<AccordionDetails>
+						<NavLink
+							style={({ isActive, isPending }) => ({
+								color: !subcategoryParam ? theme.palette.primary.main : theme.palette.text.primary,
+							})}
+							to={categoryParam}
+						>
+							<CategoryTitle>All</CategoryTitle>
+						</NavLink>
 						{subcategories.map((c, i) => (
 							<NavLink
 								key={c.title}
@@ -127,11 +131,7 @@ const Sidebar: FC<Props> = ({ categoryParam }) => {
 					</AccordionDetails>
 				</Accordion>
 				<Accordion>
-					<AccordionSummary
-						expandIcon={<SvgIconArrow icon={<ExpandMoreIcon />} />}
-						aria-controls='panel2a-content'
-						id='panel2a-header'
-					>
+					<AccordionSummary expandIcon={<SvgIconArrow icon={<ExpandMoreIcon />} />}>
 						<Typography>Price</Typography>
 					</AccordionSummary>
 					<AccordionDetails>
@@ -149,11 +149,7 @@ const Sidebar: FC<Props> = ({ categoryParam }) => {
 					</AccordionDetails>
 				</Accordion>
 				<Accordion>
-					<AccordionSummary
-						expandIcon={<SvgIconArrow icon={<ExpandMoreIcon />} />}
-						aria-controls='panel2a-content'
-						id='panel2a-header'
-					>
+					<AccordionSummary expandIcon={<SvgIconArrow icon={<ExpandMoreIcon />} />}>
 						<Typography>Size</Typography>
 					</AccordionSummary>
 					<AccordionDetails sx={{ display: "flex", gap: "80px" }}>
@@ -188,11 +184,7 @@ const Sidebar: FC<Props> = ({ categoryParam }) => {
 					</AccordionDetails>
 				</Accordion>
 				<Accordion>
-					<AccordionSummary
-						expandIcon={<SvgIconArrow icon={<ExpandMoreIcon />} />}
-						aria-controls='panel2a-content'
-						id='panel2a-header'
-					>
+					<AccordionSummary expandIcon={<SvgIconArrow icon={<ExpandMoreIcon />} />}>
 						<Typography>Collection</Typography>
 					</AccordionSummary>
 					<AccordionDetails>
@@ -203,11 +195,7 @@ const Sidebar: FC<Props> = ({ categoryParam }) => {
 					</AccordionDetails>
 				</Accordion>
 				<Accordion>
-					<AccordionSummary
-						expandIcon={<SvgIconArrow icon={<ExpandMoreIcon />} />}
-						aria-controls='panel2a-content'
-						id='panel2a-header'
-					>
+					<AccordionSummary expandIcon={<SvgIconArrow icon={<ExpandMoreIcon />} />}>
 						<Typography>Brand</Typography>
 					</AccordionSummary>
 					<AccordionDetails>
@@ -225,11 +213,7 @@ const Sidebar: FC<Props> = ({ categoryParam }) => {
 					</AccordionDetails>
 				</Accordion>
 				<Accordion>
-					<AccordionSummary
-						expandIcon={<SvgIconArrow icon={<ExpandMoreIcon />} />}
-						aria-controls='panel2a-content'
-						id='panel2a-header'
-					>
+					<AccordionSummary expandIcon={<SvgIconArrow icon={<ExpandMoreIcon />} />}>
 						<Typography>Style</Typography>
 					</AccordionSummary>
 					<AccordionDetails>

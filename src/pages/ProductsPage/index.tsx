@@ -1,13 +1,13 @@
 import { Container, styled, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navigate, Route, Routes, useLocation, useParams } from "react-router";
-import LastPostsBlog from "src/components/Blog";
-import Breadcrumbs from "src/components/globals/Breadcrumbs";
 import TopTitleBar from "src/components/globals/TopTitleBar";
 import Newsletter from "src/components/Newsletter/Newsletter";
 import Products from "src/components/Products";
+import useGetLocation from "src/hooks/useGetLocation";
 import useGetParams from "src/hooks/useGetParams";
 import { categories } from "src/utils/constants/categories.constants";
+import ProductItemPage from "../ProductItemPage";
 import Sidebar from "./Sidebar/Sidebar";
 
 const ProductsPageContainer = styled("div")`
@@ -23,37 +23,31 @@ const ProductsPageMain = styled("div")`
 const names = ["By Price", "By Name", "Most Orders", "Most Likes", "Newest"];
 
 const ProductsPage = () => {
-	const [categoryParam, subcategoryParam] = useGetParams();
+	const [productsParam, categoryParam, subcategoryParam, productIdParam] = useGetLocation();
 	const handleGetValue = (value: string) => {
 		console.log(value);
 	};
+
 	return (
 		<>
 			<ProductsPageContainer>
 				<Container>
 					<TopTitleBar
-						title={categoryParam}
+						category={categoryParam}
+						subcategory={subcategoryParam}
 						selectorList={names}
 						handleGetValue={handleGetValue}
 						selectorWidth='135px'
 					/>
 					<ProductsPageMain>
-						<Sidebar categoryParam={categoryParam} />
-						{/* <Routes>
+						<Sidebar categoryParam={categoryParam} subcategoryParam={subcategoryParam} />
+						<Routes>
 							<Route path='/' element={<Navigate to={categories[0].title} />} />
 							<Route
-								path={categoryParam}
-								element={<Products categoryParam={categoryParam} subcategoryParam={subcategoryParam} />}
-							>
-								<Route
-									path={subcategoryParam}
-									element={
-										<Products categoryParam={categoryParam} subcategoryParam={subcategoryParam} />
-									}
-								/>
-							</Route>
-						</Routes> */}
-						<Products />
+								path={`${categoryParam}/${subcategoryParam ? subcategoryParam : ""}`}
+								element={<Products />}
+							/>
+						</Routes>
 					</ProductsPageMain>
 				</Container>
 			</ProductsPageContainer>

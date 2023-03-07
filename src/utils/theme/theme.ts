@@ -835,7 +835,7 @@ let theme = createTheme({
 			styleOverrides: {
 				root: ({ theme }) => ({
 					height: 24,
-					background: `${theme.palette.secondary.light}33`,
+					background: `${theme.palette.secondary.main}`,
 					transition: "all 0.3s ease 0s",
 					"& .MuiChip-label": {
 						padding: "0 10px",
@@ -852,6 +852,19 @@ let theme = createTheme({
 			},
 		},
 		MuiButton: {
+			variants: [
+				{
+					props: { size: "large" },
+					style: {
+						"& .MuiButton-startIcon": {
+							marginRight: "14px",
+						},
+						fontSize: "20px",
+						lineHeight: "24px",
+						letterSpacing: "-0.6px",
+					},
+				},
+			],
 			styleOverrides: {
 				root: ({ theme }) => ({
 					color: theme.palette.text.primary,
