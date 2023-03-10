@@ -71,7 +71,7 @@ const AuthSignIn: FC<Props> = () => {
   };
 
   //==================Logic API of SigIn================================
-  const [loginUser, { data: loginData, isSuccess: isLoginSuccess, isError }] =
+  const [loginUser, {isError }] =
     useLoginUserMutation();
 
   const onSubmit = async (data: ILoginForm) => {

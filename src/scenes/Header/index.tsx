@@ -1,14 +1,14 @@
 import {
-  alpha,
-  Button,
-  Divider,
-  Grid,
-  IconButton,
-  InputAdornment,
-  InputBase,
-  Stack,
-  styled,
-  TextField,
+	alpha,
+	Button,
+	Divider,
+	Grid,
+	IconButton,
+	InputAdornment,
+	InputBase,
+	Stack,
+	styled,
+	TextField,
 } from "@mui/material";
 import React, { FC } from "react";
 import theme from "src/utils/theme/theme";
@@ -33,70 +33,61 @@ import useGetLocation from "src/hooks/useGetLocation";
 import { useAppSelector } from "src/strore_api/configureStore";
 
 const StackStyled = styled(Stack)<{ dark?: string }>(({ theme, dark }) => ({
-  position: "fixed",
-  zIndex: "10",
-  flexDirection: "row",
-  alignItems: "center",
-  padding: "0 30px 0 15px",
-  width: "100%",
-  height: headerSize.height,
-  backgroundColor: dark ? "#17181f" : theme.palette.background.paper,
-  borderBottom: `1px solid ${
-    dark ? theme.palette.grey[800] : theme.palette.grey["A100"]
-  }`,
-  transition: "all 0.3s ease 0s",
-  "& .MuiInputBase": {
-    "&-root": {
-      "& fieldset": {
-        borderColor: dark
-          ? theme.palette.grey[400]
-          : theme.palette.grey["A200"],
-        transition: "all 0.3s ease 0s",
-      },
-      "&:not(:has(input:focus)):hover fieldset": {
-        borderColor: dark ? theme.palette.grey[600] : theme.palette.grey[400],
-      },
-      "&.Mui-focused fieldset": {
-        filter: dark ? "invert(1)" : "invert(0)",
-        borderColor: theme.palette.primary.main,
-      },
-    },
-  },
+	position: "fixed",
+	zIndex: "10",
+	flexDirection: "row",
+	alignItems: "center",
+	padding: "0 30px 0 15px",
+	width: "100%",
+	height: headerSize.height,
+	backgroundColor: dark ? "#17181f" : theme.palette.background.paper,
+	borderBottom: `1px solid ${dark ? theme.palette.grey[800] : theme.palette.grey["A100"]}`,
+	transition: "all 0.3s ease 0s",
+	"& .MuiInputBase": {
+		"&-root": {
+			"& fieldset": {
+				borderColor: dark ? theme.palette.grey[400] : theme.palette.grey["A200"],
+				transition: "all 0.3s ease 0s",
+			},
+			"&:not(:has(input:focus)):hover fieldset": {
+				borderColor: dark ? theme.palette.grey[600] : theme.palette.grey[400],
+			},
+			"&.Mui-focused fieldset": {
+				filter: dark ? "invert(1)" : "invert(0)",
+				borderColor: theme.palette.primary.main,
+			},
+		},
+	},
 }));
 
 const MenuBar = styled("ul")<{ dark?: string }>(({ theme, dark }) => ({
-  display: "flex",
-  alignItems: "center",
-  paddingLeft: "10px",
-  marginRight: "auto",
-  filter: dark ? "invert(1)" : "invert(0)",
+	display: "flex",
+	alignItems: "center",
+	paddingLeft: "10px",
+	marginRight: "auto",
+	filter: dark ? "invert(1)" : "invert(0)",
 }));
 const MenuItem = styled("li")(({ theme }) => ({
-  listStyle: "none",
+	listStyle: "none",
 }));
 const SearchBar = styled("div")<{ dark?: string }>(({ theme, dark }) => ({
-  display: "flex",
-  alignItems: "center",
-  gap: "5px",
-  filter: dark ? "invert(1)" : "invert(0)",
+	display: "flex",
+	alignItems: "center",
+	gap: "5px",
+	filter: dark ? "invert(1)" : "invert(0)",
 }));
 
-const MyButton = styled(Button)<{ dark?: string; active?: string }>(
-  ({ theme, dark, active }) => ({
-    padding: "15px",
-    color:
-      active === "true"
-        ? theme.palette.text.primary
-        : theme.palette.text.secondary,
-    filter: dark ? "invert(1)" : "invert(0)",
-    "&:hover": {
-      color: theme.palette.text.primary,
-    },
-  })
-);
+const MyButton = styled(Button)<{ dark?: string; active?: string }>(({ theme, dark, active }) => ({
+	padding: "15px",
+	color: active === "true" ? theme.palette.text.primary : theme.palette.text.secondary,
+	filter: dark ? "invert(1)" : "invert(0)",
+	"&:hover": {
+		color: theme.palette.text.primary,
+	},
+}));
 
 const Search = styled("div")(({ theme }) => ({
-  marginRight: "10px",
+	marginRight: "10px",
 }));
 
 const SvgIconSearch = styled(SvgIcon)(({ theme }) => ({}));
@@ -109,8 +100,12 @@ interface Props {
 }
 
 const AppBar: FC<Props> = ({ dark }) => {
-  const navigate = useNavigate();
-  const [categoryParam] = useGetLocation(productsPath);
+	const navigate = useNavigate();
+	const [categoryParam] = useGetLocation(productsPath);
+
+	const handleClickCategory = (category: string) => {
+		navigate(productsPath + "/" + category.toLowerCase());
+	};
   const isAuth = useAppSelector((state) => state?.auth?.authUser);
 
   const handleCheckAuth = () => {
@@ -129,51 +124,51 @@ const AppBar: FC<Props> = ({ dark }) => {
 	  }
   };
 
-  return (
-    <StackStyled dark={dark}>
-      <MyButton dark={dark} onClick={() => navigate(homePath)}>
-        <SvgIcon width={67} icon={<LogoIcon />} />
-      </MyButton>
-      <MenuBar dark={dark}>
-        {categories.map((c) => (
-          <MenuItem key={c.title}>
-            <MyButton
-              active={categoryParam === c.title ? "true" : "false"}
-              onClick={() => navigate(productsPath + "/" + c.title)}
-            >
-              {c.title}
-            </MyButton>
-          </MenuItem>
-        ))}
-        <MenuItem>
-          <MyButton>Blog</MyButton>
-        </MenuItem>
-      </MenuBar>
-      <SearchBar dark={dark}>
-        <Search>
-          <TextField
-            placeholder="Search"
-            size="small"
-            id="outlined-start-adornment"
-            sx={{ width: "250px" }}
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <SearchIcon />
-                </InputAdornment>
-              ),
-            }}
-          />
-        </Search>
-        <IconButton size="small" onClick={handleClickCart}>
-          <SvgIcon size={20} icon={<BagIcon />} />
-        </IconButton>
-        <IconButton size="small" onClick={handleCheckAuth}>
-          <SvgIcon size={20} icon={<UserIcon />} />
-        </IconButton>
-      </SearchBar>
-    </StackStyled>
-  );
+	return (
+		<StackStyled dark={dark}>
+			<MyButton dark={dark} onClick={() => navigate(homePath)}>
+				<SvgIcon width={67} icon={<LogoIcon />} />
+			</MyButton>
+			<MenuBar dark={dark}>
+				{categories.map((c) => (
+					<MenuItem key={c.title}>
+						<MyButton
+							active={categoryParam === c.title.toLowerCase() ? "true" : "false"}
+							onClick={() => handleClickCategory(c.title)}
+						>
+							{c.title}
+						</MyButton>
+					</MenuItem>
+				))}
+				<MenuItem>
+					<MyButton>Blog</MyButton>
+				</MenuItem>
+			</MenuBar>
+			<SearchBar dark={dark}>
+				<Search>
+					<TextField
+						placeholder='Search'
+						size='small'
+						id='outlined-start-adornment'
+						sx={{ width: "250px" }}
+						InputProps={{
+							startAdornment: (
+								<InputAdornment position='start'>
+									<SearchIcon />
+								</InputAdornment>
+							),
+						}}
+					/>
+				</Search>
+				<IconButton size='small' onClick={handleClickCart}>
+					<SvgIcon size={20} icon={<BagIcon />} />
+				</IconButton>
+				<IconButton size='small' onClick={handleCheckAuth}>
+					<SvgIcon size={20} icon={<UserIcon />} />
+				</IconButton>
+			</SearchBar>
+		</StackStyled>
+	);
 };
 
 export default AppBar;
