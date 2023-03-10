@@ -6,7 +6,7 @@ import theme from "./utils/theme/theme";
 import { GlobalStyles } from "./styles/GlobalStyles.styled";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import { store, useAppSelector } from "./strore_api/configureStore";
+import { store } from "./strore_api/configureStore";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(

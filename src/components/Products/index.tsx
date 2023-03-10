@@ -1,11 +1,4 @@
-import {
-  Box,
-  CircularProgress,
-  Container,
-  Pagination,
-  Skeleton, Stack,
-  Typography,
-} from "@mui/material";
+import { Box, CircularProgress, Container, Pagination, Skeleton, Stack } from "@mui/material";
 import React, { FC, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useLocation } from "react-router";
@@ -14,7 +7,6 @@ import useGetParams from "src/hooks/useGetParams";
 import { useGetProductsQuery } from "src/strore_api/product/productApi";
 import { IAboutProduct, IProduct, IRating } from "src/types";
 import { productCardSize } from "src/utils/constants/sizes.constants";
-import theme from "src/utils/theme/theme";
 import ProductCard from "./ProductCard";
 import { ProductList } from "./ProductsCards.styled";
 
