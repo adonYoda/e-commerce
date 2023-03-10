@@ -72,4 +72,32 @@ export interface IResponseRegister {
 	jwtToken: string;
 	jwtRefreshToken: string;
 	roles: string[];
+=======
+}
+
+export interface IRating {
+	totalRatingScore: number;
+	numberOfRated: number;
+}
+
+export interface IAboutProduct {
+	colorSizeQuantity: IColorSize[];
+	mainImgUrl: string;
+	photos: string[];
+	description: string;
+	details: string;
+}
+
+export interface IColorSize {
+	color: string;
+	size: string;
+	quantity: number;
+	iconUrl: string;
+}
+
+export interface ISubCategory {
+	name: string;
+	totalProducts: number;
+	extendableCategories: string[];
+
 }

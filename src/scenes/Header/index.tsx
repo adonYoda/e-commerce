@@ -1,4 +1,5 @@
 import {
+
 	alpha,
 	Button,
 	Divider,
@@ -9,6 +10,7 @@ import {
 	Stack,
 	styled,
 	TextField,
+
 } from "@mui/material";
 import React, { FC } from "react";
 import theme from "src/utils/theme/theme";
@@ -22,10 +24,11 @@ import { ReactComponent as LogoIcon } from "../../assets/icons/Base/logo.svg";
 import { headerSize } from "src/utils/constants/sizes.constants";
 import { categories } from "src/utils/constants/categories.constants";
 import { useLocation, useMatch, useNavigate, useParams } from "react-router";
+
 import { authSignInPath, homePath, productsNestPath, productsPath } from "src/utils/constants/routes.constants";
+
 import useGetParams from "src/hooks/useGetParams";
 import useGetLocation from "src/hooks/useGetLocation";
-import { useAppSelector } from "src/strore_api/configureStore";
 
 const StackStyled = styled(Stack)<{ dark?: string }>(({ theme, dark }) => ({
 	position: "fixed",
@@ -97,6 +100,7 @@ interface Props {
 const AppBar: FC<Props> = ({ dark }) => {
 	const navigate = useNavigate();
 	const [categoryParam] = useGetLocation(productsPath);
+
 	const isAuth = useAppSelector((state) => state?.auth?.authUser);
 
 	const handleCheckAuth = () => {
@@ -113,6 +117,11 @@ const AppBar: FC<Props> = ({ dark }) => {
 		} else {
 			navigate("<Cart/>");
 		}
+
+
+	const handleClickCategory = (category: string) => {
+		navigate(productsPath + "/" + category.toLowerCase());
+
 	};
 
 	return (
@@ -151,6 +160,7 @@ const AppBar: FC<Props> = ({ dark }) => {
 						}}
 					/>
 				</Search>
+
 				<IconButton size='small' onClick={handleClickCart}>
 					<SvgIcon size={20} icon={<BagIcon />} />
 				</IconButton>
