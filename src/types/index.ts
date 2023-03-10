@@ -24,7 +24,6 @@ export interface IProductSubCategory {
 	name: string;
 	extendableCategories: string[];
 }
-
 export interface IRating {
 	totalRatingScore: number;
 	numberOfRated: number;
@@ -49,4 +48,28 @@ export interface ISubCategory {
 	name: string;
 	totalProducts: number;
 	extendableCategories: string[];
+}
+
+export interface IRegisterForm {
+	email: string;
+	password: string;
+	confirmPassword: string;
+	firstName: string;
+	lastName: string;
+}
+
+export interface ILoginForm {
+	email: string;
+	password: string;
+}
+
+export interface IResponseRegister {
+	userId: string;
+	email: string;
+	firstName: string;
+	lastName: string;
+	registrationDate: string;
+	jwtToken: string;
+	jwtRefreshToken: string;
+	roles: string[];
 }
