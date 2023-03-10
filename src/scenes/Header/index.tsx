@@ -1,17 +1,15 @@
 import {
 
-  
-  Button,
- 
-  
-  IconButton,
-  InputAdornment,
-  InputBase,
-  Stack,
-  styled,
-  TextField,
-
-
+	alpha,
+	Button,
+	Divider,
+	Grid,
+	IconButton,
+	InputAdornment,
+	InputBase,
+	Stack,
+	styled,
+	TextField,
 
 } from "@mui/material";
 import React, { FC } from "react";
@@ -26,7 +24,9 @@ import { ReactComponent as LogoIcon } from "../../assets/icons/Base/logo.svg";
 import { headerSize } from "src/utils/constants/sizes.constants";
 import { categories } from "src/utils/constants/categories.constants";
 import { useLocation, useMatch, useNavigate, useParams } from "react-router";
-import { homePath, productsNestPath, productsPath } from "src/utils/constants/routes.constants";
+
+import { authSignInPath, homePath, productsNestPath, productsPath } from "src/utils/constants/routes.constants";
+
 import useGetParams from "src/hooks/useGetParams";
 import useGetLocation from "src/hooks/useGetLocation";
 
@@ -101,8 +101,27 @@ const AppBar: FC<Props> = ({ dark }) => {
 	const navigate = useNavigate();
 	const [categoryParam] = useGetLocation(productsPath);
 
+	const isAuth = useAppSelector((state) => state?.auth?.authUser);
+
+	const handleCheckAuth = () => {
+		if (!isAuth) {
+			navigate(authSignInPath);
+		} else {
+			navigate("<Profile/>");
+		}
+	};
+
+	const handleClickCart = () => {
+		if (!isAuth) {
+			navigate(authSignInPath);
+		} else {
+			navigate("<Cart/>");
+		}
+
+
 	const handleClickCategory = (category: string) => {
 		navigate(productsPath + "/" + category.toLowerCase());
+
 	};
 
 	return (
@@ -141,10 +160,11 @@ const AppBar: FC<Props> = ({ dark }) => {
 						}}
 					/>
 				</Search>
-				<IconButton size='small'>
+
+				<IconButton size='small' onClick={handleClickCart}>
 					<SvgIcon size={20} icon={<BagIcon />} />
 				</IconButton>
-				<IconButton size='small'>
+				<IconButton size='small' onClick={handleCheckAuth}>
 					<SvgIcon size={20} icon={<UserIcon />} />
 				</IconButton>
 			</SearchBar>
