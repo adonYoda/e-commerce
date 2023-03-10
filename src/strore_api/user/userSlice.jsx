@@ -7,8 +7,6 @@ const userSlice = createSlice({
     userId: "",
     firstName: "",
     lastName: "",
-    jwtToken: "",
-    jwtRefreshToken: "",
     registrationDate: "",
     roles: [],
   },
@@ -20,6 +18,7 @@ const userSlice = createSlice({
       state.lastName = action.payload.lastName;
       state.registrationDate = action.payload.registrationDate;
       state.roles = action.payload.roles;
+      state.authUser = true;
     },
   },
 });

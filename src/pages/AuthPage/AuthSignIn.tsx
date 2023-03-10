@@ -24,6 +24,7 @@ import { emailRegex } from "src/utils/constants/temp.constans";
 import { ILoginForm } from "src/types";
 import { useDispatch } from "react-redux";
 import { putUser } from "src/strore_api/user/userSlice";
+import { authUser } from "src/strore_api/token/authSlice";
 
 const Form = styled("form")`
   display: flex;
@@ -60,9 +61,6 @@ const AuthSignIn: FC<Props> = () => {
     event.preventDefault();
   };
 
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-
   const authContent = {
     title: "Sign In",
     topDescription: {
@@ -83,21 +81,23 @@ const AuthSignIn: FC<Props> = () => {
         password: data.password,
       }).unwrap();
       dispatch(putUser(user));
+      dispatch(
+        authUser({
+          jwtToken: user.jwtToken,
+          jwtRefreshToken: user.jwtRefreshToken,
+        })
+      );
       console.log(user);
     } catch (error: any) {
       console.log(error);
       if (error.code === 404) {
       }
-      if (error.code === 404) {
-        setHandlerError("Wrong password");
+      if (error.code === 400) {
+        setHandlerError("Wrong login");
         resetField("password");
       }
       if (error.code === 401) {
-        setHandlerError("Wrong login or password");
-        resetField("password");
-      }
-      if (error.code === 403) {
-        setHandlerError("Access denied");
+        setHandlerError("Wrong password");
         resetField("password");
       }
     }

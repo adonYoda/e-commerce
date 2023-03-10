@@ -12,43 +12,53 @@ export interface IProduct {
 }
 
 export interface IProductAttributes {
-    category: string;
-    subCategory: string;
-    brand: string;
-    collection: string;
-    season: string;
-    style: string;
+  category: string;
+  subCategory: string;
+  brand: string;
+  collection: string;
+  season: string;
+  style: string;
 }
 
-
 export interface IRating {
-    totalRatingScore: number;
-    numberOfRated: number;
+  totalRatingScore: number;
+  numberOfRated: number;
 }
 
 export interface IAboutProduct {
-    colorSizeQuantity: [
-        {
-          color: string;
-          size: string;
-          quantity: number;
-        }
-      ];
-      mainImgUrl: string;
-      photos: string[];
-      description: string;
-      details: string;
+  colorSizeQuantity: [
+    {
+      color: string;
+      size: string;
+      quantity: number;
+    }
+  ];
+  mainImgUrl: string;
+  photos: string[];
+  description: string;
+  details: string;
 }
 
 export interface IRegisterForm {
-  email: string,
-  password:string,
-  confirmPassword:string,
-  firstName:string,
-  lastName:string
+  email: string;
+  password: string;
+  confirmPassword: string;
+  firstName: string;
+  lastName: string;
 }
 
 export interface ILoginForm {
-  email: string,
-  password:string
+  email: string;
+  password: string;
+}
+
+export interface IResponseRegister {
+  userId: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  registrationDate: string;
+  jwtToken: string;
+  jwtRefreshToken: string;
+  roles: string[];
 }

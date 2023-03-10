@@ -20,7 +20,16 @@ const userApi = ecommerceApi.injectEndpoints({
               body: args
             }
           }
-        })
+        }),
+        // refreshAuthUser: build.query({
+        //   query: ({userId, email}) => {
+        //     return{
+        //       url: "refresh",
+        //       method: "POST",
+        //       body: userId, email
+        //     }
+        //   }
+        // })
       })
 })
 

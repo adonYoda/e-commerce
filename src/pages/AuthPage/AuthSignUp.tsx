@@ -16,7 +16,7 @@ import { AuthContainer, ContainerStyled, Link, Terms } from "./Auth.styled";
 import { ReactComponent as Visibility } from "../../assets/icons/Base/eye.svg";
 import { ReactComponent as VisibilityOff } from "../../assets/icons/Base/eye-slash.svg";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { IRegisterForm } from "src/types";
+import { IRegisterForm, IResponseRegister } from "src/types";
 import {
   emailRegex,
   nameRegex,
@@ -25,6 +25,7 @@ import {
 import { putUser } from "src/strore_api/user/userSlice";
 import { useDispatch } from "react-redux";
 import { useRegisterUserMutation } from "src/strore_api/user/userApi";
+import { authUser } from "src/strore_api/token/authSlice";
 
 const Form = styled("form")`
   display: flex;
@@ -45,10 +46,8 @@ const AuthSignUp: FC<Props> = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors, isValid },
     reset,
-    getValues,
   } = useForm({
     defaultValues: {
       firstName: "",
@@ -63,7 +62,6 @@ const AuthSignUp: FC<Props> = () => {
   const [isPasswordValid, setIsPasswordValid] = useState(false);
   const [showPassword, setShowPassword] = React.useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
-  const watchAllFields = watch();
 
   const handleMouseDownPassword = (
     event: React.MouseEvent<HTMLButtonElement>
@@ -82,14 +80,20 @@ const AuthSignUp: FC<Props> = () => {
 
   const onSubmit = async (data: IRegisterForm) => {
     if (data.password === data.confirmPassword) {
-	  console.log(data);
-      const user = await registerUser({
+      console.log(data);
+      const user: IResponseRegister = await registerUser({
         email: data.email,
         password: data.password,
         firstName: data.firstName,
         lastName: data.lastName,
       }).unwrap();
       dispatch(putUser(user));
+      dispatch(
+        authUser({
+          jwtToken: user.jwtToken,
+          jwtRefreshToken: user.jwtRefreshToken,
+        })
+      );
       console.log("Registration fields : ", user);
     } else {
       setIsPasswordValid(true);
@@ -101,6 +105,12 @@ const AuthSignUp: FC<Props> = () => {
     <AuthContainer>
       <ContainerStyled>
         <AuthContent {...authContent}>
+          {isError && (
+            <Typography>
+              {" "}
+              User with this email address already exists...{" "}
+            </Typography>
+          )}
           <Form onSubmit={handleSubmit(onSubmit)}>
             <TextField
               {...register("firstName", {
