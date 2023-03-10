@@ -72,7 +72,6 @@ export interface IResponseRegister {
 	jwtToken: string;
 	jwtRefreshToken: string;
 	roles: string[];
-=======
 }
 
 export interface IRating {
@@ -99,5 +98,4 @@ export interface ISubCategory {
 	name: string;
 	totalProducts: number;
 	extendableCategories: string[];
-
 }

@@ -1,5 +1,4 @@
 import {
-
 	alpha,
 	Button,
 	Divider,
@@ -10,7 +9,6 @@ import {
 	Stack,
 	styled,
 	TextField,
-
 } from "@mui/material";
 import React, { FC } from "react";
 import theme from "src/utils/theme/theme";
@@ -29,6 +27,7 @@ import { authSignInPath, homePath, productsNestPath, productsPath } from "src/ut
 
 import useGetParams from "src/hooks/useGetParams";
 import useGetLocation from "src/hooks/useGetLocation";
+import { useAppSelector } from "src/strore_api/configureStore";
 
 const StackStyled = styled(Stack)<{ dark?: string }>(({ theme, dark }) => ({
 	position: "fixed",
@@ -101,7 +100,7 @@ const AppBar: FC<Props> = ({ dark }) => {
 	const navigate = useNavigate();
 	const [categoryParam] = useGetLocation(productsPath);
 
-	const isAuth = useAppSelector((state) => state?.auth?.authUser);
+	const isAuth = useAppSelector((state) => state.auth.authUser);
 
 	const handleCheckAuth = () => {
 		if (!isAuth) {
@@ -117,11 +116,10 @@ const AppBar: FC<Props> = ({ dark }) => {
 		} else {
 			navigate("<Cart/>");
 		}
-
+	};
 
 	const handleClickCategory = (category: string) => {
 		navigate(productsPath + "/" + category.toLowerCase());
-
 	};
 
 	return (
