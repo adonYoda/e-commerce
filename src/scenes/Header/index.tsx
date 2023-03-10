@@ -22,9 +22,15 @@ import { ReactComponent as LogoIcon } from "../../assets/icons/Base/logo.svg";
 import { headerSize } from "src/utils/constants/sizes.constants";
 import { categories } from "src/utils/constants/categories.constants";
 import { useLocation, useMatch, useNavigate, useParams } from "react-router";
-import { homePath, productsNestPath, productsPath } from "src/utils/constants/routes.constants";
+import {
+  authSignInPath,
+  homePath,
+  productsNestPath,
+  productsPath,
+} from "src/utils/constants/routes.constants";
 import useGetParams from "src/hooks/useGetParams";
 import useGetLocation from "src/hooks/useGetLocation";
+import { useAppSelector } from "src/strore_api/configureStore";
 
 const StackStyled = styled(Stack)<{ dark?: string }>(({ theme, dark }) => ({
 	position: "fixed",
@@ -86,11 +92,11 @@ const Search = styled("div")(({ theme }) => ({
 
 const SvgIconSearch = styled(SvgIcon)(({ theme }) => ({}));
 SvgIconSearch.defaultProps = {
-	color: `${theme.palette.text.secondary} !important`,
+  color: `${theme.palette.text.secondary} !important`,
 };
 
 interface Props {
-	dark?: string;
+  dark?: string;
 }
 
 const AppBar: FC<Props> = ({ dark }) => {
@@ -100,6 +106,23 @@ const AppBar: FC<Props> = ({ dark }) => {
 	const handleClickCategory = (category: string) => {
 		navigate(productsPath + "/" + category.toLowerCase());
 	};
+  const isAuth = useAppSelector((state) => state?.auth?.authUser);
+
+  const handleCheckAuth = () => {
+    if (!isAuth) {
+      navigate(authSignInPath);
+    }else{
+		navigate("<Profile/>")
+	}
+  };
+
+  const handleClickCart = () => {
+    if (!isAuth) {
+		navigate(authSignInPath);
+	  }else{
+		navigate("<Cart/>")
+	  }
+  };
 
 	return (
 		<StackStyled dark={dark}>
@@ -137,10 +160,10 @@ const AppBar: FC<Props> = ({ dark }) => {
 						}}
 					/>
 				</Search>
-				<IconButton size='small'>
+				<IconButton size='small' onClick={handleClickCart}>
 					<SvgIcon size={20} icon={<BagIcon />} />
 				</IconButton>
-				<IconButton size='small'>
+				<IconButton size='small' onClick={handleCheckAuth}>
 					<SvgIcon size={20} icon={<UserIcon />} />
 				</IconButton>
 			</SearchBar>
