@@ -15,4 +15,6 @@ export const cartApi = ecommerceApi.injectEndpoints({
 	overrideExisting: true,
 });
 
+
+
 export const { useGetCartQuery } = cartApi;
