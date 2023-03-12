@@ -1,6 +1,4 @@
 import {
-  Alert,
-  AlertTitle,
   Button,
   FormControl,
   IconButton,
@@ -17,7 +15,6 @@ import AuthContent from "../../components/Auth/AuthContent";
 import { ReactComponent as Visibility } from "../../assets/icons/Base/eye.svg";
 import { ReactComponent as VisibilityOff } from "../../assets/icons/Base/eye-slash.svg";
 import { AuthContainer, ContainerStyled, LostPassword } from "./Auth.styled";
-import { Stack } from "@mui/system";
 import { useLoginUserMutation } from "src/strore_api/user/userApi";
 import { useForm } from "react-hook-form";
 import { emailRegex } from "src/utils/constants/temp.constans";
