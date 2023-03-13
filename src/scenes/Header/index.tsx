@@ -122,51 +122,51 @@ const AppBar: FC<Props> = ({ dark }) => {
 		navigate(productsPath + "/" + category.toLowerCase());
 	};
 
-  return (
-    <StackStyled dark={dark}>
-      <MyButton dark={dark} onClick={() => navigate(homePath)}>
-        <SvgIcon width={67} icon={<LogoIcon />} />
-      </MyButton>
-      <MenuBar dark={dark}>
-        {categories.map((c) => (
-          <MenuItem key={c.title}>
-            <MyButton
-              active={categoryParam === c.title ? "true" : "false"}
-              onClick={() => navigate(productsPath + "/" + c.title)}
-            >
-              {c.title}
-            </MyButton>
-          </MenuItem>
-        ))}
-        <MenuItem>
-          <MyButton>Blog</MyButton>
-        </MenuItem>
-      </MenuBar>
-      <SearchBar dark={dark}>
-        <Search>
-          <TextField
-            placeholder="Search"
-            size="small"
-            id="outlined-start-adornment"
-            sx={{ width: "250px" }}
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <SearchIcon />
-                </InputAdornment>
-              ),
-            }}
-          />
-        </Search>
-        <IconButton size="small" onClick={handleClickCart}>
-          <SvgIcon size={20} icon={<BagIcon />} />
-        </IconButton>
-        <IconButton size="small" onClick={handleCheckAuth}>
-          <SvgIcon size={20} icon={<UserIcon />} />
-        </IconButton>
-      </SearchBar>
-    </StackStyled>
-  );
+	return (
+		<StackStyled dark={dark}>
+			<MyButton dark={dark} onClick={() => navigate(homePath)}>
+				<SvgIcon width={67} icon={<LogoIcon />} />
+			</MyButton>
+			<MenuBar dark={dark}>
+				{categories.map((c) => (
+					<MenuItem key={c.title}>
+						<MyButton
+							active={categoryParam.toLowerCase() === c.title.toLowerCase() ? "true" : "false"}
+							onClick={() => handleClickCategory(c.title)}
+						>
+							{c.title}
+						</MyButton>
+					</MenuItem>
+				))}
+				<MenuItem>
+					<MyButton>Blog</MyButton>
+				</MenuItem>
+			</MenuBar>
+			<SearchBar dark={dark}>
+				<Search>
+					<TextField
+						placeholder='Search'
+						size='small'
+						id='outlined-start-adornment'
+						sx={{ width: "250px" }}
+						InputProps={{
+							startAdornment: (
+								<InputAdornment position='start'>
+									<SearchIcon />
+								</InputAdornment>
+							),
+						}}
+					/>
+				</Search>
+				<IconButton size='small' onClick={handleClickCart}>
+					<SvgIcon size={20} icon={<BagIcon />} />
+				</IconButton>
+				<IconButton size='small' onClick={handleCheckAuth}>
+					<SvgIcon size={20} icon={<UserIcon />} />
+				</IconButton>
+			</SearchBar>
+		</StackStyled>
+	);
 };
 
 export default AppBar;
