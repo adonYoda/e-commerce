@@ -50,7 +50,7 @@ const Main = () => {
 						path={`${productsPath}/${cactegoryParam}/${subcategoryParam}/${productIdParam}/${productNameParam}`}
 						element={<ProductItemPage />}
 					/>
-					<Route path={profilePath} element={<ProfilePage/>}/>
+					{/* <Route path={profilePath} element={<ProfilePage/>}/> */}
 				</Routes>
 			</ScrollToTop>
 		</MainContainer>
