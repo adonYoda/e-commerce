@@ -4,3 +4,4 @@ export const productsNestPath = productsPath + "/*";
 export const authSignInPath = "/signin";
 export const authSignUpPath = "/signup";
 export const authRecoveryPath = "/recovery";
+export const profilePath = "/main/profile/"

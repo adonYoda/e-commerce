@@ -23,7 +23,7 @@ import { headerSize } from "src/utils/constants/sizes.constants";
 import { categories } from "src/utils/constants/categories.constants";
 import { useLocation, useMatch, useNavigate, useParams } from "react-router";
 
-import { authSignInPath, homePath, productsNestPath, productsPath } from "src/utils/constants/routes.constants";
+import { authSignInPath, homePath, productsNestPath, productsPath, profilePath } from "src/utils/constants/routes.constants";
 
 import useGetParams from "src/hooks/useGetParams";
 import useGetLocation from "src/hooks/useGetLocation";
@@ -106,7 +106,7 @@ const AppBar: FC<Props> = ({ dark }) => {
 		if (!isAuth) {
 			navigate(authSignInPath);
 		} else {
-			navigate("<Profile/>");
+			navigate(profilePath);
 		}
 	};
 

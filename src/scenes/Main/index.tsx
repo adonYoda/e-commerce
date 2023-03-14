@@ -11,6 +11,7 @@ import AuthSignUp from "src/pages/AuthPage/AuthSignUp";
 import LandingPage from "src/pages/LandingPage";
 import ProductItemPage from "src/pages/ProductItemPage";
 import ProductsPage from "src/pages/ProductsPage";
+import ProfilePage from "src/pages/Profile";
 import {
 	authRecoveryPath,
 	authSignInPath,
@@ -18,6 +19,7 @@ import {
 	homePath,
 	productsNestPath,
 	productsPath,
+	profilePath,
 } from "src/utils/constants/routes.constants";
 import { headerSize } from "src/utils/constants/sizes.constants";
 
@@ -48,6 +50,7 @@ const Main = () => {
 						path={`${productsPath}/${cactegoryParam}/${subcategoryParam}/${productIdParam}/${productNameParam}`}
 						element={<ProductItemPage />}
 					/>
+					<Route path={profilePath} element={<ProfilePage/>}/>
 				</Routes>
 			</ScrollToTop>
 		</MainContainer>
