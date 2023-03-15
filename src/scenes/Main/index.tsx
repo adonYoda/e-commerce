@@ -11,7 +11,7 @@ import AuthSignUp from "src/pages/AuthPage/AuthSignUp";
 import LandingPage from "src/pages/LandingPage";
 import ProductItemPage from "src/pages/ProductItemPage";
 import ProductsPage from "src/pages/ProductsPage";
-import ProfilePage from "src/pages/Profile";
+import ProfilePage from "src/pages/ProfilePage";
 import {
 	authRecoveryPath,
 	authSignInPath,
@@ -50,7 +50,7 @@ const Main = () => {
 						path={`${productsPath}/${cactegoryParam}/${subcategoryParam}/${productIdParam}/${productNameParam}`}
 						element={<ProductItemPage />}
 					/>
-					{/* <Route path={profilePath} element={<ProfilePage/>}/> */}
+					<Route path={profilePath} element={<ProfilePage/>}/>
 				</Routes>
 			</ScrollToTop>
 		</MainContainer>
