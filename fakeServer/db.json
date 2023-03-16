@@ -1,4 +1,29 @@
 {
+
+	"users": [
+		{
+			"userId": "db0001",
+			"email": "debbie.baker@gmail.com",
+			"firstName": "Debbie",
+			"lastName": "Baker",
+			"registrationDate": "2023-03-04T23:09:48.075366500+02:00[Asia/Jerusalem]",
+			"phone": "(972)54-123-1234",
+			"address": {
+			  "country": "Israel",
+			  "city": "Bat-Yam",
+			  "zipCode": 5812343,
+			  "street": "Dereh Ben Gurion",
+			  "house": "18a",
+			  "fullAdress": "Israel , Bat-Yam , 5812343 , Dereh Ben Gurion, 18a"
+			},
+			"cards": [
+			  "**** **** **** 1234"
+			],
+			"roles": [
+			  "USER"
+			]
+		  }
+	],
 	"oldProducts": [
 		{
 			"product_id": 7442,

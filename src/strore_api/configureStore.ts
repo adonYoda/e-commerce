@@ -5,24 +5,23 @@ import authReducer from "./token/authSlice";
 
 import userReducer from "./user/userSlice";
 
-
 import { TypedUseSelectorHook } from "react-redux";
 import { useSelector } from "react-redux";
 
 export const store = configureStore({
-    reducer: {
-        [productApi.reducerPath]: productApi.reducer,
-        product: productReducer,
-        auth: authReducer,
-        user: userReducer
-    },
-    middleware: (getDefaultMiddleware: any) => 
-        getDefaultMiddleware().concat(productApi.middleware)
-    
+  reducer: {
+    [productApi.reducerPath]: productApi.reducer,
+    product: productReducer,
+    auth: authReducer,
+    user: userReducer,
+  },
+  middleware: (getDefaultMiddleware: any) =>
+    getDefaultMiddleware().concat(productApi.middleware),
 });
 
 store.subscribe(() => {
-	localStorage.setItem("product", JSON.stringify(store.getState().product));
+  localStorage.setItem("product", JSON.stringify(store.getState().product));
+  localStorage.setItem("user", JSON.stringify(store.getState().user));
 });
 
 export type RootState = ReturnType<typeof store.getState>;

@@ -10,13 +10,13 @@ import {
   Typography,
 } from "@mui/material";
 import React, { FC, useState } from "react";
-import { authSignInPath } from "src/utils/constants/routes.constants";
+import { authSignInPath, profilePath } from "src/utils/constants/routes.constants";
 import AuthContent from "../../components/Auth/AuthContent";
 import { AuthContainer, ContainerStyled, Link, Terms } from "./Auth.styled";
 import { ReactComponent as Visibility } from "../../assets/icons/Base/eye.svg";
 import { ReactComponent as VisibilityOff } from "../../assets/icons/Base/eye-slash.svg";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { IRegisterForm, IResponseRegister } from "src/types";
+import { IRegisterForm, IResponseUser } from "src/types";
 import {
   emailRegex,
   nameRegex,
@@ -26,6 +26,7 @@ import { putUser } from "src/strore_api/user/userSlice";
 import { useDispatch } from "react-redux";
 import { useRegisterUserMutation } from "src/strore_api/user/userApi";
 import { authUser } from "src/strore_api/token/authSlice";
+import { useNavigate } from "react-router";
 
 const Form = styled("form")`
   display: flex;
@@ -59,6 +60,7 @@ const AuthSignUp: FC<Props> = () => {
     mode: "onBlur",
   });
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [isPasswordValid, setIsPasswordValid] = useState(false);
   const [showPassword, setShowPassword] = React.useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -81,7 +83,7 @@ const AuthSignUp: FC<Props> = () => {
   const onSubmit = async (data: IRegisterForm) => {
     if (data.password === data.confirmPassword) {
       console.log(data);
-      const user: IResponseRegister = await registerUser({
+      const user: IResponseUser = await registerUser({
         email: data.email,
         password: data.password,
         firstName: data.firstName,
@@ -95,6 +97,7 @@ const AuthSignUp: FC<Props> = () => {
         })
       );
       console.log("Registration fields : ", user);
+      navigate(profilePath)
     } else {
       setIsPasswordValid(true);
     }
