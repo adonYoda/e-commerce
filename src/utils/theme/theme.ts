@@ -419,6 +419,12 @@ let theme = createTheme({
 				},
 			},
 		},
+		MuiInput: {  //<<<<======= Attention!!!!!!!!!!
+			defaultProps: {
+				disableUnderline: true,
+				fullWidth: true,
+			}
+		},
 		MuiFormControl: {
 			variants: [
 				{

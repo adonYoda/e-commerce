@@ -25,7 +25,7 @@ const Profile = () => {
       <ProfileHeaderWrapper>
         <ProfileHeader />
       </ProfileHeaderWrapper>
-      <Divider variant="middle" />
+      <Divider />
       <ProfileInformationWrapper>
         <ProfileInformation/>
       </ProfileInformationWrapper>

@@ -9,13 +9,13 @@ const userSlice = createSlice({
     lastName: "",
     registrationDate: "",
     phone: "",
-    adress: {
+    address: {
       country: "",
       city: "",
       zipCode: "",
       street: "",
       house: "",
-      fullAdress: "",
+      fullAddress: "",
     },
     cards: [],
     roles: [],
@@ -27,9 +27,9 @@ const userSlice = createSlice({
       state.firstName = action.payload.firstName;
       state.lastName = action.payload.lastName;
       state.registrationDate = action.payload.registrationDate;
-	  state.phone = action.payload.phone;
-	  state.adress = action.payload.adress;
-	  state.cards = action.payload.cards;
+      state.phone = action.payload.phone;
+      state.address = action.payload.address;
+      state.cards = action.payload.cards;
       state.roles = action.payload.roles;
       state.authUser = true;
     },

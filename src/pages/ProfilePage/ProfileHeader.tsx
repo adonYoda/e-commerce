@@ -7,7 +7,8 @@ import { fakeBaseUrl } from "src/utils/constants/temp.constans";
 
 const HeaderWrapper = styled("div")((theme)=>({
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    marginBottom: '20px'
 }))
 
 const LogoutButton = styled(Typography)`
@@ -40,7 +41,7 @@ const ProfileHeader = () => {
         </Typography>
       </Avatar>
       <NameWrapper>
-      <Typography variant="caption1">{user.firstName +' '+ user.lastName}</Typography>
+      <Typography variant="caption1" sx={{cursor: 'default'}} >{user.firstName +' '+ user.lastName}</Typography>
       <LogoutButton variant="caption4" >Logout</LogoutButton>
       </NameWrapper>
     </HeaderWrapper>

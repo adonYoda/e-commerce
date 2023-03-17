@@ -6,7 +6,7 @@ import Profile from "./Profile";
 const MainContainer = styled(Container)(({ theme }) => ({
   //backgroundColor: "blue",
   width: "100%",
-  height: "content",
+  minHeight: "975px",
   display: "flex",
   flexDirection: "row",
 }));
