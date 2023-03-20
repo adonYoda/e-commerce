@@ -30,13 +30,27 @@ export const productApi = ecommerceApi.injectEndpoints({
 					method: "GET",
 				};
 			},
-			transformResponse: (response: IProduct[]) => {
-				return response;
-			},
 			providesTags: ["Products"],
+		}),
+		getProduct: build.query<
+			IProduct,
+			{
+				productId: string;
+			}
+		>({
+			query: ({ productId }) => {
+				console.log("API request");
+				return {
+					url: `/products?productId=${productId}`,
+					method: "GET",
+				};
+			},
+			transformResponse: (response: IProduct[]) => {
+				return response[0];
+			},
 		}),
 	}),
 	overrideExisting: true,
 });
 
-export const { useGetProductsQuery } = productApi;
+export const { useGetProductsQuery, useGetProductQuery } = productApi;
