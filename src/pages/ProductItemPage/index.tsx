@@ -1,10 +1,14 @@
-import { Container, Divider, styled } from "@mui/material";
-import React, { useState } from "react";
+import { Container, Divider, Skeleton, styled } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Newsletter from "src/components/Newsletter/Newsletter";
 import Products from "src/components/Products";
 import Section from "src/components/Section/Section";
+import useGetLocation from "src/hooks/useGetLocation";
+import { useGetProductQuery } from "src/strore_api/product/productApi";
 import { selectProduct } from "src/strore_api/product/productSlice";
+import { IProduct } from "src/types";
+import { productsPath } from "src/utils/constants/routes.constants";
 import ProductItemGallery from "./ProductItemGallery/ProductItemGallery";
 import ProductItemSidebar from "./ProductItemSidebar/ProductItemSidebar";
 
@@ -15,23 +19,46 @@ const ProductItem = styled("div")`
 	column-gap: 77px;
 	margin-bottom: 77.5px;
 `;
-const AlsoLike = styled("div")``;
 const DividerStyled = styled(Divider)`
 	border-color: ${({ theme }) => theme.palette.grey["A200"]};
 `;
 const ProductItemPage = () => {
+	console.log("render");
+	const [categoryParam, subcategoryParam, productIdParam] = useGetLocation(productsPath);
+	const productId = productIdParam.substring(productIdParam.indexOf("=") + 1);
+
 	const product = useSelector(selectProduct);
-	const photosUrl = [...product.aboutProduct.photos];
-	photosUrl.unshift(product.aboutProduct.mainImgUrl);
+
+	const { data, isFetching, isSuccess } = useGetProductQuery(
+		{ productId },
+		{ skip: +productId === product.productId }
+	);
+
+	const reducePhotos = (product: IProduct) => {
+		const photosUrl = [...product!.aboutProduct.photos];
+		photosUrl.unshift(product!.aboutProduct.mainImgUrl);
+		return photosUrl;
+	};
 
 	return (
 		<ProductItemPageContainer>
 			<Container>
-				<ProductItem>
-					<ProductItemGallery photosUrl={photosUrl} />
-					<ProductItemSidebar product={product} />
-				</ProductItem>
-				{/* <AlsoLike></AlsoLike> */}
+				{isFetching ? (
+					<Skeleton
+						key={product.productId}
+						variant='rectangular'
+						width='100%'
+						height='1273px'
+						sx={{ borderRadius: "10px" }}
+					/>
+				) : (
+					(+productId === product.productId || isSuccess) && (
+						<ProductItem>
+							<ProductItemGallery photosUrl={reducePhotos(data ?? product)} />
+							<ProductItemSidebar product={data ?? product} />
+						</ProductItem>
+					)
+				)}
 				<DividerStyled />
 			</Container>
 			<Section title='You might also like'>
