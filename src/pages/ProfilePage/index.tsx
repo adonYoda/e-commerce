@@ -13,7 +13,8 @@ const MainContainer = styled(Container)(({ theme }) => ({
 
 const MyBoxProfile = styled("div")(({ theme }) => ({
   width: "30%",
-  height: "380px",
+  //height: 'content',
+  height: "400px",
   //borderColor: theme.palette.grey['A200'],
   border: `1px solid ${theme.palette.grey.A200}`,
   borderRadius: "10px",

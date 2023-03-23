@@ -1,8 +1,13 @@
 import { Avatar, Button, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import React from "react";
-import { useAppSelector } from "src/strore_api/configureStore";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
+import { store, useAppSelector } from "src/strore_api/configureStore";
+import { authUser, logOut } from "src/strore_api/token/authSlice";
 import { useGetUserInfoQuery } from "src/strore_api/user/userApi";
+import { deleteUser } from "src/strore_api/user/userSlice";
+import { homePath } from "src/utils/constants/routes.constants";
 import { fakeBaseUrl } from "src/utils/constants/temp.constans";
 
 const HeaderWrapper = styled("div")((theme)=>({
@@ -30,6 +35,15 @@ const NameWrapper = styled("div")((theme)=>({
 
 const ProfileHeader = () => {
   const user = useAppSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    dispatch(deleteUser());
+    dispatch(logOut());
+    navigate(homePath)
+  }
 
   //const {data, error} = useGetUserInfoQuery(userId);
 
@@ -42,7 +56,7 @@ const ProfileHeader = () => {
       </Avatar>
       <NameWrapper>
       <Typography variant="caption1" sx={{cursor: 'default'}} >{user.firstName +' '+ user.lastName}</Typography>
-      <LogoutButton variant="caption4" >Logout</LogoutButton>
+      <LogoutButton variant="caption4" onClick={handleLogout} >Logout</LogoutButton>
       </NameWrapper>
     </HeaderWrapper>
   );
