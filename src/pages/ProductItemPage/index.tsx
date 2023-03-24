@@ -23,7 +23,6 @@ const DividerStyled = styled(Divider)`
 	border-color: ${({ theme }) => theme.palette.grey["A200"]};
 `;
 const ProductItemPage = () => {
-	console.log("render");
 	const [categoryParam, subcategoryParam, productIdParam] = useGetLocation(productsPath);
 	const productId = productIdParam.substring(productIdParam.indexOf("=") + 1);
 

@@ -1,7 +1,9 @@
-import { Card, CardActionArea, CardContent, CardMedia, Rating, styled, Typography } from "@mui/material";
+import { Card, CardActionArea, CardContent, CardMedia, Chip, Rating, styled, Typography } from "@mui/material";
 import React, { MouseEvent, MouseEventHandler, useState } from "react";
 import { IProduct } from "src/types";
 import { ReactComponent as ShoppingBagIcon } from "../../assets/icons/Base/shopping-bag.svg";
+import { ReactComponent as HeartIcon } from "../../assets/icons/Base/heart.svg";
+import { ReactComponent as HeartFullIcon } from "../../assets/icons/Base/heart-full.svg";
 import { ReactComponent as StarIcon } from "../../assets/icons/Base/star.svg";
 import { ReactComponent as StarFilledIcon } from "../../assets/icons/Base/star-filled.svg";
 import { CheckboxCardIcon } from "../globals/MuiCheckboxCardIcon.styled";
@@ -49,6 +51,11 @@ const ProductNamePrice = styled("div")`
 	align-items: start;
 	font-weight: 500;
 `;
+const ChipStyled = styled(Chip)`
+	position: absolute;
+	top: 10px;
+	left: 10px;
+`;
 
 interface Props {
 	product: IProduct;
@@ -78,11 +85,17 @@ const ProductCard: React.FC<Props> = ({ product }) => {
 	const handleOnClickCard = () => {
 		dispatch(getProduct(product));
 	};
-	const handleOnChangeToCart = () => {};
+	const handleOnChangeToCart = () => {
+		setIsChecked((prev) => !prev);
+	};
+	const isDiscounted = () => {
+		return product.discount > 0;
+	};
 
 	return (
 		<CardStyled variant='outlined'>
 			<CardActionAreaStyled>
+				{isDiscounted() && <ChipStyled color='info' label={`-${product.discount}%`} />}
 				<Link to={linkToProductItem()} onClick={handleOnClickCard}>
 					<CardMedia
 						sx={{ objectFit: "cover", width: "100%", height: "100%" }}
