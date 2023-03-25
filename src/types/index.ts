@@ -1,5 +1,6 @@
 export interface IProduct {
 	productId: number;
+	productCode: number;
 	productName: string;
 	productReceiptDate: string;
 	productAttributes: IProductAttributes;

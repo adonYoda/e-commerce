@@ -31,7 +31,7 @@ const MainContainer = styled("main")`
 `;
 
 const Main = () => {
-	const [productsParam, cactegoryParam, subcategoryParam, productIdParam, productNameParam] = useGetLocation();
+	const [productsParam, cactegoryParam, subcategoryParam, productCodeParam, productNameParam] = useGetLocation();
 	return (
 		<MainContainer>
 			<Container>
@@ -47,7 +47,7 @@ const Main = () => {
 						<Route path={authRecoveryPath} element={<AuthRecovery />} />
 					</>
 					<Route
-						path={`${productsPath}/${cactegoryParam}/${subcategoryParam}/${productIdParam}/${productNameParam}`}
+						path={`${productsPath}/${cactegoryParam}/${subcategoryParam}/${productCodeParam}/${productNameParam}`}
 						element={<ProductItemPage />}
 					/>
 					{/* <Route path={profilePath} element={<ProfilePage/>}/> */}

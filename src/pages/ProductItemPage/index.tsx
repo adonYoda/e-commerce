@@ -23,15 +23,14 @@ const DividerStyled = styled(Divider)`
 	border-color: ${({ theme }) => theme.palette.grey["A200"]};
 `;
 const ProductItemPage = () => {
-	console.log("render");
-	const [categoryParam, subcategoryParam, productIdParam] = useGetLocation(productsPath);
-	const productId = productIdParam.substring(productIdParam.indexOf("=") + 1);
+	const [categoryParam, subcategoryParam, productCodeParam] = useGetLocation(productsPath);
+	const productCode = productCodeParam.substring(productCodeParam.indexOf("=") + 1);
 
 	const product = useSelector(selectProduct);
 
 	const { data, isFetching, isSuccess } = useGetProductQuery(
-		{ productId },
-		{ skip: +productId === product.productId }
+		{ productCode },
+		{ skip: +productCode === product.productCode }
 	);
 
 	const reducePhotos = (product: IProduct) => {
@@ -45,14 +44,14 @@ const ProductItemPage = () => {
 			<Container>
 				{isFetching ? (
 					<Skeleton
-						key={product.productId}
+						key={product.productCode}
 						variant='rectangular'
 						width='100%'
 						height='1273px'
 						sx={{ borderRadius: "10px" }}
 					/>
 				) : (
-					(+productId === product.productId || isSuccess) && (
+					(+productCode === product.productCode || isSuccess) && (
 						<ProductItem>
 							<ProductItemGallery photosUrl={reducePhotos(data ?? product)} />
 							<ProductItemSidebar product={data ?? product} />

@@ -17,11 +17,11 @@ interface Props {
 
 const Products: FC<Props> = ({ contained }) => {
 	// const [category, subcategory] = useGetParams();
-	const [products, category, subcategory, productId] = useGetLocation();
+	const [products, category, subcategory, productCode] = useGetLocation();
 
 	const [page, setPage] = useState(1);
 
-	const countPerPage = contained ? 12 : productId ? 4 : 9;
+	const countPerPage = contained ? 12 : productCode ? 4 : 9;
 
 	const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
 		setPage(value);
@@ -35,20 +35,20 @@ const Products: FC<Props> = ({ contained }) => {
 	} = useGetProductsQuery({ page, countPerPage, category, subcategory, contained });
 
 	return (
-		<Container sx={{ padding: `${contained || productId ? "auto" : 0} !important` }}>
+		<Container sx={{ padding: `${contained || productCode ? "auto" : 0} !important` }}>
 			<>
 				<ProductList>
 					{data.map((product: IProduct) =>
 						isFetching ? (
 							<Skeleton
-								key={product.productId}
+								key={product.productCode}
 								variant='rectangular'
 								width={productCardSize.width}
 								height={productCardSize.height}
 								sx={{ borderRadius: "10px" }}
 							/>
 						) : (
-							<ProductCard key={product.productId} product={product} />
+							<ProductCard key={product.productCode} product={product} />
 						)
 					)}
 				</ProductList>

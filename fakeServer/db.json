@@ -481,6 +481,7 @@
 	"products": [
 		{
 			"productId": 7114,
+			"productCode": 7114,
 			"productName": "New Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -541,6 +542,7 @@
 		},
 		{
 			"productId": 7115,
+			"productCode": 7115,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -621,6 +623,7 @@
 		},
 		{
 			"productId": 7116,
+			"productCode": 7116,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -683,6 +686,7 @@
 		},
 		{
 			"productId": 7117,
+			"productCode": 7117,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -757,6 +761,7 @@
 		},
 		{
 			"productId": 7118,
+			"productCode": 7118,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -828,6 +833,7 @@
 		},
 		{
 			"productId": 7119,
+			"productCode": 7119,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -881,6 +887,7 @@
 		},
 		{
 			"productId": 7120,
+			"productCode": 7120,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -946,6 +953,7 @@
 		},
 		{
 			"productId": 7121,
+			"productCode": 7121,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -1017,6 +1025,7 @@
 		},
 		{
 			"productId": 7122,
+			"productCode": 7122,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -1076,6 +1085,7 @@
 		},
 		{
 			"productId": 7123,
+			"productCode": 7123,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -1129,6 +1139,7 @@
 		},
 		{
 			"productId": 7124,
+			"productCode": 7124,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -1182,6 +1193,7 @@
 		},
 		{
 			"productId": 7125,
+			"productCode": 7125,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -1223,6 +1235,7 @@
 		},
 		{
 			"productId": 7126,
+			"productCode": 7126,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -1276,6 +1289,7 @@
 		},
 		{
 			"productId": 7127,
+			"productCode": 7127,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -1341,6 +1355,7 @@
 		},
 		{
 			"productId": 7128,
+			"productCode": 7128,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -1394,6 +1409,7 @@
 		},
 		{
 			"productId": 7129,
+			"productCode": 7129,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -1453,6 +1469,7 @@
 		},
 		{
 			"productId": 7130,
+			"productCode": 7130,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -1494,6 +1511,7 @@
 		},
 		{
 			"productId": 7131,
+			"productCode": 7131,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -1547,6 +1565,7 @@
 		},
 		{
 			"productId": 7132,
+			"productCode": 7132,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -1612,6 +1631,7 @@
 		},
 		{
 			"productId": 7133,
+			"productCode": 7133,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -1665,6 +1685,7 @@
 		},
 		{
 			"productId": 7134,
+			"productCode": 7134,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {
@@ -1730,6 +1751,7 @@
 		},
 		{
 			"productId": 7135,
+			"productCode": 7135,
 			"productName": "Basic",
 			"productReceiptDate": "16-01-2023",
 			"productAttributes": {

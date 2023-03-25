@@ -1,4 +1,5 @@
 import { IProduct } from "src/types";
+import { prefixPathProductCode } from "src/utils/constants/product.constants";
 import { ecommerceApi } from "../ecommerceApi";
 
 export const productApi = ecommerceApi.injectEndpoints({
@@ -35,13 +36,13 @@ export const productApi = ecommerceApi.injectEndpoints({
 		getProduct: build.query<
 			IProduct,
 			{
-				productId: string;
+				productCode: string;
 			}
 		>({
-			query: ({ productId }) => {
+			query: ({ productCode }) => {
 				console.log("API request");
 				return {
-					url: `/products?productId=${productId}`,
+					url: `/products?${prefixPathProductCode + productCode}`,
 					method: "GET",
 				};
 			},

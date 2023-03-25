@@ -1,7 +1,9 @@
-import { Card, CardActionArea, CardContent, CardMedia, Rating, styled, Typography } from "@mui/material";
+import { Card, CardActionArea, CardContent, CardMedia, Chip, Rating, styled, Typography } from "@mui/material";
 import React, { MouseEvent, MouseEventHandler, useState } from "react";
 import { IProduct } from "src/types";
 import { ReactComponent as ShoppingBagIcon } from "../../assets/icons/Base/shopping-bag.svg";
+import { ReactComponent as HeartIcon } from "../../assets/icons/Base/heart.svg";
+import { ReactComponent as HeartFullIcon } from "../../assets/icons/Base/heart-full.svg";
 import { ReactComponent as StarIcon } from "../../assets/icons/Base/star.svg";
 import { ReactComponent as StarFilledIcon } from "../../assets/icons/Base/star-filled.svg";
 import { CheckboxCardIcon } from "../globals/MuiCheckboxCardIcon.styled";
@@ -14,6 +16,7 @@ import { productsPath } from "src/utils/constants/routes.constants";
 import { useDispatch } from "react-redux";
 import { getProduct } from "src/strore_api/product/productSlice";
 import { currencyFormated } from "src/services/currency.services";
+import { prefixPathProductCode } from "src/utils/constants/product.constants";
 
 const CardStyled = styled(Card)`
 	border: none;
@@ -39,7 +42,7 @@ const CardContentStyled = styled(CardContent)`
 const RatingStyled = styled(Rating)`
 	margin: 10px 0;
 `;
-const TypographyProductId = styled(Typography)`
+const TypographyProductCode = styled(Typography)`
 	color: ${({ theme }) => theme.palette.text.secondary};
 	margin-bottom: 4px;
 `;
@@ -49,6 +52,11 @@ const ProductNamePrice = styled("div")`
 	align-items: start;
 	font-weight: 500;
 `;
+const ChipStyled = styled(Chip)`
+	position: absolute;
+	top: 10px;
+	left: 10px;
+`;
 
 interface Props {
 	product: IProduct;
@@ -57,20 +65,20 @@ interface Props {
 const ProductCard: React.FC<Props> = ({ product }) => {
 	const dispatch = useDispatch();
 	const [isChecked, setIsChecked] = useState(false);
-	const [productsParam, categoryParam, subcategoryParam, productIdParam] = useGetLocation();
+	const [productsParam, categoryParam, subcategoryParam, productCodeParam] = useGetLocation();
 
 	const linkToProductItem = () => {
 		const path = [];
-		if (!!productIdParam) {
+		if (!!productCodeParam) {
 			path.push("./../..");
-			path.push(`productId=${product.productId}`);
+			path.push(prefixPathProductCode + product.productCode);
 			path.push(product.productName);
 			return path.join("/");
 		}
 		productsParam !== productsPath && path.push(productsPath);
 		!categoryParam && path.push(product.productAttributes.category);
 		!subcategoryParam && path.push(product.productAttributes.subCategory.name);
-		path.push(`productId=${product.productId}`);
+		path.push(prefixPathProductCode + product.productCode);
 		path.push(product.productName);
 		return path.join("/");
 	};
@@ -78,11 +86,17 @@ const ProductCard: React.FC<Props> = ({ product }) => {
 	const handleOnClickCard = () => {
 		dispatch(getProduct(product));
 	};
-	const handleOnChangeToCart = () => {};
+	const handleOnChangeToCart = () => {
+		setIsChecked((prev) => !prev);
+	};
+	const isDiscounted = () => {
+		return product.discount > 0;
+	};
 
 	return (
 		<CardStyled variant='outlined'>
 			<CardActionAreaStyled>
+				{isDiscounted() && <ChipStyled color='info' label={`-${product.discount}%`} />}
 				<Link to={linkToProductItem()} onClick={handleOnClickCard}>
 					<CardMedia
 						sx={{ objectFit: "cover", width: "100%", height: "100%" }}
@@ -92,7 +106,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
 						loading='lazy'
 					/>
 				</Link>
-				{!productIdParam && (
+				{!productCodeParam && (
 					<CheckboxCardIconStyled
 						onChange={handleOnChangeToCart}
 						color='primary'
@@ -109,7 +123,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
 					value={product.rating.totalRatingScore / product.rating.numberOfRated}
 					readOnly
 				/>
-				<TypographyProductId variant='caption3'>#{product.productId}</TypographyProductId>
+				<TypographyProductCode variant='caption3'>#{product.productCode}</TypographyProductCode>
 				<ProductNamePrice>
 					<Typography variant='caption3'>{product.productName}</Typography>
 					<Typography variant='caption1'>
