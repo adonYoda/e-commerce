@@ -5,6 +5,7 @@ import { RootState } from "../configureStore";
 
 let initialState: IProduct = {
 	productId: 0,
+	productCode: 0,
 	productName: "",
 	productReceiptDate: "",
 	productAttributes: {
@@ -41,6 +42,7 @@ export const productSlice = createSlice({
 	reducers: {
 		getProduct: (state, action: PayloadAction<IProduct>) => {
 			state.productId = action.payload.productId;
+			state.productCode = action.payload.productCode;
 			state.productName = action.payload.productName;
 			state.productReceiptDate = action.payload.productReceiptDate;
 			state.productAttributes = action.payload.productAttributes;

@@ -3,6 +3,7 @@ import React from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import useGetLocation from "src/hooks/useGetLocation";
 import useGetParams from "src/hooks/useGetParams";
+import { prefixPathProductCode } from "src/utils/constants/product.constants";
 import { productsPath } from "src/utils/constants/routes.constants";
 
 const BreadcrumbsContainer = styled("div")`
@@ -22,7 +23,7 @@ const Breadcrumbs = () => {
 	const paramsList = useGetLocation();
 	const paths = paramsList
 		.slice(1)
-		.filter((el) => !el.includes("productId="))
+		.filter((el) => !el.includes(prefixPathProductCode))
 		.map((el) => {
 			return el[0].toUpperCase() + el.slice(1);
 		});

@@ -23,7 +23,7 @@ const ProductsPageMain = styled("div")`
 const names = ["By Price", "By Name", "Most Orders", "Most Likes", "Newest"];
 
 const ProductsPage = () => {
-	const [productsParam, categoryParam, subcategoryParam, productIdParam] = useGetLocation();
+	const [productsParam, categoryParam, subcategoryParam, productCodeParam] = useGetLocation();
 	const handleGetValue = (value: string) => {
 		console.log(value);
 	};

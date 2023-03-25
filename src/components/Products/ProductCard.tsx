@@ -16,6 +16,7 @@ import { productsPath } from "src/utils/constants/routes.constants";
 import { useDispatch } from "react-redux";
 import { getProduct } from "src/strore_api/product/productSlice";
 import { currencyFormated } from "src/services/currency.services";
+import { prefixPathProductCode } from "src/utils/constants/product.constants";
 
 const CardStyled = styled(Card)`
 	border: none;
@@ -41,7 +42,7 @@ const CardContentStyled = styled(CardContent)`
 const RatingStyled = styled(Rating)`
 	margin: 10px 0;
 `;
-const TypographyProductId = styled(Typography)`
+const TypographyProductCode = styled(Typography)`
 	color: ${({ theme }) => theme.palette.text.secondary};
 	margin-bottom: 4px;
 `;
@@ -64,20 +65,20 @@ interface Props {
 const ProductCard: React.FC<Props> = ({ product }) => {
 	const dispatch = useDispatch();
 	const [isChecked, setIsChecked] = useState(false);
-	const [productsParam, categoryParam, subcategoryParam, productIdParam] = useGetLocation();
+	const [productsParam, categoryParam, subcategoryParam, productCodeParam] = useGetLocation();
 
 	const linkToProductItem = () => {
 		const path = [];
-		if (!!productIdParam) {
+		if (!!productCodeParam) {
 			path.push("./../..");
-			path.push(`productId=${product.productId}`);
+			path.push(prefixPathProductCode + product.productCode);
 			path.push(product.productName);
 			return path.join("/");
 		}
 		productsParam !== productsPath && path.push(productsPath);
 		!categoryParam && path.push(product.productAttributes.category);
 		!subcategoryParam && path.push(product.productAttributes.subCategory.name);
-		path.push(`productId=${product.productId}`);
+		path.push(prefixPathProductCode + product.productCode);
 		path.push(product.productName);
 		return path.join("/");
 	};
@@ -105,7 +106,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
 						loading='lazy'
 					/>
 				</Link>
-				{!productIdParam && (
+				{!productCodeParam && (
 					<CheckboxCardIconStyled
 						onChange={handleOnChangeToCart}
 						color='primary'
@@ -122,7 +123,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
 					value={product.rating.totalRatingScore / product.rating.numberOfRated}
 					readOnly
 				/>
-				<TypographyProductId variant='caption3'>#{product.productId}</TypographyProductId>
+				<TypographyProductCode variant='caption3'>#{product.productCode}</TypographyProductCode>
 				<ProductNamePrice>
 					<Typography variant='caption3'>{product.productName}</Typography>
 					<Typography variant='caption1'>
