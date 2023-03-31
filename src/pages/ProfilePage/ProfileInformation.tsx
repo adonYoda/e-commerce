@@ -42,6 +42,7 @@ const MyTypography = styled(Typography)(({ theme }) => ({
 const ProfileInformation = () => {
   const user = useAppSelector((store) => store.user);
   const [flag, setFlag] = useState(false);
+  const [globalFlag, setGlobalFlag] = useState(false)
 
   return (
     <WrapperProfileInformation>
@@ -74,6 +75,15 @@ const ProfileInformation = () => {
           {user.phone}
         </Typography>
       )) || <MyInput defaultValue={user.phone} id="phone" />}
+      {
+        <Typography
+        color="primary"
+        variant="caption4"
+        sx={{ cursor: "pointer" }}
+      >
+        +Add
+      </Typography>
+      }
       <MyTypography variant="caption4">Address</MyTypography>
       {(!flag && (
         <Typography variant="body15" sx={{ cursor: "default" }}>

@@ -1,5 +1,262 @@
 {
 
+	"orders": [
+        {
+            "orderNumber": 3,
+            "dateOfOrder": "2023-01-02T12:00:00Z",
+            "totalCost": 150,
+            "currency": "USD",
+            "dateOfDelivery": "2023-01-10T12:00:00Z",
+            "statusOfOrder": "On the way",
+            "purchasedGoods": [
+                {
+                    "productId": 7144,
+                    "productName": "Basic",
+                    "currency": "USD",
+                    "price": 50,
+                    "aboutProduct": {
+                        "colorSizeQuantity": [
+                            {
+                                "color": "Black",
+                                "size": "M",
+                                "quantity": 1,
+                                "iconUrl": "https://example.com/blackIcon.jpg"
+                            }
+                        ],
+                        "mainImgUrl": "https://i.imgur.com/mXww2VA.jpeg"
+                    }
+                },
+                {
+                    "productId": 7154,
+                    "productName": "Basic",
+                    "currency": "USD",
+                    "price": 100,
+                    "aboutProduct": {
+                        "colorSizeQuantity": [
+                            {
+                                "color": "Purple",
+                                "size": "L",
+                                "quantity": 1,
+                                "iconUrl": "https://example.com/purpleIcon.jpg"
+                            }
+                        ],
+                        "mainImgUrl": "https://i.imgur.com/mXww2VA.jpeg"
+                    }
+                }
+            ]
+        },
+        {
+            "orderNumber": 2,
+            "dateOfOrder": "2023-04-02T12:00:00Z",
+            "totalCost": 55,
+            "currency": "USD",
+            "dateOfDelivery": "2023-06-10T12:00:00Z",
+            "statusOfOrder": "Done",
+            "purchasedGoods": [
+                {
+                    "productId": 7144,
+                    "productName": "Basic",
+                    "currency": "USD",
+                    "price": 55,
+                    "aboutProduct": {
+                        "colorSizeQuantity": [
+                            {
+                                "color": "Black",
+                                "size": "M",
+                                "quantity": 1,
+                                "iconUrl": "https://example.com/blackIcon.jpg"
+                            }
+                        ],
+                        "mainImgUrl": "https://i.imgur.com/mXww2VA.jpeg"
+                    }
+                }
+            ]
+        },
+        {
+            "orderNumber": 1,
+            "dateOfOrder": "2023-04-02T12:00:00Z",
+            "totalCost": 78,
+            "currency": "USD",
+            "dateOfDelivery": "2023-06-10T12:00:00Z",
+            "statusOfOrder": "Canceled",
+            "purchasedGoods": [
+                {
+                    "productId": 7144,
+                    "productName": "Basic",
+                    "currency": "USD",
+                    "price": 50,
+                    "aboutProduct": {
+                        "colorSizeQuantity": [
+                            {
+                                "color": "Black",
+                                "size": "M",
+                                "quantity": 1,
+                                "iconUrl": "https://example.com/blackIcon.jpg"
+                            }
+                        ],
+                        "mainImgUrl": "https://i.imgur.com/mXww2VA.jpeg"
+                    }
+                },
+                {
+                    "productId": 7154,
+                    "productName": "Basic",
+                    "currency": "USD",
+                    "price": 28,
+                    "aboutProduct": {
+                        "colorSizeQuantity": [
+                            {
+                                "color": "Purple",
+                                "size": "L",
+                                "quantity": 1,
+                                "iconUrl": "https://example.com/purpleIcon.jpg"
+                            }
+                        ],
+                        "mainImgUrl": "https://i.imgur.com/mXww2VA.jpeg"
+                    }
+                }
+            ]
+        },
+		{
+            "orderNumber": 4,
+            "dateOfOrder": "2023-01-02T12:00:00Z",
+            "totalCost": 150,
+            "currency": "USD",
+            "dateOfDelivery": "2023-01-10T12:00:00Z",
+            "statusOfOrder": "On the way",
+            "purchasedGoods": [
+                {
+                    "productId": 7144,
+                    "productName": "Basic",
+                    "currency": "USD",
+                    "price": 50,
+                    "aboutProduct": {
+                        "colorSizeQuantity": [
+                            {
+                                "color": "Black",
+                                "size": "M",
+                                "quantity": 1,
+                                "iconUrl": "https://example.com/blackIcon.jpg"
+                            }
+                        ],
+                        "mainImgUrl": "https://i.imgur.com/mXww2VA.jpeg"
+                    }
+                },
+                {
+                    "productId": 7154,
+                    "productName": "Basic",
+                    "currency": "USD",
+                    "price": 100,
+                    "aboutProduct": {
+                        "colorSizeQuantity": [
+                            {
+                                "color": "Purple",
+                                "size": "L",
+                                "quantity": 1,
+                                "iconUrl": "https://example.com/purpleIcon.jpg"
+                            }
+                        ],
+                        "mainImgUrl": "https://i.imgur.com/mXww2VA.jpeg"
+                    }
+                }
+            ]
+        },
+		{
+            "orderNumber": 5,
+            "dateOfOrder": "2023-01-02T12:00:00Z",
+            "totalCost": 150,
+            "currency": "USD",
+            "dateOfDelivery": "2023-01-10T12:00:00Z",
+            "statusOfOrder": "On the way",
+            "purchasedGoods": [
+                {
+                    "productId": 7144,
+                    "productName": "Basic",
+                    "currency": "USD",
+                    "price": 50,
+                    "aboutProduct": {
+                        "colorSizeQuantity": [
+                            {
+                                "color": "Black",
+                                "size": "M",
+                                "quantity": 1,
+                                "iconUrl": "https://example.com/blackIcon.jpg"
+                            }
+                        ],
+                        "mainImgUrl": "https://i.imgur.com/mXww2VA.jpeg"
+                    }
+                },
+                {
+                    "productId": 7154,
+                    "productName": "Basic",
+                    "currency": "USD",
+                    "price": 100,
+                    "aboutProduct": {
+                        "colorSizeQuantity": [
+                            {
+                                "color": "Purple",
+                                "size": "L",
+                                "quantity": 1,
+                                "iconUrl": "https://example.com/purpleIcon.jpg"
+                            }
+                        ],
+                        "mainImgUrl": "https://i.imgur.com/mXww2VA.jpeg"
+                    }
+                },
+				{
+                    "productId": 7104,
+                    "productName": "Basic",
+                    "currency": "USD",
+                    "price": 50,
+                    "aboutProduct": {
+                        "colorSizeQuantity": [
+                            {
+                                "color": "Black",
+                                "size": "M",
+                                "quantity": 1,
+                                "iconUrl": "https://example.com/blackIcon.jpg"
+                            }
+                        ],
+                        "mainImgUrl": "https://i.imgur.com/mXww2VA.jpeg"
+                    }
+                },
+				{
+                    "productId": 7133,
+                    "productName": "Basic",
+                    "currency": "USD",
+                    "price": 50,
+                    "aboutProduct": {
+                        "colorSizeQuantity": [
+                            {
+                                "color": "Black",
+                                "size": "M",
+                                "quantity": 1,
+                                "iconUrl": "https://example.com/blackIcon.jpg"
+                            }
+                        ],
+                        "mainImgUrl": "https://i.imgur.com/mXww2VA.jpeg"
+                    }
+                },
+				{
+                    "productId": 7000,
+                    "productName": "Basic",
+                    "currency": "USD",
+                    "price": 50,
+                    "aboutProduct": {
+                        "colorSizeQuantity": [
+                            {
+                                "color": "Black",
+                                "size": "M",
+                                "quantity": 1,
+                                "iconUrl": "https://example.com/blackIcon.jpg"
+                            }
+                        ],
+                        "mainImgUrl": "https://i.imgur.com/mXww2VA.jpeg"
+                    }
+                }
+            ]
+        }
+    ],
+
 	"users": [
 		{
 			"userId": "db0001",

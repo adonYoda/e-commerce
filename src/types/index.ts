@@ -30,13 +30,6 @@ export interface IRating {
   numberOfRated: number;
 }
 
-export interface IAboutProduct {
-  colorSizeQuantity: IColorSize[];
-  mainImgUrl: string;
-  photos: string[];
-  description: string;
-  details: string;
-}
 
 export interface IColorSize {
   color: string;
@@ -112,3 +105,21 @@ export interface ISubCategory {
   totalProducts: number;
   extendableCategories: string[];
 }
+
+export interface IOrder {
+  orderNumber: number;
+  dateOfOrder: string;
+  totalCost: number;
+  currency: string;
+  dateOfDelivery: string;
+  statusOfOrder: string;
+  purchasedGoods: IProductOrder[];
+}
+
+export interface IProductOrder {
+    productId: number;
+    productName: string;
+    currency: string;
+    price: number;
+    aboutProduct: IAboutProduct
+  }

@@ -26,7 +26,6 @@ const authSlice = createSlice({
 			state.authUser = true;
 		},
 		logOut(state) {
-			//store.getState().user = null;
 			state.authUser = false;
 			Cookies.remove("accessToken");
 			Cookies.remove("refreshToken");
